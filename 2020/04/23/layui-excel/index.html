@@ -6,16 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>王二麻子</title>
+  <title>layui-excel | 王二麻子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基于hexo搭建起来的博客网站">
-<meta property="og:type" content="website">
-<meta property="og:title" content="王二麻子">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="layui第三方插件layui-excel的用法一. layui-excel模块化  想到使用layui-excel,就默认认为使用使用了整个layui模块  1. layui-excel 的导入 layui官方文档找到layui第三方插件模块   搜索excel, 找到码云社区   下载lay-ext文件夹   放入自己的项目静态资源目录   在html中配置插件   在layui中导入插件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="layui-excel">
+<meta property="og:url" content="http://yoursite.com/2020/04/23/layui-excel/index.html">
 <meta property="og:site_name" content="王二麻子">
-<meta property="og:description" content="基于hexo搭建起来的博客网站">
+<meta property="og:description" content="layui第三方插件layui-excel的用法一. layui-excel模块化  想到使用layui-excel,就默认认为使用使用了整个layui模块  1. layui-excel 的导入 layui官方文档找到layui第三方插件模块   搜索excel, 找到码云社区   下载lay-ext文件夹   放入自己的项目静态资源目录   在html中配置插件   在layui中导入插件">
+<meta property="og:image" content="c:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200423115551348.png">
+<meta property="og:image" content="c:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200423115714948.png">
+<meta property="og:image" content="c:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200423115820970.png">
+<meta property="og:image" content="c:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200423115934648.png">
+<meta property="og:image" content="c:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200423120014313.png">
+<meta property="og:image" content="c:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200423120142113.png">
+<meta property="article:published_time" content="2020-04-23T11:05:51.588Z">
+<meta property="article:modified_time" content="2020-04-23T11:14:41.206Z">
 <meta property="article:author" content="王二麻子">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:%5CUsers%5CAdministrator%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200423115551348.png">
   
     <link rel="alternative" href="/atom.xml" title="王二麻子" type="application/atom+xml">
   
@@ -151,16 +160,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-layui-excel" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-layui-excel" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/23/layui-excel/">layui-excel</a>
+    <h1 class="article-title" itemprop="name">
+      layui-excel
     </h1>
   
 
@@ -232,6 +239,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -239,16 +267,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/23/layui-excel/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/23/layui-excel/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/22/%E8%BF%99%E6%98%AF%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">这是我的第二篇博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -268,246 +355,14 @@
 
 
 
-
   
-    <article id="post-这是我的第二篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/22/%E8%BF%99%E6%98%AF%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/">这是我的第二篇博客</a>
-    </h1>
   
 
-        
-        <a href="/2020/04/22/%E8%BF%99%E6%98%AF%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-04-22T01:31:55.125Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前端响应式首页修改过程"><a href="#前端响应式首页修改过程" class="headerlink" title="前端响应式首页修改过程"></a>前端响应式首页修改过程</h2><blockquote>
-<p>​        加粗的字体表示未完成的内容以及当时记录的时间, 或者表示未完成的内容被完成的时间.</p>
-</blockquote>
-<h3 id="1-页面顶部导航"><a href="#1-页面顶部导航" class="headerlink" title="1.  页面顶部导航"></a>1.  页面顶部导航</h3><ol>
-<li>取消了navbar的绝对定位，占据文档流，修改其html结构， 然后显示在页面上部</li>
-<li>修复了因为屏幕突然变小而造成导航栏塌陷的BUG（0408 18：33未完成）</li>
-<li>使用flex布局处理导航栏塌陷的问题 (0409 - 17:04 已完成)</li>
-</ol>
-<hr>
-<h3 id="2-左边菜单"><a href="#2-左边菜单" class="headerlink" title="2. 左边菜单"></a>2. 左边菜单</h3><p>​    </p>
-<h4 id="2-1-左边菜单已解决BUG"><a href="#2-1-左边菜单已解决BUG" class="headerlink" title="2.1 左边菜单已解决BUG"></a>2.1 左边菜单已解决BUG</h4><ol>
-<li>取消左边一级菜单的绝对定位, 让其占据文档流, 以进一步实现响应式</li>
-<li>取消右边二级菜单的动画移动效果</li>
-<li>解决了双击一级菜单会无法显示的bug</li>
-<li>通过取消其移动达到了左边一级菜单始终显示的效果.</li>
-<li>修复了在移动端下左边菜单用于展开菜单的黑色图标无法显示的bug</li>
-<li>修复了,在点击二级菜单后, 再点击首页头像显示异常的bug</li>
-<li><strong>在点击左边一级菜单之后的其他选项后, 再点击首页, 会头像显示异常(0409- 14:07)</strong></li>
-<li>修复了, 左边菜单首位显示头像异常的, 使其总是在点击首页确定展开之后才显示头像(0409 - 16:00)</li>
-<li><strong>点击左边一级菜单的图标才会显示效果, 点击没有反应(0409-14:33)</strong></li>
-<li></li>
-</ol>
-<h4 id="2-2-左边菜单未解决BUG"><a href="#2-2-左边菜单未解决BUG" class="headerlink" title="2.2 左边菜单未解决BUG"></a>2.2 左边菜单未解决BUG</h4><ol>
-<li><strong>点击左边一级菜单的图标才会显示效果, 点击没有反应(0408-18:33)</strong></li>
-<li><strong>在点击左边一级菜单之后的其他选项后, 再点击首页, 会头像显示异常(0409- 18:33)</strong></li>
-<li><strong>取消了原先在左边一级菜单中P标签的点击事件, 使得当点击P标签时会冒泡到父元素,被父元素监听,触发父元素A标签的方法.(未完成 0409 - 16:30 )</strong></li>
-</ol>
-<hr>
-<h3 id="3-iframe层"><a href="#3-iframe层" class="headerlink" title="3. iframe层"></a>3. iframe层</h3><h4 id="3-1-已修复"><a href="#3-1-已修复" class="headerlink" title="3.1 已修复"></a>3.1 已修复</h4><h5 id="3-1-1-首页"><a href="#3-1-1-首页" class="headerlink" title="3.1.1 首页"></a>3.1.1 首页</h5><ol>
-<li>页面中显示居中的效果</li>
-<li>事务通知可横向滚动选取</li>
-<li>通知栏可横向滚动显示全内容(“原先显示不出校内新闻”)</li>
-<li>固定下载栏操作列, 其他内容可以横向滚动显示(0408-18:33未完成)</li>
-<li>首页iframe层在移动端设备下与浏览器高度自适应</li>
-<li><strong>个人日历在移动端的响应式处理(0409- 完成)</strong></li>
-</ol>
-<h4 id="3-2-未修复"><a href="#3-2-未修复" class="headerlink" title="3.2 未修复"></a>3.2 未修复</h4><ol>
-<li>固定下载栏操作列, 其他内容可以横向滚动显示(0408-18:33未完成)</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/22/%E8%BF%99%E6%98%AF%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我在04-22创建了一篇新的博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/22/%E6%88%91%E5%9C%A804-22%E5%88%9B%E5%BB%BA%E4%BA%86%E4%B8%80%E7%AF%87%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2/">我在04-22创建了一篇新的博客</a>
-    </h1>
   
 
-        
-        <a href="/2020/04/22/%E6%88%91%E5%9C%A804-22%E5%88%9B%E5%BB%BA%E4%BA%86%E4%B8%80%E7%AF%87%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-04-22T01:31:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/22/%E6%88%91%E5%9C%A804-22%E5%88%9B%E5%BB%BA%E4%BA%86%E4%B8%80%E7%AF%87%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/22/hello-world/">Hello !!! 你好呀, 朋友</a>
-    </h1>
   
 
-        
-        <a href="/2020/04/22/hello-world/" class="archive-article-date">
-  	<time datetime="2020-04-22T01:16:19.210Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/22/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -530,8 +385,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
