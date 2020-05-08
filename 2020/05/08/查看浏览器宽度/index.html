@@ -6,14 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 王二麻子</title>
+  <title>查看浏览器宽度 | 王二麻子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基于hexo搭建起来的博客网站">
-<meta property="og:type" content="website">
-<meta property="og:title" content="王二麻子">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="js中查看浏览器宽度  1 网页可见区域宽：document.body.clientWidth   2 网页可见区域高：document.body.clientHeight    3 网页可见区域宽：document.body.offsetWidth (包括边线的宽)    4 网页可见区域高：document.body.offsetHeight (包括边线的宽)   5 网页正文全文宽：docu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="查看浏览器宽度">
+<meta property="og:url" content="http://yoursite.com/2020/05/08/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/index.html">
 <meta property="og:site_name" content="王二麻子">
-<meta property="og:description" content="基于hexo搭建起来的博客网站">
+<meta property="og:description" content="js中查看浏览器宽度  1 网页可见区域宽：document.body.clientWidth   2 网页可见区域高：document.body.clientHeight    3 网页可见区域宽：document.body.offsetWidth (包括边线的宽)    4 网页可见区域高：document.body.offsetHeight (包括边线的宽)   5 网页正文全文宽：docu">
+<meta property="article:published_time" content="2020-05-08T02:09:58.261Z">
+<meta property="article:modified_time" content="2020-04-09T03:37:18.973Z">
 <meta property="article:author" content="王二麻子">
 <meta name="twitter:card" content="summary">
   
@@ -151,184 +153,170 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-查看浏览器宽度" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      查看浏览器宽度
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/08/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/" class="archive-article-date">
+
+        
+        <a href="/2020/05/08/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/" class="archive-article-date">
   	<time datetime="2020-05-08T02:09:58.261Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/08/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/">查看浏览器宽度</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="js中查看浏览器宽度"><a href="#js中查看浏览器宽度" class="headerlink" title="js中查看浏览器宽度"></a>js中查看浏览器宽度</h2><p>  1 <strong>网页可见区域宽：document.body.clientWidth</strong></p>
+<p>  2 <strong>网页可见区域高：document.body.clientHeight</strong> </p>
+<p>  3 <strong>网页可见区域宽：document.body.offsetWidth (包括边线的宽)</strong> </p>
+<p>  4 <strong>网页可见区域高：document.body.offsetHeight (包括边线的宽)</strong></p>
+<p>  5 <strong>网页正文全文宽：document.body.scrollWidth</strong> </p>
+<p>  6 <strong>网页正文全文高：document.body.scrollHeight</strong> </p>
+<p>  7 <strong>网页被卷去的高：document.body.scrollTop</strong></p>
+<p>  8 <strong>网页被卷去的左：document.body.scrollLeft</strong> </p>
+<p>  9 <strong>网页正文部分上：window.screenTop</strong> </p>
+<p> 10 <strong>网页正文部分左：window.screenLeft</strong></p>
+<p> 11 <strong>屏幕分辨率的高：window.screen.height</strong></p>
+<p> 12 <strong>屏幕分辨率的宽：window.screen.width</strong> </p>
+<p> 13 <strong>屏幕可用工作区高度：window.screen.availHeight</strong> </p>
+<p> 14 <strong>屏幕可用工作区宽度：window.screen.availWidth</strong> </p>
+<p> 17 HTML精确定位:scrollLeft,scrollWidth,clientWidth,offsetWidth<br> 18 scrollHeight: 获取对象的滚动高度。<br> 19 scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离<br> 20 scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离<br> 21 scrollWidth:获取对象的滚动宽度<br> 22 offsetHeight:获取对象相对于版面或由父坐标 offsetParent 属性指定的父坐标的高度<br> 23 offsetLeft:获取对象相对于版面或由 offsetParent 属性指定的父坐标的计算左侧位置<br> 24 offsetTop:获取对象相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置<br> 25 event.clientX 相对文档的水平座标<br> 26 event.clientY 相对文档的垂直座标<br> 27 event.offsetX 相对容器的水平坐标<br> 28 event.offsetY 相对容器的垂直坐标<br> 29 document.documentElement.scrollTop 垂直方向滚动的值<br> 30 event.clientX+document.documentElement.scrollTop 相对文档的水平座标+垂直方向滚动的量<br> 31<br> 32 IE，FireFox 差异如下：<br> 33<br> 34 IE6.0、FF1.06+：<br> 35 clientWidth = width + padding<br> 36 clientHeight = height + padding<br> 37 offsetWidth = width + padding + border<br> 38 offsetHeight = height + padding + border<br> 39<br> 40 IE5.0/5.5：<br> 41 clientWidth = width - border<br> 42 clientHeight = height - border<br> 43 offsetWidth = width<br> 44 offsetHeight = height<br> 45<br> 46 (需要提一下：CSS中的margin属性，与clientWidth、offsetWidth、clientHeight、offsetHeight均无关)<br> 47 网页可见区域宽： document.body.clientWidth<br> 48 网页可见区域高： document.body.clientHeight<br> 49 网页可见区域宽： document.body.offsetWidth (包括边线的宽)<br> 50 网页可见区域高： document.body.offsetHeight (包括边线的高)<br> 51 网页正文全文宽： document.body.scrollWidth<br> 52 网页正文全文高： document.body.scrollHeight<br> 53 网页被卷去的高： document.body.scrollTop<br> 54 网页被卷去的左： document.body.scrollLeft<br> 55 网页正文部分上： window.screenTop<br> 56 网页正文部分左： window.screenLeft<br> 57 屏幕分辨率的高： window.screen.height<br> 58 屏幕分辨率的宽： window.screen.width<br> 59 屏幕可用工作区高度： window.screen.availHeight<br> 60 屏幕可用工作区宽度： window.screen.availWidth</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>请我吃点东西吧, 我的已经3天没吃饭了<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/08/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/29/axios%E7%9A%84%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2020-04-29T06:19:50.919Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/29/axios%E7%9A%84%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">axios的简单配置</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/29/axios%E7%9A%84%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/">axios的简单配置</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/23/layui-excel/" class="archive-article-date">
-  	<time datetime="2020-04-23T03:45:45.364Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/23/layui-excel/">layui-excel</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/22/%E8%BF%99%E6%98%AF%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-04-22T01:31:55.125Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/22/%E8%BF%99%E6%98%AF%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/">这是我的第二篇博客</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/22/%E6%88%91%E5%9C%A804-22%E5%88%9B%E5%BB%BA%E4%BA%86%E4%B8%80%E7%AF%87%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-04-22T01:31:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/22/%E6%88%91%E5%9C%A804-22%E5%88%9B%E5%BB%BA%E4%BA%86%E4%B8%80%E7%AF%87%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2/">我在04-22创建了一篇新的博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/22/hello-world/" class="archive-article-date">
-  	<time datetime="2020-04-22T01:16:19.210Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/22/hello-world/">Hello !!! 你好呀, 朋友</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -351,8 +339,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
