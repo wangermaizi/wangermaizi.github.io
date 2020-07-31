@@ -6,18 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello !!! 你好呀, 朋友 | 王二麻子</title>
+  <title>layui-excel | 王二麻子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="layui第三方插件layui-excel的用法一. layui-excel模块化  想到使用layui-excel,就默认认为使用使用了整个layui模块  1. layui-excel 的导入 layui官方文档找到layui第三方插件模块   搜索excel, 找到码云社区   下载lay-ext文件夹   放入自己的项目静态资源目录   在html中配置插件   在layui中导入插件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello !!! 你好呀, 朋友">
-<meta property="og:url" content="http://yoursite.com/2020/04/22/hello-world/index.html">
+<meta property="og:title" content="layui-excel">
+<meta property="og:url" content="http://yoursite.com/2020/07/31/layui-excel/index.html">
 <meta property="og:site_name" content="王二麻子">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="article:published_time" content="2020-04-22T01:16:19.210Z">
-<meta property="article:modified_time" content="2020-04-22T04:48:25.090Z">
+<meta property="og:description" content="layui第三方插件layui-excel的用法一. layui-excel模块化  想到使用layui-excel,就默认认为使用使用了整个layui模块  1. layui-excel 的导入 layui官方文档找到layui第三方插件模块   搜索excel, 找到码云社区   下载lay-ext文件夹   放入自己的项目静态资源目录   在html中配置插件   在layui中导入插件">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/08/Yn0GEd.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/08/YnBpad.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/08/YnBkxf.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/08/YnB1zV.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/08/YnBdiR.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/08/YnBrQK.png">
+<meta property="article:published_time" content="2020-07-31T14:50:17.846Z">
+<meta property="article:modified_time" content="2020-05-08T02:49:45.362Z">
 <meta property="article:author" content="王二麻子">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/05/08/Yn0GEd.png">
   
     <link rel="alternative" href="/atom.xml" title="王二麻子" type="application/atom+xml">
   
@@ -51,6 +58,8 @@
 		<hgroup>
 		  <h1 class="header-author"><a href="/">王二麻子</a></h1>
 		</hgroup>
+		
+		<p class="header-subtitle">关于记录王二麻子的学习生涯</p>
 		
 
 		<nav class="header-menu">
@@ -110,6 +119,8 @@
 			  <h1 class="header-author js-header-author">王二麻子</h1>
 			</hgroup>
 			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>关于记录王二麻子的学习生涯<i class="icon icon-quo-right"></i></p>
+			
 			
 			
 				
@@ -153,39 +164,82 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-layui-excel" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello !!! 你好呀, 朋友
+      layui-excel
     </h1>
   
 
         
-        <a href="/2020/04/22/hello-world/" class="archive-article-date">
-  	<time datetime="2020-04-22T01:16:19.210Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-22</time>
+        <a href="/2020/07/31/layui-excel/" class="archive-article-date">
+  	<time datetime="2020-07-31T14:50:17.846Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h2 id="layui第三方插件layui-excel的用法"><a href="#layui第三方插件layui-excel的用法" class="headerlink" title="layui第三方插件layui-excel的用法"></a>layui第三方插件layui-excel的用法</h2><h3 id="一-layui-excel模块化"><a href="#一-layui-excel模块化" class="headerlink" title="一. layui-excel模块化"></a>一. layui-excel模块化</h3><blockquote>
+<p> 想到使用layui-excel,就默认认为使用使用了整个layui模块</p>
+</blockquote>
+<h4 id="1-layui-excel-的导入"><a href="#1-layui-excel-的导入" class="headerlink" title="1. layui-excel 的导入"></a>1. layui-excel 的导入</h4><ol>
+<li><p>layui官方文档找到layui第三方插件模块</p>
+<p><img src="https://s1.ax1x.com/2020/05/08/Yn0GEd.png" alt="img"></p>
+</li>
+<li><p>搜索excel, 找到码云社区</p>
+<p><img src="https://s1.ax1x.com/2020/05/08/YnBpad.png" alt="image 20200423115714948"></p>
+</li>
+<li><p>下载lay-ext文件夹</p>
+<p><img src="https://s1.ax1x.com/2020/05/08/YnBkxf.md.png" alt="image 20200423115820970"></p>
+</li>
+<li><p>放入自己的项目静态资源目录</p>
+<p><img src="https://s1.ax1x.com/2020/05/08/YnB1zV.png" alt="image 20200423115934648"></p>
+</li>
+<li><p>在html中配置插件</p>
+<p><img src="https://s1.ax1x.com/2020/05/08/YnBdiR.png" alt="image 20200423120014313"></p>
+</li>
+<li><p>在layui中导入插件</p>
+<p><img src="https://s1.ax1x.com/2020/05/08/YnBrQK.png" alt="image 20200423120142113"></p>
+</li>
+</ol>
+<h4 id="2-layui-excel的使用"><a href="#2-layui-excel的使用" class="headerlink" title="2.layui-excel的使用"></a>2.layui-excel的使用</h4><h5 id="2-1-下载excel文件"><a href="#2-1-下载excel文件" class="headerlink" title="2.1 下载excel文件"></a>2.1 下载excel文件</h5><p>​    在网页中下载excel文件需要调用</p>
+<p><code>excel.exportExcel([[&#39;Hello&#39;, &#39;World&#39;, &#39;!&#39;]], &#39;hello.xlsx&#39;, &#39;xlsx&#39;)</code>方法</p>
+<p>方法参数介绍:</p>
+<ul>
+<li>第一个参数: excel表中的数据内容, 一般是一个二维数组, 或者一个对象,另外可以独立设置表头</li>
+<li>第二个参数: 下载的文件名称</li>
+<li>第三个参数: 下载文件的类型</li>
+</ul>
+<h5 id="2-2-显示上传的excel文件"><a href="#2-2-显示上传的excel文件" class="headerlink" title="2.2 显示上传的excel文件"></a>2.2 显示上传的excel文件</h5><h6 id="2-2-1-上传excel文件处理方式"><a href="#2-2-1-上传excel文件处理方式" class="headerlink" title="2.2.1 上传excel文件处理方式:"></a>2.2.1 上传excel文件处理方式:</h6><p>一般是点击触发上传文件事件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#LAY-excel-import-excel'</span>).change(<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line"><span class="comment">// 注意：这里直接引用 e.target.files 会导致 FileList 对象在读取之前变化，导致无法弹出文件</span></span><br><span class="line">  <span class="keyword">var</span> files = <span class="built_in">Object</span>.values(e.target.files);</span><br><span class="line">  uploadExcel(files);</span><br><span class="line">  <span class="comment">// 变更完清空，否则选择同一个文件不触发此事件</span></span><br><span class="line">  e.target.value = <span class="string">''</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 调用上传excel需要传入文件参数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">uploadExcel</span>(<span class="params">files</span>) </span>&#123;</span><br><span class="line">  layui.use([<span class="string">'excel'</span>, <span class="string">'layer'</span>], <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 引入layui中的弹出层插件和excel插件, excel以配置完毕</span></span><br><span class="line">    <span class="keyword">var</span> excel = layui.excel,</span><br><span class="line">    	layer = layui.layer;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      <span class="comment">// 实质上调用了excel.importExcel的方法来加载原生上传上来的files对象</span></span><br><span class="line">      excel.importExcel(files, &#123;</span><br><span class="line">        <span class="comment">// 读取数据的同时梳理数据</span></span><br><span class="line">        <span class="comment">// 当然也可以不处理 </span></span><br><span class="line">        fields: &#123;</span><br><span class="line">          <span class="string">'id'</span>: <span class="string">'A'</span></span><br><span class="line">          , <span class="string">'username'</span>: <span class="string">'B'</span></span><br><span class="line">          , <span class="string">'experience'</span>: <span class="string">'C'</span></span><br><span class="line">          , <span class="string">'sex'</span>: <span class="string">'D'</span></span><br><span class="line">          , <span class="string">'score'</span>: <span class="string">'E'</span></span><br><span class="line">          , <span class="string">'city'</span>: <span class="string">'F'</span></span><br><span class="line">          , <span class="string">'classify'</span>: <span class="string">'G'</span></span><br><span class="line">          , <span class="string">'wealth'</span>: <span class="string">'H'</span></span><br><span class="line">          , <span class="string">'sign'</span>: <span class="string">'I'</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 解析结束之后,会执行回调函数, 获取到解析成功之后的数据</span></span><br><span class="line">        <span class="comment">// 还可以再进行数据梳理</span></span><br><span class="line">        <span class="comment">// 如果不需要展示直接上传，可以再次 $.ajax() 将JSON数据通过 JSON.stringify() 处理后传递到后端即可</span></span><br><span class="line">        layer.open(&#123;</span><br><span class="line">          title: <span class="string">'文件转换结果'</span></span><br><span class="line">          , <span class="attr">area</span>: [<span class="string">'800px'</span>, <span class="string">'400px'</span>]</span><br><span class="line">          , <span class="attr">tipsMore</span>: <span class="literal">true</span></span><br><span class="line">          , <span class="attr">content</span>: laytpl($(<span class="string">'#LAY-excel-export-ans'</span>).html()).render(&#123;<span class="attr">data</span>: data, <span class="attr">files</span>: files&#125;)</span><br><span class="line">          <span class="comment">// laytpl($('#LAY-excel-export-ans').html()).render(&#123;data: data, files: files&#125;) 弹出层的内容由渲染引擎渲染出来</span></span><br><span class="line">         <span class="comment">// 与ejs模板类似渲染时传入两个值data(数据), files(文件)</span></span><br><span class="line">          , <span class="attr">success</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            element.render(<span class="string">'tab'</span>)</span><br><span class="line">            layui.code(&#123;&#125;)</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">      layer.alert(e.message)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p><strong><em>关于layui的模板引擎</em></strong></p>
+<ul>
+<li><p>type=”text/html”用来指明这个模板引擎</p>
+</li>
+<li><p>id=”xxx”作为唯一标识检索需要渲染的内容,值得注意的是, 真正的渲染并不是在这个script标签里面的</p>
+</li>
+<li><p>layui模板引擎常见的写法:  </p>
+<blockquote>
+<p> { {\ \# layui(语句) }}   </p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;html&quot; id&#x3D;&quot;LAY-excel-export-ans&quot;&gt;</span><br><span class="line">    &#123;&#123;# layui.each(d.data, function(file_index, item)&#123; &#125;&#125;</span><br><span class="line">    &lt;blockquote class&#x3D;&quot;layui-elem-quote&quot;&gt;&#123;&#123;d.files[file_index].name&#125;&#125;&lt;&#x2F;blockquote&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;layui-tab&quot;&gt;</span><br><span class="line">        &lt;ul class&#x3D;&quot;layui-tab-title&quot;&gt;</span><br><span class="line">        	&lt;!-- 循环文件名(切换标题) --&gt;</span><br><span class="line">            &#123;&#123;# layui.each(item, function(sheet_name, content) &#123; &#125;&#125;</span><br><span class="line">            &lt;li&gt;&#123;&#123;sheet_name&#125;&#125;&lt;&#x2F;li&gt;</span><br><span class="line">            &#123;&#123;# &#125;); &#125;&#125;</span><br><span class="line">        &lt;&#x2F;ul&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;layui-tab-content&quot;&gt;</span><br><span class="line">        	&lt;!-- 显示所有表的数据, 根据点击sheet名显示不同的内容 --&gt;</span><br><span class="line">            &#123;&#123;# layui.each(item, function(sheet_name, content) &#123; &#125;&#125;</span><br><span class="line">            &lt;div class&#x3D;&quot;layui-tab-item&quot;&gt;</span><br><span class="line">                &lt;table class&#x3D;&quot;layui-table&quot;&gt;</span><br><span class="line">                    &#123;&#123;# layui.each(content, function(row_index, value) &#123; &#125;&#125;</span><br><span class="line">                    &#123;&#123;# var col_index &#x3D; 0 &#125;&#125;</span><br><span class="line">                    &lt;tr&gt;</span><br><span class="line">                        &#123;&#123;# layui.each(value, function(col_key, val) &#123; &#125;&#125;</span><br><span class="line">                        &lt;td id&#x3D;&quot;table-export-&#123;&#123;file_index&#125;&#125;-&#123;&#123;sheet_name&#125;&#125;-&#123;&#123;row_index&#125;&#125;-&#123;&#123;col_index++&#125;&#125;&quot;&gt;&#123;&#123;val&#125;&#125;&lt;&#x2F;td&gt;</span><br><span class="line">                        &#123;&#123;# &#125;);&#125;&#125;</span><br><span class="line">                    &lt;&#x2F;tr&gt;</span><br><span class="line">                    &#123;&#123;# &#125;);&#125;&#125;</span><br><span class="line">                &lt;&#x2F;table&gt;</span><br><span class="line">                &lt;!-- 预览代码最后可以去掉 --&gt;</span><br><span class="line">               &lt;pre class&#x3D;&quot;layui-code&quot;&gt;&#123;&#123;JSON.stringify(content, null, 2)&#125;&#125;&lt;&#x2F;pre&gt;</span><br><span class="line">            &lt;&#x2F;div&gt;</span><br><span class="line">            &#123;&#123;# &#125;); &#125;&#125;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &#123;&#123;# &#125;) &#125;&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h6 id="2-2-2-拖放上传excel文件"><a href="#2-2-2-拖放上传excel文件" class="headerlink" title="2.2.2 拖放上传excel文件"></a>2.2.2 拖放上传excel文件</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.body.ondragover = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 阻止;浏览器默认事件</span></span><br><span class="line">    e.preventDefault()</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">document</span>.body.ondrop = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 阻止浏览器默认事件</span></span><br><span class="line">    e.preventDefault();</span><br><span class="line">    <span class="keyword">var</span> files = e.dataTransfer.files;</span><br><span class="line">    uploadExcel(files)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -265,7 +319,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/22/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/31/layui-excel/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -279,15 +333,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/22/%E6%88%91%E5%9C%A804-22%E5%88%9B%E5%BB%BA%E4%BA%86%E4%B8%80%E7%AF%87%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/07/31/%E8%BF%99%E6%98%AF%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          我在04-22创建了一篇新的博客
+          这是我的第二篇博客
         
       </div>
     </a>
   
+  
+    <a href="/2020/07/31/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">查看浏览器宽度</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

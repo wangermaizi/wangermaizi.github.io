@@ -6,16 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>GIt代码管理 | 王二麻子</title>
+  <title>PHP学习文档 | 王二麻子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="GIt代码管理Git-分布式代码管理 Svn集中式代码管理 1.Git安装直接next就可以了 2.Git命令2.创建新的仓库 1cd 你要成为仓库的目录  1.初始化Git 注意：创建一个新的Git仓库，并且在该目录下隐藏一个Git文件，不要修改或者删除 1Git init  3.检出仓库将代码从远程的服务端克隆一份到本地的仓库 1.克隆命令 1Git clone 地址(github地址或者码云">
+  <meta name="description" content="php一. php项目启动*注意!!!  本章只针对如果从零开始启动一个PHP项目, 在更多的情况下, 都是使用类似于 PHPstudy 或者wamp 的站点搭建工具一键生成PHP项目 * 1.1 Apache的启动 下载Apache (  我选用的是: httpd-2.4.43-o111f-x64-vc15 版本 )  将Apache解压至预先设置好路径上 ( 我的是直接安装在D盘的根目录下 )">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GIt代码管理">
-<meta property="og:url" content="http://yoursite.com/2020/07/14/GIt%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/index.html">
+<meta property="og:title" content="PHP学习文档">
+<meta property="og:url" content="http://yoursite.com/2020/07/31/PHP%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3/index.html">
 <meta property="og:site_name" content="王二麻子">
-<meta property="og:description" content="GIt代码管理Git-分布式代码管理 Svn集中式代码管理 1.Git安装直接next就可以了 2.Git命令2.创建新的仓库 1cd 你要成为仓库的目录  1.初始化Git 注意：创建一个新的Git仓库，并且在该目录下隐藏一个Git文件，不要修改或者删除 1Git init  3.检出仓库将代码从远程的服务端克隆一份到本地的仓库 1.克隆命令 1Git clone 地址(github地址或者码云">
-<meta property="article:published_time" content="2020-07-14T02:53:45.128Z">
-<meta property="article:modified_time" content="2020-07-14T02:53:20.964Z">
+<meta property="og:description" content="php一. php项目启动*注意!!!  本章只针对如果从零开始启动一个PHP项目, 在更多的情况下, 都是使用类似于 PHPstudy 或者wamp 的站点搭建工具一键生成PHP项目 * 1.1 Apache的启动 下载Apache (  我选用的是: httpd-2.4.43-o111f-x64-vc15 版本 )  将Apache解压至预先设置好路径上 ( 我的是直接安装在D盘的根目录下 )">
+<meta property="article:published_time" content="2020-07-31T15:12:18.000Z">
+<meta property="article:modified_time" content="2020-07-31T15:20:02.706Z">
 <meta property="article:author" content="王二麻子">
 <meta name="twitter:card" content="summary">
   
@@ -51,6 +51,8 @@
 		<hgroup>
 		  <h1 class="header-author"><a href="/">王二麻子</a></h1>
 		</hgroup>
+		
+		<p class="header-subtitle">关于记录王二麻子的学习生涯</p>
 		
 
 		<nav class="header-menu">
@@ -110,6 +112,8 @@
 			  <h1 class="header-author js-header-author">王二麻子</h1>
 			</hgroup>
 			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>关于记录王二麻子的学习生涯<i class="icon icon-quo-right"></i></p>
+			
 			
 			
 				
@@ -153,122 +157,496 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-GIt代码管理" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-PHP学习文档" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      GIt代码管理
+      PHP学习文档
     </h1>
   
 
         
-        <a href="/2020/07/14/GIt%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-07-14T02:53:45.128Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
+        <a href="/2020/07/31/PHP%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3/" class="archive-article-date">
+  	<time datetime="2020-07-31T15:12:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="GIt代码管理"><a href="#GIt代码管理" class="headerlink" title="GIt代码管理"></a>GIt代码管理</h3><p>Git-分布式代码管理</p>
-<p>Svn集中式代码管理</p>
-<h3 id="1-Git安装"><a href="#1-Git安装" class="headerlink" title="1.Git安装"></a>1.Git安装</h3><p>直接next就可以了</p>
-<h2 id="2-Git命令"><a href="#2-Git命令" class="headerlink" title="2.Git命令"></a>2.Git命令</h2><p>2.创建新的仓库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd 你要成为仓库的目录</span><br></pre></td></tr></table></figure>
-
-<p>1.初始化Git</p>
-<p>注意：创建一个新的Git仓库，并且在该目录下隐藏一个Git文件，不要修改或者删除</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Git init</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-检出仓库"><a href="#3-检出仓库" class="headerlink" title="3.检出仓库"></a>3.检出仓库</h3><p>将代码从远程的服务端克隆一份到本地的仓库</p>
-<p>1.克隆命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Git clone 地址(github地址或者码云的克隆地址)</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-Git工作流"><a href="#4-Git工作流" class="headerlink" title="4.Git工作流"></a>4.Git工作流</h3><h5 id="Git维护是由三棵树"><a href="#Git维护是由三棵树" class="headerlink" title="Git维护是由三棵树"></a>Git维护是由三棵树</h5><ol>
-<li>工作目录：持有实际的文件</li>
-<li>缓存区：其实类似与修改索引，将修改的内容临时保存到缓存区域</li>
-<li>HEAD，类似与版本，指向你最近一次提交的结果</li>
-</ol>
-<h3 id="5-添加与提交"><a href="#5-添加与提交" class="headerlink" title="5.添加与提交"></a>5.添加与提交</h3><p>1.将计划改动的文件提交到缓存区</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add 文件名称</span><br><span class="line">git add *</span><br><span class="line"><span class="comment"># 可以使用</span></span><br><span class="line">git add .</span><br><span class="line"><span class="comment"># 将所有文件进行提交</span></span><br></pre></td></tr></table></figure>
-
-<p>2.当内容修改完成之后，希望成为1个版本，那么可以将内容进行提交</p>
-<p>​    注意：这个命令将改动提交到HEAD，但是没有传入到远程仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"代码提交的信息"</span>（比如：git commit -m <span class="string">"create one.txt.1"</span>）</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-设置远程地址"><a href="#6-设置远程地址" class="headerlink" title="6.设置远程地址"></a>6.设置远程地址</h3><p>1.设置远程仓库地址</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/KTBOY/testGit.git</span><br></pre></td></tr></table></figure>
-
-<p>2.将代码推送到远程仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br><span class="line"><span class="comment"># 特殊情况下可能会使用 -f 进行强制推送</span></span><br><span class="line">git push -u -f origin master</span><br><span class="line"></span><br><span class="line"><span class="comment"># 系统会提示登录, 请正确填写用户名以及密码</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="7-项目中经常使用的命令"><a href="#7-项目中经常使用的命令" class="headerlink" title="7.项目中经常使用的命令"></a>7.项目中经常使用的命令</h3><p>1.更新项目到本地</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
-<p>2.版本回退</p>
-<p>查看提交项目的版本信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 或者使用</span></span><br><span class="line">git reflog</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset -hard id</span><br></pre></td></tr></table></figure>
-
-<p>3.分支</p>
-<p>创建分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b dev</span><br></pre></td></tr></table></figure>
-
-<p>切换分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout 分支名称</span><br></pre></td></tr></table></figure>
-
-<p>合并分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge 分支名称</span><br></pre></td></tr></table></figure>
-
-<h3 id="8-公司工作使用Git的流程"><a href="#8-公司工作使用Git的流程" class="headerlink" title="8.公司工作使用Git的流程"></a>8.公司工作使用Git的流程</h3><p>1.远程仓库地址克隆服务器里面的代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone</span><br></pre></td></tr></table></figure>
-
-<p>2.创建分支给自己开发</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b 分支名称</span><br></pre></td></tr></table></figure>
-
-<p>3.更新服务器最新代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
-<p>4.将自己开发的代码和服务器的代码合并</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge 分支的名称</span><br></pre></td></tr></table></figure>
-
-<p>5.提交代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="9-忽视文件夹"><a href="#9-忽视文件夹" class="headerlink" title="9. 忽视文件夹"></a>9. 忽视文件夹</h3><p>​        在使用<code>git</code>的过程中，一般我们总会有些文件无需纳入<code>git</code>的管理，也不希望它们总出现在未跟踪文件列表，这些文件通常是日志文件、临时文件、编译产生的中间文件、工具自动生成的文件等等。</p>
-<p>​        以 Vue项目为例子, 我们不想提交大量node_module包, 因此需要在.gitignore中提示不提交node_module的相关文件</p>
-<h4 id="9-1-gitignore-规范"><a href="#9-1-gitignore-规范" class="headerlink" title="9.1 .gitignore 规范"></a>9.1 .gitignore 规范</h4><ul>
-<li>所有空行或者以注释符号 ＃ 开头的行都会被 Git 忽略</li>
-<li>可以使用标准的 glob 模式匹配</li>
-<li>匹配模式最后跟斜杠(/)说明要忽略的是目录</li>
-<li>要忽略指定模式以外的文件或目录，可以在模式前加上感叹号(!)进行取反</li>
+        <h2 id="php"><a href="#php" class="headerlink" title="php"></a>php</h2><h3 id="一-php项目启动"><a href="#一-php项目启动" class="headerlink" title="一. php项目启动"></a>一. php项目启动</h3><p>*<em>注意!!!  本章只针对如果从零开始启动一个PHP项目, 在更多的情况下, 都是使用类似于 PHPstudy 或者wamp 的站点搭建工具一键生成PHP项目 *</em></p>
+<h4 id="1-1-Apache的启动"><a href="#1-1-Apache的启动" class="headerlink" title="1.1 Apache的启动"></a>1.1 Apache的启动</h4><ul>
+<li><p>下载Apache (  我选用的是: httpd-2.4.43-o111f-x64-vc15 版本 )</p>
+</li>
+<li><p>将Apache解压至预先设置好路径上 ( 我的是直接安装在D盘的根目录下 )</p>
+</li>
+<li><p>将: Apache24\bin 配置进环境变量中</p>
+</li>
+<li><p>cmd输入httpd -t 检测是否可以正常运行</p>
+</li>
+<li><p>提示报错则按报错信息修改相关内容</p>
+</li>
+<li><p>当 httpd -t 提示 Syntax OK时 , 则表示可以正常使用Apache服务器</p>
+</li>
+<li><p>cmd 内 输入 httpd , 即可启动Apache服务</p>
+<p>此时可以访问 localhost:80 来查看Apache服务的主页 ( Apache服务器默认开启的是80端口 )</p>
+<blockquote>
+<p>一般而言, 在没有过多的配置下, Apache网页显示内容主要是存放在 Apache24\htdocs 内, 默认显示目录的index.html文件</p>
+</blockquote>
+</li>
 </ul>
-<h4 id="9-2-匹配规则"><a href="#9-2-匹配规则" class="headerlink" title="9.2 匹配规则"></a>9.2 匹配规则</h4><ul>
-<li><code>logs/</code>：忽略当前路径下的logs目录，包含logs下的所有子目录和文件</li>
-<li><code>/logs.txt</code>：忽略根目录下的logs.txt文件</li>
-<li><code>*.class</code>：忽略所有后缀为.class的文件</li>
-<li><code>!/classes/a.class</code>：不忽略classes目录下的a.class文件</li>
-<li><code>tmp/*.txt</code>：只忽略tmp目录下的.txt文件</li>
-<li><code>**/foo</code>：可以忽略/foo, a/foo, a/b/foo等</li>
+<h4 id="1-2-PHP的安装"><a href="#1-2-PHP的安装" class="headerlink" title="1.2 PHP的安装"></a>1.2 PHP的安装</h4><p>​       PHP 作为一种解释型语言, 不能像js一样直接被浏览器解释执行 (其实浏览器底层也是借用V8引擎才能解释执行), 因此需要 PHP 解释器解释执行</p>
+<ul>
+<li>下载php, 一般选择php7之后的版本, php5的版本已经算过时了 ( 我选用的是php-7.4.4-Win32-vc15-x64版本 )</li>
+<li>将下载好的php解压至预先设置好的路径( 自定义路径 )</li>
+<li>找到 php.ini-delevopment 文件将其命名为: php.ini</li>
+<li>找到extension=mysql, 将其注释解开 ( 开启php的mysql资源 )</li>
 </ul>
-<h4 id="9-3-举个例子"><a href="#9-3-举个例子" class="headerlink" title="9.3 举个例子"></a>9.3 举个例子</h4><ol>
-<li><p>创建.gitignore</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># touch 是Linux系统常见的命令, 意为创建文件意思</span></span><br><span class="line">touch .gitignore</span><br></pre></td></tr></table></figure>
+<h4 id="1-3-php-和-Apache的关联"><a href="#1-3-php-和-Apache的关联" class="headerlink" title="1.3 php 和 Apache的关联"></a>1.3 php 和 Apache的关联</h4><p>​        要想在浏览器渲染出 php 执行的内容, 需要 web 服务器的支持, 不一定是用Apache服务器, 也可以使用Nginx服务器, 这里以常用的Apache服务器为例子</p>
+<ul>
+<li><p>打开Apache的 httpd.conf文件</p>
 </li>
-<li><p>在.gitignore 中编辑</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 忽视所有的node_module文件</span><br><span class="line">&#x2F;node_module</span><br><span class="line"># 忽视 vscode自动生成的文件</span><br><span class="line">.vscode</span><br><span class="line"># 忽视 HBuild 自动生成的文件</span><br><span class="line">.project</span><br></pre></td></tr></table></figure>
+<li><p>加载php解释器</p>
 </li>
-<li><p>保存即可</p>
-<p>完成可使用 <code>git add .</code> 进行验证</p>
+<li><p>增加可执行文件的后缀名,( 让Apache可以执行php文件 )</p>
+</li>
+<li><p>设置php.ini 文件所在的路劲, ( 让Apache服务器可以与PHP关联起来 ) </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 加载php解释器</span><br><span class="line">LoadModule php7_module "F:\PHP\php7apache2_4.dll"</span><br><span class="line"># 增加可执行文件的后缀名</span><br><span class="line">AddType application/x-httpd-php .php .html .htm</span><br><span class="line"># 设置php.ini文件所在路径</span><br><span class="line">PHPIniDir "F:\PHP"</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="1-4-Apache的端口映射-多站点布置"><a href="#1-4-Apache的端口映射-多站点布置" class="headerlink" title="1.4 Apache的端口映射 (多站点布置)"></a>1.4 Apache的端口映射 (多站点布置)</h4><p>因为一台服务器 ( 或者说好一点的服务器 ) 价格是很贵的, 一般来说, 如果一台服务器只搭建一台网站, 是很不经济的方案, 因此需要配置对个站点 ( 网站 );</p>
+<h5 id="1-4-1-基于IP的虚拟机主机"><a href="#1-4-1-基于IP的虚拟机主机" class="headerlink" title="1.4.1 基于IP的虚拟机主机"></a>1.4.1 基于IP的虚拟机主机</h5><p>​        一般来说, 一台电脑只会配置一个网卡, 因此一般来说一台电脑只有一个IP地址</p>
+<p>​        但是, 有的服务器可以配置多个网卡槽, 可以拥有多个IP地址, 因为并不是很常见因此在这里不做过多的介绍</p>
+<h5 id="1-4-2-基于域名的虚拟机主机"><a href="#1-4-2-基于域名的虚拟机主机" class="headerlink" title="1.4.2 基于域名的虚拟机主机"></a>1.4.2 基于域名的虚拟机主机</h5><p>​        一台电脑只有一个IP, 但是IP下可以制作多个网站, 需要的是给不同的网站起不同的名字</p>
+<ul>
+<li><p>修改本机host 文件 (host文件的修改以及路径详见百度, 当然在学习的过程中, 这个也可以跳过)</p>
+<p>如: 我想在我本机中运行 <a href="http://www.wangermazi.com" target="_blank" rel="noopener">www.wangermazi.com</a>, <a href="http://www.huangwei.com" target="_blank" rel="noopener">www.huangwei.com</a> 这两个域名</p>
+<p>(即将多个域名都映射到本机地址上)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1  localhost</span><br><span class="line">127.0.0.1  www.wangermazi.com</span><br><span class="line">127.0.0.1  www.huangwei.com</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打开Apache的安装目录, 找到Apache服务器的配置文件, httpd.conf ,  去除下面两行代码的 # 号注释</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 开启Apache的虚拟主机功能</span><br><span class="line">LoadModule vhost_alias_module modules&#x2F;mod_vhost_alias.so</span><br><span class="line"># 从conf&#x2F;extra&#x2F;httpd-vhosts.conf 这个文件中导入虚拟主机配置</span><br><span class="line">Include conf&#x2F;extra&#x2F;httpd-vhosts.conf</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打开conf/extra/httpd-vhosts.conf 这个路劲的文件, 把默认设置</p>
+<p><em>注意, 这个配置文件实际上是一个XML配置文件</em></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 配置虚拟主机, 监听的端口 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">VirtualHost</span> *<span class="attr">:80</span>&gt;</span></span><br><span class="line">    # </span><br><span class="line">    ServerAdmin webmaster@dummy-host.localhost</span><br><span class="line">    # 设置监听网页的根目录文件</span><br><span class="line">    DocumentRoot "/www/docs/dummy-host.localhost"</span><br><span class="line">    ServerName dummy-host.localhost</span><br><span class="line">    ServerAlias http://www.dummy-host.localhost/</span><br><span class="line">    ErrorLog "logs/dummy-host.localhost-error_log"</span><br><span class="line">    CustomLog "logs/dummy-host.localhost-access_log common"</span><br><span class="line"><span class="tag">&lt;/<span class="name">VirtualHost</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">VirtualHost</span> *<span class="attr">:80</span>&gt;</span></span><br><span class="line">    ServerAdmin webmaster@dummy-host2.localhost</span><br><span class="line">    DocumentRoot "/www/docs/dummy-host2.localhost"</span><br><span class="line">    ServerName dummy-host2.localhost</span><br><span class="line">    ErrorLog "logs/dummy-host2.localhost-error_log"</span><br><span class="line">    CustomLog "logs/dummy-host2.localhost-access_log common"</span><br><span class="line"><span class="tag">&lt;/<span class="name">VirtualHost</span>&gt;</span></span><br><span class="line"></span><br><span class="line"># 可以将上面的内容改成自己下面的想要的目录和域名</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">VirtualHost</span> *<span class="attr">:80</span>&gt;</span></span><br><span class="line">    ServerAdmin webmaster@dummy-host.localhost</span><br><span class="line">    DocumentRoot "D:/wamp/www/"</span><br><span class="line">    ServerName localhost</span><br><span class="line">    ServerAlias localhost</span><br><span class="line">    ErrorLog "logs/localhost-error_log"</span><br><span class="line"><span class="tag">&lt;/<span class="name">VirtualHost</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">VirtualHost</span> *<span class="attr">:80</span>&gt;</span></span><br><span class="line">    # 服务器名称 ( 这个可以跳过 )</span><br><span class="line">    ServerAdmin webmaster@dummy-host.localhost</span><br><span class="line">    # 网页根路径</span><br><span class="line">    DocumentRoot "D:/wamp/www/web/"  (这个必须写)</span><br><span class="line">    </span><br><span class="line">    ServerName test.com （填主域名, 这个可以跳过, 用localhost启动）</span><br><span class="line">    # 要绑多少个域名都可以写在 ServerAlias, 记得多个域名用空格隔开, ServerAlias 会将这这些域名指向同一个项目</span><br><span class="line">    ServerAlias *.test.com (这里的服务器别名可以支持泛解析，即所有的子域名都可以解析绑定到该虚拟主机)</span><br><span class="line">    ErrorLog "logs/localhost-error_log"</span><br><span class="line"><span class="tag">&lt;/<span class="name">VirtualHost</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果 弄完之后 出现403错误 那在httpd.conf里设置目录的访问权限  步骤:找到</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Directory</span> /&gt;</span></span><br><span class="line">Options FollowSymLinks ExecCGI Indexes</span><br><span class="line">AllowOverride None</span><br><span class="line">Order deny,allow</span><br><span class="line">Deny from all</span><br><span class="line">Satisfy all</span><br><span class="line"><span class="tag">&lt;/<span class="name">Directory</span>&gt;</span></span><br><span class="line"></span><br><span class="line">更改为</span><br><span class="line"><span class="comment">&lt;!-- Directory 为目录访问权限 --&gt;</span></span><br><span class="line"># Indexes 当没有指明访问文件夹下面的哪个文件而且也没有指定默认文件时, 会返回文件夹下的文件目录</span><br><span class="line"># 该选项在正式开发中不会使用, 一般用于Apache或者php的学习</span><br><span class="line"></span><br><span class="line"># 项目文件的根路径</span><br><span class="line"><span class="tag">&lt;<span class="name">Directory</span> "这里可以写入文件路径" /&gt;</span></span><br><span class="line">Options FollowSymLinks ExecCGI Indexes</span><br><span class="line">AllowOverride None</span><br><span class="line"># Order deny,allow</span><br><span class="line"># Deny from all</span><br><span class="line"># Satisfy all</span><br><span class="line"><span class="tag">&lt;/<span class="name">Directory</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<blockquote>
+<p>值得注意的是, 在修改Apache相关的文件之后, 都要重启Apache服务器才会生效</p>
+<p>在重启Apache之前,  建议先使用  httpd -t  测试配置是否生效</p>
+</blockquote>
+<h4 id="1-5-PHP的时间配置"><a href="#1-5-PHP的时间配置" class="headerlink" title="1.5 PHP的时间配置"></a>1.5 PHP的时间配置</h4><p>如果使用的是PHP原生安装包的话, 因为PHP默认配置的是零时区, 而我们中国是在东八区, 因此需要额外配置</p>
+<ul>
+<li><p>PHP的配置文件, php.ini</p>
+</li>
+<li><p>打开文件找到, </p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">;data.timezone =</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将前面的分号去除</p>
+</li>
+<li><p>将等号后面改为 : PRC ( RPC代表着中国市区 )</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">;data.timezone = PRC</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启Apache (修改Apache和php的配置文件, 都需要重启Apache服务器, 让Apache重新加载这些配置 )</p>
+</li>
+</ul>
+<h3 id="二-PHP基础"><a href="#二-PHP基础" class="headerlink" title="二.  PHP基础"></a>二.  PHP基础</h3><blockquote>
+<p>在php文件中 输入 echo phpinfo() 可输出php所有的状态信息</p>
+<p>注意!!!  不同于js, 所有的php语句结尾必须要用分号; 声明, 不然会报错 ( 这点跟Java类似 )</p>
+</blockquote>
+<h4 id="2-1-变量的名称与使用"><a href="#2-1-变量的名称与使用" class="headerlink" title="2.1  变量的名称与使用"></a>2.1  变量的名称与使用</h4><p>​        与Python类似, php定义变量没有特别关键字</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义变量</span></span><br><span class="line">$name = <span class="string">"wang"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用(使用)变量</span></span><br><span class="line"><span class="keyword">echo</span> $name;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-2-全局变量"><a href="#2-2-全局变量" class="headerlink" title="2.2 全局变量"></a>2.2 全局变量</h4><p>​        php内部内置了很多变量, 方便开发人员直接调用, 例如获取get参数的$_GET[] 数组变量</p>
+<blockquote>
+<p>$_REQUEST[] 无论是get方法请求还是post方法请求都会获取到</p>
+</blockquote>
+<p>​        值得注意的是</p>
+<p>​        在外部的变量, 无法直接在函数中使用</p>
+<p>​        需要通过使用函数形参传递的方法, 将函数外部的变量传进函数体内</p>
+<p>​        或者使用 global关键字定义全局变量</p>
+<h4 id="2-3-字符串的拼接"><a href="#2-3-字符串的拼接" class="headerlink" title="2.3 字符串的拼接"></a>2.3 字符串的拼接</h4><p>​        与js不同的是, 字符串的拼接在php中是以 . 来进行连接的, 而不是 + 号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$str &#x3D; &quot;hello&quot;;</span><br><span class="line">$new_str &#x3D; $str.&quot; world&quot;</span><br></pre></td></tr></table></figure>
+
+<p>​        并且 php 也支持 类似ES6 中的 js 模板语法</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$name = <span class="string">"王"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">echo</span> <span class="string">"早上好呀, $&#123;name&#125;"</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-4-数据-链表"><a href="#2-4-数据-链表" class="headerlink" title="2.4 数据 ( 链表 )"></a>2.4 数据 ( 链表 )</h4><h5 id="2-4-1-数组的定义"><a href="#2-4-1-数组的定义" class="headerlink" title="2.4.1 数组的定义"></a>2.4.1 数组的定义</h5><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种定义数组的方式:</span></span><br><span class="line">$list1 = <span class="keyword">array</span>(<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>); <span class="comment">// 默认下标为 0, 1, 2, 4</span></span><br><span class="line"><span class="comment">// 第二种映射的写法  下标 =&gt; 值</span></span><br><span class="line">$carts = <span class="keyword">array</span>(<span class="string">'username'</span> =&gt; <span class="string">"wang"</span>,<span class="string">"password"</span>=&gt;<span class="string">"linghun123."</span> );</span><br><span class="line"><span class="comment">// php 5.3之后的写法:</span></span><br><span class="line">$list2 = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>];</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="2-4-2-冒泡算法"><a href="#2-4-2-冒泡算法" class="headerlink" title="2.4.2 冒泡算法"></a>2.4.2 冒泡算法</h5><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">		$arr1 = <span class="keyword">array</span>(<span class="number">18</span>, <span class="number">22</span>, <span class="number">15</span>, <span class="number">12</span>, <span class="number">23</span>, <span class="number">9</span>);</span><br><span class="line">		$n = count($arr1);</span><br><span class="line">		<span class="comment">// 要控制趟数</span></span><br><span class="line">		<span class="keyword">for</span> ($i=<span class="number">0</span>; $i &lt; $n<span class="number">-1</span>; $i++) &#123; </span><br><span class="line">			<span class="comment">// 在每一趟里面, 控制进行比较的次数</span></span><br><span class="line">			<span class="keyword">for</span>($k = <span class="number">0</span>; $k &lt; $n<span class="number">-1</span> -$i ; $k++)&#123;</span><br><span class="line">				<span class="comment">// 如果前一项比后一项大,则进行交换</span></span><br><span class="line">				<span class="keyword">if</span> ($arr1[$k] &gt; $arr1[$k+<span class="number">1</span>]) &#123;</span><br><span class="line">					<span class="comment">// 数组交换结果 -&gt; 冒泡排序的核心代码, 定义一个空变量当做两个值传递的中间件</span></span><br><span class="line">					$temp = $arr1[$k];</span><br><span class="line">					$arr1[$k] = $arr1[$k+<span class="number">1</span>];</span><br><span class="line">					$arr1[$k+<span class="number">1</span>] = $temp;</span><br><span class="line"></span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					<span class="comment">// 如果不是大于前一项则什么做</span></span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">"&lt;pre&gt;"</span>;</span><br><span class="line">		print_r($arr1);</span><br><span class="line">		<span class="keyword">echo</span> <span class="string">"&lt;/pre&gt;"</span>;</span><br><span class="line">	 <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="2-4-3-选择排序"><a href="#2-4-3-选择排序" class="headerlink" title="2.4.3 选择排序"></a>2.4.3 选择排序</h5><p><strong>选择排序原理:</strong>    </p>
+<p>​    1.遍历数组, 在此过程中, 找到数组的最大值及其下标位置, 然后将最大值的单元, 跟数组的最后一个单元”交换位置”, 这样进行一趟之后, 数组中的最大值就一定放在最后位置;</p>
+<ol start="2">
+<li>将上述过程中, 剩余的数据继续遍历一次, 并做同样的事情, 则此时剩余部分的最大值也能够放在剩余部分的最后位置–对整体而言就是倒数第二的位置排序</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$arr1 = [<span class="number">18</span>, <span class="number">22</span>, <span class="number">12</span>, <span class="number">15</span>, <span class="number">23</span>, <span class="number">9</span>];</span><br><span class="line">$n = count($arr1);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ($i=<span class="number">0</span>; $i &lt; $n<span class="number">-1</span>; $i++) &#123; </span><br><span class="line">    <span class="comment">// 先假定第一个值为最大值, 随后交换比这个值大的值</span></span><br><span class="line">    $max= $arr1[<span class="number">0</span>];</span><br><span class="line">    $max_key = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> ($k=<span class="number">0</span>; $k &lt; $n - $i; $k++) &#123; </span><br><span class="line">        <span class="comment">// 这个循环是在其中某一趟中从前(若干)个数据中找最大值</span></span><br><span class="line">        <span class="keyword">if</span> ($arr1[$k] &gt; $max) &#123;</span><br><span class="line">            <span class="comment"># code...</span></span><br><span class="line">            $max = $arr1[$k];</span><br><span class="line">            $max_key = $k;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 获取最后的下标</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 获取最后的下标</span></span><br><span class="line">    <span class="comment">// 交换最大值</span></span><br><span class="line">    $temp = $arr1[$max_key];</span><br><span class="line">    $arr1[$max_key] = $arr1[$n<span class="number">-1</span>-$i];</span><br><span class="line">    $arr1[$n<span class="number">-1</span>-$i] = $temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">print_r($arr1);</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="2-4-4-二分查找"><a href="#2-4-4-二分查找" class="headerlink" title="2.4.4 二分查找"></a>2.4.4 二分查找</h5><p>此查找算法针对的数组有以下条件:<br>            1. 索引数组 (数组的元素必须是数字)<br>            2. 数组是已经排序好的了 (已经通过升序或者降序排序好了)</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">	$arr1 = [<span class="number">18</span>, <span class="number">22</span>, <span class="number">12</span>, <span class="number">15</span>, <span class="number">23</span>, <span class="number">9</span>, <span class="number">32</span>,<span class="number">111</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">123</span>, <span class="number">445</span>];</span><br><span class="line">	sort($arr1);</span><br><span class="line">	$n = count($arr1);</span><br><span class="line"><span class="comment">// 开始假设存在这么一个函数, 它能够从某个数组$arr中的某个下标范围($start--$end)中找到指定的数据$value  </span></span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">binary_search</span><span class="params">($arr1, $value, $start, $end)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 此时我们认为: 必须 $start &lt; $end, 如果出现, 我们就认为找不到</span></span><br><span class="line">		<span class="keyword">if</span> ($start &gt; $end) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		&#125; </span><br><span class="line">		</span><br><span class="line">		<span class="comment">// 向下取整, 获取取值范围的中间值(中间下标)</span></span><br><span class="line">		$mid = floor(($start + $end) / <span class="number">2</span>);</span><br><span class="line">		<span class="comment">// 获取中间值</span></span><br><span class="line">		$mid_value = $arr1[$mid];</span><br><span class="line">		<span class="keyword">if</span> ($mid_value == $value) &#123;</span><br><span class="line">			<span class="comment">// 刚好中间项相等</span></span><br><span class="line">			<span class="keyword">echo</span> $mid_value;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">		&#125; <span class="keyword">elseif</span> ($mid_value &gt; $value) &#123;</span><br><span class="line">			<span class="comment">// 如果中间项比目标位置大, 就只要去左边的一半中找</span></span><br><span class="line">			$new_start = $start;</span><br><span class="line">			$new_end = $mid<span class="number">-1</span>;</span><br><span class="line">			<span class="comment">// 使用递归函数,查找新的取值范围</span></span><br><span class="line">			<span class="keyword">return</span> binary_search($arr1, $value, $new_start, $new_end);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="comment">// 如果中间项比目标位置小, 就只要去右边的一半中找</span></span><br><span class="line">			$new_start = $mid+<span class="number">1</span>;</span><br><span class="line">			$new_end = $end;</span><br><span class="line">			<span class="keyword">return</span> binary_search($arr1, $value, $new_start, $new_end);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	$result = binary_search($arr1, $search_num, <span class="number">0</span>, $n<span class="number">-1</span>);</span><br><span class="line">	var_dump($result);</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="2-4-5-数组指针"><a href="#2-4-5-数组指针" class="headerlink" title="2.4.5 数组指针"></a>2.4.5 数组指针</h5><p>数组或者说链表中 forEach函数本质就是使用指针不断进行下一个的切换</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在php 中, 存在以下几个函数</span></span><br><span class="line">$list1 = [<span class="string">'222'</span>, <span class="string">'11'</span>, <span class="string">'4444'</span>,<span class="string">'wang'</span>, <span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">$re = current($list1);  <span class="comment">// 获取数组中当前指针所在的单元值</span></span><br><span class="line">$re = key($list1);  <span class="comment">// 获取数组中当前指针所在的单元键值</span></span><br><span class="line">$re = next($list1); <span class="comment">// 指针往后移一个单位, 并取得新位置上的值</span></span><br><span class="line">$re = prev($list1);  <span class="comment">// 指针往前移一个单位, 并获取新位置上的值</span></span><br><span class="line">$re = end($list1);  <span class="comment">// 将数组中的指针移动到最后一个位置, 并获取新位置上的值</span></span><br><span class="line">$re = reset($list1);  <span class="comment">// 将数组中的指针移动到最开始的位置, 并获取新位置上的值</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$list2 = <span class="keyword">array</span>(<span class="string">'a'</span>, <span class="string">'2'</span>=&gt;<span class="string">'b'</span>,  <span class="string">'c'</span>, <span class="string">'x'</span>=&gt;<span class="string">'d'</span>, <span class="string">'e'</span>);</span><br><span class="line">$length = count($list2);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ($i = <span class="number">0</span>; $i &lt; $length; $i++) &#123;</span><br><span class="line">    $key = key($list2);</span><br><span class="line">    $value = current($list2);</span><br><span class="line">    <span class="comment">// 指针先后移一个位置</span></span><br><span class="line">    next($list2);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"$key===&gt;$value &lt;br&gt;"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-5-PHP数据类型"><a href="#2-5-PHP数据类型" class="headerlink" title="2.5 PHP数据类型"></a>2.5 PHP数据类型</h4><ol>
+<li><strong>String</strong>（字符串）</li>
+<li><strong>Integer</strong>（整型）</li>
+<li><strong>Float</strong>（浮点型）</li>
+<li><strong>Boolean</strong>（布尔型）</li>
+<li><strong>Array</strong>（数组）</li>
+<li><strong>Object</strong>（对象）</li>
+<li><strong>NULL</strong>（空值）</li>
+</ol>
+<h3 id="三-PHP-mysql"><a href="#三-PHP-mysql" class="headerlink" title="三. PHP-mysql"></a>三. PHP-mysql</h3><h4 id="3-1-PHP连接mysql数据库"><a href="#3-1-PHP连接mysql数据库" class="headerlink" title="3.1 PHP连接mysql数据库"></a>3.1 PHP连接mysql数据库</h4><ul>
+<li>$link= @mysqli_connect($db_host.”:”.$db_port, $db_user, $db_pass), 连接mysql服务, 返回一个连接句柄</li>
+<li>mysqli_select_db($link, $db_name) , 连接数据库, 返回数据库句柄</li>
+<li>mysqli_set_charset($link, $charset); // 设置字符集</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php </span><br><span class="line">	&#x2F;&#x2F; php连接数据库</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 1. 配置连接数据库信息</span><br><span class="line">	$db_host &#x3D; &quot;localhost&quot;;  &#x2F;&#x2F; 主机名</span><br><span class="line">	$db_port &#x3D; &quot;3306&quot;;  &#x2F;&#x2F; 端口名</span><br><span class="line">	$db_user &#x3D; &quot;root&quot;;  &#x2F;&#x2F; 用户名</span><br><span class="line">	$db_pass &#x3D; &quot;a8848&quot;;  &#x2F;&#x2F; 密码</span><br><span class="line">	$db_name &#x3D; &quot;php_test&quot;; &#x2F;&#x2F; 数据库</span><br><span class="line">	$charset &#x3D; &quot;utf8&quot;;  &#x2F;&#x2F; 字符集</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	$success_str &#x3D; &quot;&quot;;</span><br><span class="line">	if (!$link&#x3D; @mysqli_connect($db_host.&quot;:&quot;.$db_port, $db_user, $db_pass))&#123;</span><br><span class="line">		echo &quot;&lt;h2&gt; php连接数据库失败, 请确定后重新尝试 &lt;&#x2F;h2&gt;&quot;;</span><br><span class="line">		echo &quot;系统错误信息: &quot;.mysqli_connect_error();</span><br><span class="line">		die();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F; 选择当前的数据库</span><br><span class="line">	if (!mysqli_select_db($link, $db_name) ) &#123;</span><br><span class="line">		</span><br><span class="line">		echo &quot;&lt;h2&gt; php选择数据库失败 &lt;&#x2F;h2&gt;&quot;;</span><br><span class="line">		die();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	if ($link) &#123;</span><br><span class="line">		$success_str &#x3D; &quot;数据库连接成功!!!&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	&#x2F;&#x2F; 设置字符集</span><br><span class="line">	mysqli_set_charset($link, $charset);</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-2-PHP对mysql数据库的增删改查"><a href="#3-2-PHP对mysql数据库的增删改查" class="headerlink" title="3.2 PHP对mysql数据库的增删改查"></a>3.2 PHP对mysql数据库的增删改查</h4><p>php 对mysql的curd 无非就是定义一个mysql工具类, </p>
+<p>类中 有两个共有的类静态方法 (static修饰的方法) </p>
+<h3 id="四-PHP图像编辑"><a href="#四-PHP图像编辑" class="headerlink" title="四.  PHP图像编辑"></a>四.  PHP图像编辑</h3><p>​        主要是应用到了 PHP的GD2 扩展, 但前端的canvas画图功能已经非常强大了, 因此对于后端的画图并没有多大的需求</p>
+<p><strong>pass</strong></p>
+<h3 id="五-PHP文件上传"><a href="#五-PHP文件上传" class="headerlink" title="五. PHP文件上传"></a>五. PHP文件上传</h3><p>​        PHP内置了文件上传功能</p>
+<p><strong>pass</strong></p>
+<h3 id="六-session与cookies"><a href="#六-session与cookies" class="headerlink" title="六. session与cookies"></a>六. session与cookies</h3><blockquote>
+<p>cookie和session均为PHP的超全局变量, 值得注意的是, cookie相应头的设置,需要放在php脚本的最前面</p>
+</blockquote>
+<p>​    session和cookies都是PHP内置用于临时存储数据的超全局变量, 只是存放的位置不同, session存放于服务器会话中, cookie 存放于浏览器中</p>
+<h4 id="6-1-session"><a href="#6-1-session" class="headerlink" title="6.1 session"></a>6.1 session</h4><h4 id="6-2-cookies"><a href="#6-2-cookies" class="headerlink" title="6.2 cookies"></a>6.2 cookies</h4><h3 id="七-类与对象"><a href="#七-类与对象" class="headerlink" title="七. 类与对象"></a>七. 类与对象</h3><h4 id="7-1-类与对象的关系"><a href="#7-1-类与对象的关系" class="headerlink" title="7.1 类与对象的关系"></a>7.1 类与对象的关系</h4><ul>
+<li><p>类就是分类,性别,模板,概念等, 类是无形,看不见,摸不着,不实际的 (抽象)</p>
+</li>
+<li><p>类是具有相同属性和行为的一组对象的集合(集合为抽象概念, 不是实体概念)</p>
+</li>
+<li><p>客观世界中的任何一个对象都可称之为类的对象, 具有属性和行为</p>
+</li>
+<li><p>在任何编程中, 都是先定义类, 再实例化成对象 ( 即先有类再有对象 )</p>
+</li>
+</ul>
+<h4 id="7-2-类的定义-或者说类的设计"><a href="#7-2-类的定义-或者说类的设计" class="headerlink" title="7.2 类的定义 ( 或者说类的设计 )"></a>7.2 类的定义 ( 或者说类的设计 )</h4><ol>
+<li><p>一般定义一个类都是用 class 关键字进行修饰, 而且为了方便区别, 类名的头一个字母都是大写</p>
+</li>
+<li><p>类中只有两种内容: 成员变量和成员方法</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 定义成员属性 (对象属性)</span></span><br><span class="line">    <span class="comment">// public 是访问权限的修饰 (权限修饰符)</span></span><br><span class="line">    <span class="keyword">public</span> $name = <span class="string">"wang"</span>;</span><br><span class="line">    <span class="keyword">public</span> $age = <span class="number">23</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> $id = <span class="string">'111'</span>;  <span class="comment">// 私有权限, 只能在本类中被访问, 在类外和子类中都无权访问</span></span><br><span class="line">    <span class="keyword">protected</span> $money = <span class="string">"222"</span>; <span class="comment">// 受保护的权限, 只能在本类中和子类中被访问, 在类外不能被访问</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// define("DB_HOST", "localhost"); // 此时程序一运行就会报错</span></span><br><span class="line">    <span class="comment">// 类中不允许存放普通代码</span></span><br><span class="line">    <span class="comment">// 可以将普通代码放入成员方法中</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 定义成员方法 (对象方法)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">showInfo</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">// __FILE__ 魔术常量, 获取当前文件的路径</span></span><br><span class="line">        <span class="keyword">echo</span> <span class="keyword">__FILE__</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
 </ol>
+<h4 id="7-3-类的使用"><a href="#7-3-类的使用" class="headerlink" title="7.3 类的使用"></a>7.3 类的使用</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">student_02</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 定义成员变量</span></span><br><span class="line">    <span class="keyword">public</span> $name = <span class="string">"wang"</span>;</span><br><span class="line">    <span class="keyword">public</span> $edu = <span class="string">"带专"</span>;</span><br><span class="line">    <span class="comment">// 定义成员方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sayHello</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="string">"hello $this-&gt;name"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 实例化对象</span></span><br><span class="line">$obj = <span class="keyword">new</span> student_02();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 外部调用成员变量</span></span><br><span class="line">$obj-&gt;name;</span><br><span class="line"><span class="comment">// 外部调用成员方法</span></span><br><span class="line"><span class="keyword">echo</span> $obj-&gt;say_hello();</span><br></pre></td></tr></table></figure>
 
+<h4 id="7-4-this-关键字-和-self-关键字"><a href="#7-4-this-关键字-和-self-关键字" class="headerlink" title="7.4 $this 关键字 和 self 关键字"></a>7.4 $this 关键字 和 self 关键字</h4><h4 id="7-5-类常量"><a href="#7-5-类常量" class="headerlink" title="7.5  类常量"></a>7.5  类常量</h4><h4 id="7-5-类的生命周期函数-内置方法"><a href="#7-5-类的生命周期函数-内置方法" class="headerlink" title="7.5 类的生命周期函数 (内置方法)"></a>7.5 类的生命周期函数 (内置方法)</h4><ol>
+<li><p>构造函数</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 构造函数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 析构方法</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>析构函数</p>
+</li>
+</ol>
+<h4 id="7-6-静态属性与静态方法"><a href="#7-6-静态属性与静态方法" class="headerlink" title="7.6  静态属性与静态方法"></a>7.6  静态属性与静态方法</h4><p>​        静态属性和静态方法 都是在定义的前面用 static 关键字修饰, 此时的方法和属性都只于当前类相关, 而不与实例化出来的对象相关</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student_Static</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> $name = <span class="string">"wang"</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">say_hello</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="string">"hello! my name is "</span>.Student_Static::name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">echo</span> Student_Static::say_hello();</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<h3 id="八-数据库工具类"><a href="#八-数据库工具类" class="headerlink" title="八. 数据库工具类"></a>八. 数据库工具类</h3><p><strong>pass</strong></p>
+<h3 id="九-PDO类"><a href="#九-PDO类" class="headerlink" title="九. PDO类"></a>九. PDO类</h3><p><strong>pass</strong></p>
+<h3 id="十-Smarty"><a href="#十-Smarty" class="headerlink" title="十. Smarty"></a>十. Smarty</h3><p><strong>pass</strong></p>
+<h3 id="十一-TP5"><a href="#十一-TP5" class="headerlink" title="十一.  TP5"></a>十一.  TP5</h3><p>​        <strong>TP5是国人自己开发的框架,有中文官网, 中文帮助文档, 中文社区, 丰富的资源,虽然TP5已经是较为晚一代的产品, 但对于了解MVC的运行原理帮助很大</strong></p>
+<blockquote>
+<p>注意, 如需切换TP的版本, 只需要更换thinkPHP的目录即可</p>
+</blockquote>
+<h4 id="11-1-配置文件"><a href="#11-1-配置文件" class="headerlink" title="11.1 配置文件"></a>11.1 配置文件</h4><h4 id="11-2-函数文件"><a href="#11-2-函数文件" class="headerlink" title="11.2 函数文件"></a>11.2 函数文件</h4><h4 id="11-3-框架请求的生命周期"><a href="#11-3-框架请求的生命周期" class="headerlink" title="11.3 框架请求的生命周期"></a>11.3 框架请求的生命周期</h4><ul>
+<li>请求开始</li>
+<li>入口文件</li>
+<li>进入底层执行<ul>
+<li>引导文件 start.php</li>
+<li>注册自动加载</li>
+<li>注册错误和异常机制</li>
+<li>应用初始化</li>
+<li>URL访问检测</li>
+<li>路由检测</li>
+<li>请求分发</li>
+</ul>
+</li>
+<li>进入控制器方法<ol>
+<li>视图输出</li>
+<li>模型</li>
+</ol>
+</li>
+</ul>
+<h4 id="11-4-控制器"><a href="#11-4-控制器" class="headerlink" title="11.4 控制器"></a>11.4 控制器</h4><h5 id="11-4-1-控制器的后缀"><a href="#11-4-1-控制器的后缀" class="headerlink" title="11.4.1 控制器的后缀"></a>11.4.1 控制器的后缀</h5><p>打开控制器配置文件  application/config.php 有如下配置</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 控制器类后缀</span></span><br><span class="line"><span class="string">'controller_suffix'</span>      =&gt; <span class="keyword">false</span>,</span><br></pre></td></tr></table></figure>
+
+<p>上面表达的是, controller控制器默认不带 前缀, controller下index控制器就叫index</p>
+<p>如需改动, 则需将上述代码改成:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 控制器类后缀</span></span><br><span class="line"><span class="string">'controller_suffix'</span>      =&gt; <span class="string">"Wang"</span>,</span><br></pre></td></tr></table></figure>
+
+<p>上述表达的是, controller下的index控制器叫 WangIndex.php</p>
+<h4 id="11-5-url访问"><a href="#11-5-url访问" class="headerlink" title="11.5 url访问"></a>11.5 url访问</h4><p>​        在TP5.0的框架中, 默认使用PATH_INFO方式的url进行访问</p>
+<p>即: http://域名/入口文件/模块名/控制器名称/操作方法/参数1/参数2</p>
+<p>例如, 访问前台 index 模块下的index控制器的 index方法, 路径为:</p>
+<p><a href="http://localhost:8080/public/index.php/index/test/index" target="_blank" rel="noopener">http://localhost:8080/public/index.php/index/test/index</a></p>
+<p><strong>index.php为入口文件</strong></p>
+<p>隐藏入口文件</p>
+<p>可以参考TP5.0的官方 URL重写方法:</p>
+<ol>
+<li><p>打开httpd.conf</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将这行注释去电, 允许修改模块配置</span></span><br><span class="line">LoadModule rewrite_module modules/mod_rewrite.so</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>检索 AllowOverride All </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory "$&#123;SRVROOT&#125;/htdocs"&gt;</span><br><span class="line">    AllowOverride All</span><br><span class="line">    Options None</span><br><span class="line">    Require all granted</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过在虚拟主机配置中也修改成上述内容</p>
+</li>
+</ol>
+<h4 id="11-6-开启调试模式"><a href="#11-6-开启调试模式" class="headerlink" title="11.6 开启调试模式"></a>11.6 开启调试模式</h4><p>在application中下的config.php, 将 “app_debug”的false改为true</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 应用调试模式</span></span><br><span class="line"><span class="string">'app_debug'</span>              =&gt; <span class="keyword">true</span>,</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="11-7-模块"><a href="#11-7-模块" class="headerlink" title="11.7 模块"></a>11.7 模块</h4><blockquote>
+<p>application下的目录称之为模块</p>
+</blockquote>
+<p>在application下config.php配置了默认的模块和默认的控制器名称</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 默认模块名</span></span><br><span class="line"><span class="string">'default_module'</span>         =&gt; <span class="string">'index'</span>,</span><br><span class="line"><span class="comment">// 禁止访问模块</span></span><br><span class="line"><span class="string">'deny_module_list'</span>       =&gt; [<span class="string">'common'</span>],</span><br><span class="line"><span class="comment">// 默认控制器名</span></span><br><span class="line"><span class="string">'default_controller'</span>     =&gt; <span class="string">'Index'</span>,</span><br><span class="line"><span class="comment">// 默认操作名</span></span><br><span class="line"><span class="string">'default_action'</span>         =&gt; <span class="string">'index'</span>,</span><br><span class="line"><span class="comment">// 默认的空控制器名</span></span><br><span class="line"><span class="string">'empty_controller'</span>       =&gt; <span class="string">'Error'</span>,</span><br></pre></td></tr></table></figure>
+
+<p>有上述可知, 按项目最开始访问的是, index模块下的index控制下的index方法</p>
+<h5 id="11-7-1-创建模块"><a href="#11-7-1-创建模块" class="headerlink" title="11.7.1 创建模块"></a>11.7.1 创建模块</h5><ol>
+<li><p>手动创建模块, 一个模块的要包含以下几个要素</p>
+<ul>
+<li>controller</li>
+<li>view</li>
+<li>model</li>
+<li>config.php</li>
+<li>common.php</li>
+</ul>
+</li>
+<li><p>命令行创建模块</p>
+<p>用命令行创建模块需要前往到项目根目录, 即think文件所在的目录</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php think build --<span class="keyword">module</span> home</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>命令行创建控制器</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">php think make:controller 模块名/控制器名</span><br><span class="line">例如: php think make:controller admin/edit</span><br><span class="line"></span><br><span class="line">或者: php think make:controller admin/edit -<span class="literal">-plain</span>  ( 没有默认的<span class="number">7</span>个方法 )</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<h4 id="11-8-依赖注入"><a href="#11-8-依赖注入" class="headerlink" title="11.8 依赖注入"></a>11.8 依赖注入</h4><p>​        一般来说, 当我们想从B类中调用A的方法时, 会存在以下的方法:    </p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> $name = <span class="string">"wang"</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">get_name</span> <span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"我的名字是: &#123;$this-&gt;name&#125;"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">get_name</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        $a = <span class="keyword">new</span> A();</span><br><span class="line">        $name = $a-&gt;get_name();</span><br><span class="line">        <span class="keyword">return</span> $name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$b = <span class="keyword">new</span> B();</span><br><span class="line"><span class="keyword">echo</span> $b-&gt;get_name();</span><br></pre></td></tr></table></figure>
+
+<p>但是如果明知, A类一定会实例化于B类的时候, 可以使用依赖注入的写法:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> $name = <span class="string">"wang"</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">get_name</span> <span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"我的名字是: &#123;$this-&gt;name&#125;"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">get_name</span><span class="params">(A $a)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        $name = $a-&gt;get_name();</span><br><span class="line">        <span class="keyword">return</span> $name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">$b = <span class="keyword">new</span> B();</span><br><span class="line">$obj = <span class="keyword">new</span> A();</span><br><span class="line"><span class="keyword">echo</span> $b-&gt;get_name($obj);</span><br></pre></td></tr></table></figure>
+
+<p>​            这种依赖的写法注入的写法用于controller控制器中</p>
+<h4 id="11-9-模板视图-view"><a href="#11-9-模板视图-view" class="headerlink" title="11.9  模板视图 (view)"></a>11.9  模板视图 (view)</h4><ol>
+<li><p>模板的定义</p>
+<p>为了方便模板的划分, TP框架对模板文件进行了目录划分, 默认的定义规则为: 视图目录 / 控制器名 (小写, 控制器大写, 则用_小写代替) / 操作名 ( 小写 ) + 模板后缀 ( 默认是.html ) </p>
+<blockquote>
+<p>​        值得注意的是, 当你不知道当前控制器实际会调用的是哪个目录下的模板时, 可以在调试模式下直接返回 模板, 错误信息会提示你在哪里创建模板, 因此并不需要太在意模板的目录结构</p>
+</blockquote>
+</li>
+<li><p>渲染模板的方式</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. </span></span><br><span class="line"><span class="keyword">return</span> view();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. </span></span><br><span class="line"><span class="keyword">return</span> <span class="keyword">$this</span>-&gt;fetch();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>模板赋值方式:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一种方法</span></span><br><span class="line">$user = [<span class="string">"id"</span>=&gt;<span class="string">"wang"</span>, <span class="string">"age"</span>=&gt;<span class="number">20</span>];</span><br><span class="line"><span class="keyword">$this</span>-&gt;assign(<span class="string">"user"</span>, $user);</span><br><span class="line"><span class="keyword">return</span> view();</span><br><span class="line">    </span><br><span class="line"><span class="comment">// 第二种方法</span></span><br><span class="line">$user=[<span class="string">"id"</span>=&gt;<span class="string">"wang"</span>, <span class="string">"age"</span>=&gt;<span class="number">20</span>];</span><br><span class="line">$school=<span class="string">"unknown"</span>;</span><br><span class="line"><span class="keyword">return</span> view(<span class="string">"edit"</span>, [<span class="string">"user"</span>=&gt;$user, <span class="string">"school"</span>=&gt;$school]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第三种方法</span></span><br><span class="line">$user=[<span class="string">"id"</span>=&gt;<span class="string">"wang"</span>, <span class="string">"age"</span>=&gt;<span class="number">20</span>];</span><br><span class="line">$school=<span class="string">"unknown"</span>;</span><br><span class="line"><span class="keyword">return</span> view(<span class="string">"edit"</span>, compact(<span class="string">"user"</span>,<span class="string">"school"</span>));</span><br><span class="line"><span class="comment">// 上述这种写法类似于js Es6中的对象解构写法</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>模板中的控制语句块</p>
+<p>1.输出变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;php&#125;&#x2F;* 1.输出变量 *&#x2F;&#123;&#x2F;php&#125;</span><br><span class="line">我的id是: &#123;$id&#125;</span><br><span class="line">我的年龄是: &#123;$age&#125;</span><br><span class="line">我的学校是: &#123;$school&#125;</span><br><span class="line">我的名字是: &#123;$name&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.循环语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;php&#125;&#x2F;* 2. 循环语法 *&#x2F;&#123;&#x2F;php&#125;</span><br><span class="line"></span><br><span class="line">&#123;php&#125;&#x2F;* 第一种循环语法, 较为常用 *&#x2F;&#123;&#x2F;php&#125;</span><br><span class="line">   &lt;ul&gt;</span><br><span class="line">       &#123;foreach name&#x3D;&quot;list&quot; item&#x3D;&quot;vo&quot; key&#x3D;&quot;key&quot;&#125;</span><br><span class="line">       &lt;li&gt;</span><br><span class="line">           &#123;$key&#125; &#x3D;&#x3D;&gt; &#123;$vo&#125;</span><br><span class="line">       &lt;&#x2F;li&gt;</span><br><span class="line">       &#123;&#x2F;foreach&#125;</span><br><span class="line">   &lt;&#x2F;ul&gt;</span><br><span class="line"></span><br><span class="line">&#123;php&#125;&#x2F;* 循环的另外一种语法, 功能性更强 *&#x2F;&#123;&#x2F;php&#125;</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">    &#123;volist name&#x3D;&quot;list&quot; id&#x3D;&quot;ov&quot; key&#x3D;&quot;index&quot; &#125;</span><br><span class="line">    &lt;li&gt;</span><br><span class="line">        &#123;$key&#125; &#x3D;&#x3D;&gt; &#123;$ov&#125;</span><br><span class="line">    &lt;&#x2F;li&gt;</span><br><span class="line">    &#123;&#x2F;volist&#125;</span><br><span class="line">&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3.条件判断语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;php&#125;&#x2F;* 3. 条件判断语法 *&#x2F;&#123;&#x2F;php&#125;</span><br><span class="line">&#123;if condition&#x3D;&quot; $is_member &#x3D;&#x3D; 1  &quot;&#125;</span><br><span class="line"></span><br><span class="line">&lt;h4&gt;这是会员&lt;&#x2F;h4&gt;</span><br><span class="line"></span><br><span class="line">&#123;else&#x2F;&#125;</span><br><span class="line"></span><br><span class="line">&lt;h4&gt;不是会员&lt;&#x2F;h4&gt;</span><br><span class="line"></span><br><span class="line">&#123;&#x2F;if&#125;</span><br><span class="line">&#123;php&#125;&#x2F;* 注意!!!判断语句记得加上if *&#x2F;&#123;&#x2F;php&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<h4 id="11-10-模型-model"><a href="#11-10-模型-model" class="headerlink" title="11.10 模型 ( model )"></a>11.10 模型 ( model )</h4><h3 id="十二-TP-amp-RestFul"><a href="#十二-TP-amp-RestFul" class="headerlink" title="十二. TP&amp;RestFul"></a>十二. TP&amp;RestFul</h3><h4 id="12-1-RestFul接口设计"><a href="#12-1-RestFul接口设计" class="headerlink" title="12.1 RestFul接口设计"></a>12.1 RestFul接口设计</h4><h5 id="12-1-1-API-设计六要素"><a href="#12-1-1-API-设计六要素" class="headerlink" title="12.1.1 API 设计六要素"></a>12.1.1 API 设计六要素</h5><ol>
+<li><p>资源路径( URL )</p>
+</li>
+<li><p>http动词( Method )</p>
+<p>对于一个资源, 一般存在以下4个操作</p>
+<ul>
+<li><p>GET: </p>
+<p>从服务器中获取资源, 一项或者多项</p>
+</li>
+<li><p>POST:</p>
+<p>从服务器中新建一个资源</p>
+</li>
+<li><p>PUT:</p>
+<p>从服务器更新资源, 服务器返回完整的属性 (一般指的是实体) </p>
+</li>
+<li><p>DELETE:</p>
+<p>从服务器删除资源, 服务器返回操作状态码</p>
+</li>
+</ul>
+</li>
+<li><p>过滤信息 ( query-string )</p>
+</li>
+<li><p>状态码 ( Status-code )</p>
+<p>常见的状态码一般存在以下几种</p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>含义</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>201</td>
+<td>create</td>
+<td>创建成功</td>
+</tr>
+<tr>
+<td>204</td>
+<td>delete</td>
+<td>删除成功</td>
+</tr>
+<tr>
+<td>400</td>
+<td>bad request</td>
+<td>语法错误</td>
+</tr>
+<tr>
+<td>403</td>
+<td>forbidden</td>
+<td>请求没有权限</td>
+</tr>
+<tr>
+<td>500</td>
+<td>internal serve error</td>
+<td>服务器处理错误</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>错误信息 ( error )</p>
+<p>如果状态码是4XX或者5XX, 需要告诉客户端对应的错误信息, 通常以json格式返回:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"error"</span>:<span class="string">"这是一个错误信息"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="6">
+<li><p><strong>返回结果 ( Result )</strong></p>
+<p>针对不同的操作, 服务器需要返回的结果应该符合这样的规范</p>
+<p>GET / collections –&gt; 返回资源列表组</p>
+<p>GET / collection/:id –&gt; 返回资源列表 ( 列表 )</p>
+<p>POST / collections –&gt; 返回新生成的资源</p>
+<p>POST / collection / :id –&gt; 返回资源的完整属性</p>
+<p>DELETE / collections / :id –&gt; 返回204状态码 + 空文档</p>
+<p>在实际开发中, 通常会将 状态码, 错误信息,返回数据, 都放在返回结果中</p>
+<p>比如:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"code"</span>:<span class="number">200</span>,</span><br><span class="line">    <span class="attr">"msg"</span>:<span class="string">"success"</span>,</span><br><span class="line">    <span class="attr">"data"</span>:&#123;</span><br><span class="line">        <span class="attr">"id"</span>:<span class="number">1</span>,</span><br><span class="line">        <span class="attr">"user_name"</span>:<span class="string">"wang"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<h5 id="12-1-2-接口设计风格"><a href="#12-1-2-接口设计风格" class="headerlink" title="12.1.2 接口设计风格"></a>12.1.2 接口设计风格</h5><p>​    RestFul是一种软件设计风格, 主要用于有客户端与服务端交互的设计</p>
+<p>​    RestFul 是目前最流行的API设计规范, 用于Web数据接口的设计</p>
+<p>​    以新闻资源的接口设计为例: URI ( URL + URN )以及HTTP动词设计:</p>
+<table>
+<thead>
+<tr>
+<th>HTTP 动词</th>
+<th>URL 路径</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GET</td>
+<td>http://域名/news</td>
+<td>获取列表数据</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>http://域名/news/:id</td>
+<td>获取根据ID的单一数据</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>http://域名/news</td>
+<td>添加一条数据</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>http://域名/news/:id</td>
+<td>根据ID修改一条数据</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>http://域名/news/:id</td>
+<td>根据id删除一条信息</td>
+</tr>
+</tbody></table>
+<h4 id="12-2-RestFul-amp-TP5实战"><a href="#12-2-RestFul-amp-TP5实战" class="headerlink" title="12.2 RestFul &amp; TP5实战"></a>12.2 RestFul &amp; TP5实战</h4><h5 id="12-2-1-TP框架的资源路由"><a href="#12-2-1-TP框架的资源路由" class="headerlink" title="12.2.1 TP框架的资源路由"></a>12.2.1 TP框架的资源路由</h5><ol>
+<li><p>创建API模块</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php think build -<span class="literal">-module</span> api</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p>创建new控制器</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php think make:controller api/News</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="3">
+<li><p>设置路由 ( application/route.php )</p>
+<p>设置资源路由,  默认使用的是RestFul API的风格</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\think\Route::resource(<span class="string">"news"</span>, <span class="string">"api/news"</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+</li>
+</ol>
+<h3 id="十三-PHP-amp-MVC"><a href="#十三-PHP-amp-MVC" class="headerlink" title="十三.  PHP&amp;MVC"></a>十三.  PHP&amp;MVC</h3><h3 id="十二-Laravel框架"><a href="#十二-Laravel框架" class="headerlink" title="十二.  Laravel框架"></a>十二.  Laravel框架</h3>
       
 
       
@@ -347,7 +725,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/14/GIt%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/31/PHP%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -361,18 +739,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/25/axios%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E4%B8%8A%E4%BC%A0%E8%BF%9B%E5%BA%A6%E7%9B%91%E5%90%AC/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          axios文件下载上传进度监听
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/05/08/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">查看浏览器宽度</div>
+    <a href="/2020/07/31/%E8%BF%99%E6%98%AF%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">这是我的第二篇博客</div>
       <i class="icon-circle-right"></i>
     </a>
   
