@@ -6,14 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/7 | 王二麻子</title>
+  <title>学习react | 王二麻子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基于hexo搭建起来的博客网站">
-<meta property="og:type" content="website">
-<meta property="og:title" content="王二麻子">
-<meta property="og:url" content="http://yoursite.com/archives/2020/07/index.html">
+  <meta name="description" content="react库​        用于构建用户界面的JavaScript库 ​        注意!!!  React是一个库不是一个框架 react库的特点:  声明式: 组件化: 一次学习,随处编写:版本的变动较小  react的生态现在是阿里做的 一、创建项目 通过script标签引入，在学习时一般直接引用cdn引入  通过react的脚手架,创建项目进行开发,部署 1234567&#x2F;&#x2F; 1.安装">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习react">
+<meta property="og:url" content="http://yoursite.com/2020/10/06/%E5%AD%A6%E4%B9%A0react/index.html">
 <meta property="og:site_name" content="王二麻子">
-<meta property="og:description" content="基于hexo搭建起来的博客网站">
+<meta property="og:description" content="react库​        用于构建用户界面的JavaScript库 ​        注意!!!  React是一个库不是一个框架 react库的特点:  声明式: 组件化: 一次学习,随处编写:版本的变动较小  react的生态现在是阿里做的 一、创建项目 通过script标签引入，在学习时一般直接引用cdn引入  通过react的脚手架,创建项目进行开发,部署 1234567&#x2F;&#x2F; 1.安装">
+<meta property="article:published_time" content="2020-10-05T16:20:16.355Z">
+<meta property="article:modified_time" content="2020-02-26T14:03:12.405Z">
 <meta property="article:author" content="王二麻子">
 <meta name="twitter:card" content="summary">
   
@@ -155,238 +157,466 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-学习react" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      学习react
+    </h1>
+  
+
+        
+        <a href="/2020/10/06/%E5%AD%A6%E4%B9%A0react/" class="archive-article-date">
+  	<time datetime="2020-10-05T16:20:16.355Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-06</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="react库"><a href="#react库" class="headerlink" title="react库"></a>react库</h2><p>​        用于构建用户界面的JavaScript库</p>
+<p>​        注意!!!  React是一个库不是一个框架</p>
+<p>react库的特点:</p>
+<ul>
+<li>声明式:</li>
+<li>组件化:</li>
+<li>一次学习,随处编写:版本的变动较小</li>
+</ul>
+<p>react的生态现在是阿里做的</p>
+<h3 id="一、创建项目"><a href="#一、创建项目" class="headerlink" title="一、创建项目"></a>一、创建项目</h3><ol>
+<li><p>通过script标签引入，在学习时一般直接引用cdn引入</p>
+</li>
+<li><p>通过react的脚手架,创建项目进行开发,部署</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.安装脚手架</span></span><br><span class="line">cnpm installl -g create-react-app</span><br><span class="line"><span class="comment">// 2.创建项目</span></span><br><span class="line">create-react-app <span class="number">01</span>helloworld</span><br><span class="line"><span class="comment">// 开发时运行的环境</span></span><br><span class="line">cd  <span class="number">01</span>helloworld</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<h3 id="二、React的渲染"><a href="#二、React的渲染" class="headerlink" title="二、React的渲染"></a>二、React的渲染</h3><p>使用jsx的写法,可创建js元素</p>
+<p>注意:jsx的元素,必须要有一个根元素</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> root = <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>这是根元素<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>使用函数的方式创建元素</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> desc = <span class="string">"这是根组件"</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    reture (</span><br><span class="line">    	&lt;h1&gt;&#123;desc&#125;&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">export.default App</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="三、React组件传值"><a href="#三、React组件传值" class="headerlink" title="三、React组件传值"></a>三、React组件传值</h3><p>关于组件的创建</p>
+<ul>
+<li>组件的创建第一种方法：函数式组件</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span> （） </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> （</span><br><span class="line">    	&lt;h1&gt; 这是一个组件 &lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">    ）</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">export default App</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>组件的创建第二种方法：变量式创建</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> App(&#123;</span><br><span class="line">  desc:<span class="string">'类组件是继承React.Component的'</span></span><br><span class="line">&#125;).render();</span><br><span class="line">render(app,<span class="built_in">document</span>.querySelector(<span class="string">'#root'</span>))</span><br></pre></td></tr></table></figure>
+
+<p>定义类的方式</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; render &#125; <span class="keyword">from</span> <span class="string">"react-dom"</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="comment">// props是render函数传进来的参数的,是默认存在,不需要实际声明</span></span><br><span class="line">    <span class="keyword">return</span> (<span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">h1</span>&gt;</span>组件1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;this.props.desc&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">render(<span class="xml"><span class="tag">&lt;<span class="name">App</span> <span class="attr">desc</span>=<span class="string">'这是类组件'</span>/&gt;</span></span>,<span class="built_in">document</span>.querySelector(<span class="string">'#root'</span>));</span><br></pre></td></tr></table></figure>
+
+<p>注意！！！这是React16之后的写法，在这之前的js还没有扩展出类写法,因此在这之前一般采用以下的写法:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> App = React.createClass(&#123;</span><br><span class="line">  render()&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>xxxxxxx<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">render(<span class="xml"><span class="tag">&lt;<span class="name">App</span> <span class="attr">desc</span>=<span class="string">'这是类组件'</span>/&gt;</span></span>,<span class="built_in">document</span>.querySelector(<span class="string">'#root'</span>));</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="四、JSX"><a href="#四、JSX" class="headerlink" title="四、JSX"></a>四、JSX</h3><p>JSX的优点:</p>
+<ol>
+<li>​    JSX执行更快,编译为JavaScript代码时进行优化</li>
+<li>​    类型更安全,编译过程中能即时发现错误</li>
+<li>​    JSX编写模板更加简单快速(相对而言)</li>
+</ol>
+<p><strong>注意!!!</strong> </p>
+<ol>
+<li>​    Jsx与Vue类似,必须要有一个根节点</li>
+<li>​    正常的普通HTML必须小写,大写会默认认为是组件</li>
+</ol>
+<p><strong>JSX内部的表达式:{}</strong></p>
+<ol>
+<li>可以使用大多数的JS表达式:如: 变量,函数,对象,条件运算符,三元运算符</li>
+<li>可以直接使用HTML,不需要进行任何处理</li>
+<li>在使用类名的时候尽量使用className,因为class是React的内置关键字</li>
+</ol>
+<p><strong>总结:</strong></p>
+<ol>
+<li>​    JSX由HTML的元素构成</li>
+<li>中间如果需要加入变量,需要用括号括起来</li>
+<li>可以使用表达式,表达式中可以使用JSX对象</li>
+<li>属性和对象内容都是用括号插入内容</li>
+</ol>
+<h3 id="五、JSX-Style样式"><a href="#五、JSX-Style样式" class="headerlink" title="五、JSX-Style样式"></a>五、JSX-Style样式</h3><p><strong>1.class中，不可以存在多个class属性</strong></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">'abc'</span> <span class="class"><span class="keyword">class</span></span>=&#123;<span class="string">'active'</span>&#125;&gt;&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>2.style样式中,如果存在多个单词时,第二个单词开始必须首字母大写,或者用-引起来,否则会报错</strong></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> exampleStyle = &#123;</span><br><span class="line">  background:<span class="string">'skyblue'</span>,</span><br><span class="line">  borderBottom:<span class="string">'5px solid #ccc'</span></span><br><span class="line">  background-image:</span><br><span class="line">    <span class="string">"url('https://www.baidu.com/img/pc_1c6e30772d5e4103103bd460913332f9.png')"</span>  </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3. 多个类共存的操作</strong></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> ele4 = (</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;span&gt;横着<span class="number">1</span>&lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">    &lt;span&gt;竖着2&lt;/</span>span&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">);</span></span><br><span class="line"><span class="regexp">let DOMElement = (</span></span><br><span class="line"><span class="regexp">  /</span><span class="regexp">/ 样式的类名要写className,因为class在React中是关键字</span></span><br><span class="line"><span class="regexp">  /</span><span class="regexp">/ 后面可以使用变量,也可以使用字符串</span></span><br><span class="line"><span class="regexp">  &lt;div className=&#123;color&#125;&gt;</span></span><br><span class="line"><span class="regexp">    &lt;h1&gt;hello world&lt;/</span>h1&gt;</span><br><span class="line">    &lt;h2 className=&#123;classList.join(<span class="string">' '</span>)&#125;&gt;&#123;<span class="number">1</span>+<span class="number">1</span>&#125;&lt;<span class="regexp">/h2&gt;</span></span><br><span class="line"><span class="regexp">    &lt;h3&gt;&#123;str+time&#125;&lt;/</span>h3&gt;</span><br><span class="line">    &lt;h3&gt;&#123;str+localTime()&#125;&lt;<span class="regexp">/h3&gt;</span></span><br><span class="line"><span class="regexp">    &lt;h3 style=&#123;exampleStyle&#125;&gt;&#123;temp&gt;37.2? &lt;button&gt;隔离&lt;/</span>button&gt;:<span class="string">'不隔离'</span>&#125;&lt;<span class="regexp">/h3&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>div&gt;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p><strong>4. 关于JSX的注释</strong></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="comment">/* 必须在表达式内书写注释,否则报错 */</span>&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="六、条件循环"><a href="#六、条件循环" class="headerlink" title="六、条件循环"></a>六、条件循环</h3><h4 id="1-条件判断"><a href="#1-条件判断" class="headerlink" title="1. 条件判断"></a>1. 条件判断</h4><h4 id="2-循环"><a href="#2-循环" class="headerlink" title="2. 循环"></a>2. 循环</h4><h5 id="1-简单的循环方式"><a href="#1-简单的循环方式" class="headerlink" title="1. 简单的循环方式"></a>1. 简单的循环方式</h5><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">'芜湖'</span>,<span class="string">'起飞'</span>,<span class="string">'南通'</span>,<span class="string">'哈哈哈哈'</span>];</span><br><span class="line"><span class="comment">// 循环渲染</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ParentCom</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props)&#123;</span><br><span class="line">    <span class="keyword">super</span>(props)</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">let</span> res = [];</span><br><span class="line">    arr.forEach(<span class="function">(<span class="params">item,index</span>)=&gt;</span>&#123;</span><br><span class="line">      <span class="keyword">let</span> temp = <span class="xml"><span class="tag">&lt;<span class="name">li</span> <span class="attr">key</span>=<span class="string">&#123;index&#125;</span>&gt;</span>&#123;item&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span>;</span><br><span class="line">      res.push(temp)</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">// 这里的循环方式也可以使用map的方法</span></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">          &#123;res&#125;</span><br><span class="line">        &lt;<span class="regexp">/ul&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-简化后的循环方式"><a href="#2-简化后的循环方式" class="headerlink" title="2. 简化后的循环方式"></a>2. 简化后的循环方式</h5><p>​            使用数据的map方法,对每一项数据按照jsx的形式进行加工,最终得到1个每一项都是jsx对象的数值,</p>
+<h3 id="七、组件"><a href="#七、组件" class="headerlink" title="七、组件"></a>七、组件</h3><p>注意<code>ReactDom.render()</code>一般只会放一个根组件,但是一个根组件可以加载无数的组件</p>
+<h4 id="1-函数式组件"><a href="#1-函数式组件" class="headerlink" title="1. 函数式组件"></a>1. 函数式组件</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;render&#125; <span class="keyword">from</span> <span class="string">"react-dom"</span>;</span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> logo <span class="keyword">from</span> <span class="string">'./logo.svg'</span>;</span><br><span class="line"><span class="comment">// props是父组件传进来的参数</span></span><br><span class="line"><span class="comment">// 比如&lt;App weather='下雨' /&gt;  即: props.weather = '下雨'</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 注意,在括号中可以任何有效的JavaScript表达式并用大括号引起来</span></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div className=<span class="string">"App"</span>&gt;</span><br><span class="line">      &lt;header className=<span class="string">"App-header"</span>&gt;</span><br><span class="line">        &lt;img src=&#123;logo&#125; className=<span class="string">"App-logo"</span> alt=<span class="string">"logo"</span> /&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">          Edit &lt;code&gt;src/App.js&lt;<span class="regexp">/code&gt; and save to reload.</span></span><br><span class="line"><span class="regexp">        &lt;/</span>p&gt;</span><br><span class="line">        &lt;h1&gt;&#123;desc&#125;&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">        &lt;h2&gt;&#123;props.desc&#125;&lt;/</span>h2&gt;</span><br><span class="line">        &lt;a</span><br><span class="line">          className=<span class="string">"App-link"</span></span><br><span class="line">          href=<span class="string">"https://reactjs.org"</span></span><br><span class="line">          target=<span class="string">"_blank"</span></span><br><span class="line">          rel=<span class="string">"noopener noreferrer"</span></span><br><span class="line">        &gt;</span><br><span class="line">          Learn React</span><br><span class="line">        &lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>header&gt;</span><br><span class="line"></span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  );</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-类组件"><a href="#2-类组件" class="headerlink" title="2. 类组件"></a>2. 类组件</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;render&#125; <span class="keyword">from</span> <span class="string">"react-dom"</span>;</span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="comment">// props是render函数传进来的参数的,是默认存在,不需要实际声明</span></span><br><span class="line">    <span class="keyword">return</span> (<span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">h1</span>&gt;</span>组件1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;this.props.desc&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 组件的是需要render函数返回模板</span></span><br><span class="line"><span class="comment">// 类组件不用刻意声明形参</span></span><br><span class="line"><span class="comment">// 比如&lt;App weather='下雨' /&gt;  即: this.props.weather = '下雨'</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-复合组件"><a href="#3-复合组件" class="headerlink" title="3. 复合组件"></a>3. 复合组件</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ChildCom</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">    render()&#123;</span><br><span class="line">        <span class="keyword">return</span>(</span><br><span class="line">        	&lt;h1&gt;hello &#123;<span class="keyword">this</span>.props.name&#125; !!!&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">        )</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">class ParentCom extends React.Component&#123;</span></span><br><span class="line"><span class="regexp">    render() &#123;</span></span><br><span class="line"><span class="regexp">    /</span><span class="regexp">/ props是render函数传进来的参数的,是默认存在,不需要实际声明</span></span><br><span class="line"><span class="regexp">    return (</span></span><br><span class="line"><span class="regexp">        &lt;div&gt;</span></span><br><span class="line"><span class="regexp">      		&lt;h1&gt;组件1&lt;/</span>h1&gt;</span><br><span class="line">            &lt;h2&gt; 今天的天气是: &#123;<span class="keyword">this</span>.props.weather&#125; &lt;<span class="regexp">/h2&gt;      </span></span><br><span class="line"><span class="regexp">      		&lt;h3&gt;&#123;this.props.desc&#125;&lt;/</span>h3&gt;</span><br><span class="line">      		&lt;ChildCom name=&#123;<span class="keyword">this</span>.props.name&#125;/&gt;</span><br><span class="line">    	&lt;<span class="regexp">/div&gt;)</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 复合组件传参的方式</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ &lt;App name='wang' desc='这是一个类组件' weather='rain'/</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-函数式与类组件的区别"><a href="#4-函数式与类组件的区别" class="headerlink" title="4. 函数式与类组件的区别"></a>4. 函数式与类组件的区别</h4><ol>
+<li>类组件可以自定义事件,函数式组件不方便设置事件</li>
+<li>内容定死,只传一些简单的参数,就是使用函数式组件,即为静态组件</li>
+<li>函数式组件操作简单,但可支持功能较少</li>
+<li>类组件用于交互和数据修改</li>
+</ol>
+<blockquote>
+<p>注意!!!无论是类组件还是函数式组件的调用都是<ChildCom/> 这种的方式</p>
+</blockquote>
+<h3 id="八、props"><a href="#八、props" class="headerlink" title="八、props"></a>八、props</h3><h4 id="1-父传递子组件"><a href="#1-父传递子组件" class="headerlink" title="1. 父传递子组件"></a>1. 父传递子组件</h4><p>要对子组件进行控制，如：是否显示，则只需要在父组件处传入一个布尔值即可：</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父组件</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ParentCom</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props)&#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line">    <span class="keyword">this</span>.state = &#123;</span><br><span class="line">      isActive:<span class="literal">true</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">this</span>.changeShow = <span class="keyword">this</span>.changeShow.bind(<span class="keyword">this</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  changeShow()&#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      isActive:!<span class="keyword">this</span>.state.isActive</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;button onClick=&#123;<span class="keyword">this</span>.changeShow&#125;&gt;这个是控制子元素显示&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">        &lt;h1&gt;这是父元素控制子元素的操作&lt;/</span>h1&gt;</span><br><span class="line">        &lt;ChildCom isActive=&#123;<span class="keyword">this</span>.state.isActive&#125;/&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ 子组件</span></span><br><span class="line"><span class="regexp">class ChildCom extends React.Component&#123;</span></span><br><span class="line"><span class="regexp">  constructor(props)&#123;</span></span><br><span class="line"><span class="regexp">    super(props)</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">  render() &#123;</span></span><br><span class="line"><span class="regexp">    let ele = null;</span></span><br><span class="line"><span class="regexp">    if (this.props.isActive) &#123;</span></span><br><span class="line"><span class="regexp">      return (</span></span><br><span class="line"><span class="regexp">        &lt;div&gt;</span></span><br><span class="line"><span class="regexp">          &lt;h1&gt;这是子组件&lt;/</span>h1&gt;</span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">      )</span></span><br><span class="line"><span class="regexp">    /</span><span class="regexp">/ 需要注意这里无论如何都需要返回一个模板对象</span></span><br><span class="line"><span class="regexp">    &#125;else &#123;</span></span><br><span class="line"><span class="regexp">      return (</span></span><br><span class="line"><span class="regexp">        null</span></span><br><span class="line"><span class="regexp">      )</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-子组件向父组件数据传递"><a href="#2-子组件向父组件数据传递" class="headerlink" title="2. 子组件向父组件数据传递"></a>2. 子组件向父组件数据传递</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 实现子传父</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ParentCom</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line">    <span class="keyword">this</span>.state = &#123;</span><br><span class="line">      childData:<span class="string">''</span>,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  setChildData=<span class="function">(<span class="params">data</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      childData:data</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;这个是子元素传递给父元素的数据:&#123;<span class="keyword">this</span>.state.childData&#125;&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">        &#123;/</span>* 往子组件处传递一个函数,用以控制父组件的内容 *<span class="regexp">/&#125;</span></span><br><span class="line"><span class="regexp">        &lt;ChildCom setChildData=&#123;this.setChildData&#125;/</span>&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">class ChildCom extends React.Component&#123;</span></span><br><span class="line"><span class="regexp">  constructor(props)&#123;</span></span><br><span class="line"><span class="regexp">    super(props);</span></span><br><span class="line"><span class="regexp">    this.state = &#123;</span></span><br><span class="line"><span class="regexp">      msg:'hello world'</span></span><br><span class="line"><span class="regexp">    &#125;;</span></span><br><span class="line"><span class="regexp">    /</span><span class="regexp">/ 这里的绑定也可以进行绑定</span></span><br><span class="line"><span class="regexp">    this.sendData = this.sendData.bind(this)</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">  sendData()&#123;</span></span><br><span class="line"><span class="regexp">    console.log(this.state.msg);</span></span><br><span class="line"><span class="regexp">    this.props.setChildData(this.state.msg)</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">  render() &#123;</span></span><br><span class="line"><span class="regexp">    return (</span></span><br><span class="line"><span class="regexp">      &lt;div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;button onClick=&#123;this.sendData&#125;&gt;传递hello world给父元素&lt;/</span>button&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="九、React事件"><a href="#九、React事件" class="headerlink" title="九、React事件"></a>九、React事件</h3><p>特点：</p>
+<ol>
+<li>react事件，绑定事件的命名，驼峰命名</li>
+<li>传入1个函数，而不是字符串,如果的</li>
+</ol>
+<p>事件对象：</p>
+<p>​        React返回的事件对象是代理处理后的事件对象，如果想要查看事件对象的具体值，必须之间输出事件对象的属性</p>
+<p>​        原生的JS,可以直接使用return false,来阻止浏览器的默认行为</p>
+<p>​        但是因为React代理处理了原生JS使得return false 变为无效,要阻止浏览器的默认行为就使用 e.preventDefault</p>
+<p><strong>React事件传参</strong></p>
+<ol>
+<li><p>使用函数的方式</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onClick=&#123;(e)=&gt;&#123;<span class="keyword">this</span>.parentEvent1(<span class="string">'msg:hello world'</span>,e)&#125;&#125;&gt;点击&lt;<span class="regexp">/button&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>不使用箭头函数方式</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onClick=&#123;<span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">          <span class="keyword">this</span>.parentEvent1(<span class="string">'msg:hello world'</span>,event)</span><br><span class="line">        &#125;.bind(<span class="keyword">this</span>)&#125;&gt; 点击 &lt;<span class="regexp">/button&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<h3 id="十、组件条件循环渲染"><a href="#十、组件条件循环渲染" class="headerlink" title="十、组件条件循环渲染"></a>十、组件条件循环渲染</h3><h4 id="1-三元运算符"><a href="#1-三元运算符" class="headerlink" title="1. 三元运算符"></a>1. 三元运算符</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 组件1</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">UserGreet</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;h1&gt;你好,尊敬的用户&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 组件2</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">UserLogin</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;h1&gt;你好请登录&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 条件渲染的主组件</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ParentCom</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props)&#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line">    <span class="keyword">this</span>.state = &#123;</span><br><span class="line">      isLogin:<span class="literal">false</span>,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  changeEvent = <span class="function">(<span class="params">e</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e);</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;<span class="attr">isLogin</span>:!<span class="keyword">this</span>.state.isLogin&#125;)</span><br><span class="line">  &#125;;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">let</span> ele = <span class="literal">null</span>;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    条件渲染组件的方式</span></span><br><span class="line"><span class="comment">    if (this.state.isLogin)&#123;</span></span><br><span class="line"><span class="comment">      ele = &lt;UserLogin /&gt;</span></span><br><span class="line"><span class="comment">    &#125;else &#123;</span></span><br><span class="line"><span class="comment">      ele = &lt;UserGreet /&gt;</span></span><br><span class="line"><span class="comment">    &#125;*/</span></span><br><span class="line">    <span class="comment">// 这里可以使用三元运算符</span></span><br><span class="line">    ele = <span class="keyword">this</span>.state.isLogin?<span class="xml"><span class="tag">&lt;<span class="name">UserGreet</span>/&gt;</span></span>:<span class="xml"><span class="tag">&lt;<span class="name">UserLogin</span>/&gt;</span></span>;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;这是头部&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">        &#123;ele&#125;</span></span><br><span class="line"><span class="regexp">        &lt;h1&gt;这是尾部&lt;/</span>h1&gt;</span><br><span class="line">        &lt;button onClick=&#123;<span class="keyword">this</span>.changeEvent&#125;&gt;点击登录&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-列表循环渲染"><a href="#2-列表循环渲染" class="headerlink" title="2. 列表循环渲染"></a>2. 列表循环渲染</h4><h3 id="十一、React制作疫情地图"><a href="#十一、React制作疫情地图" class="headerlink" title="十一、React制作疫情地图"></a>十一、React制作疫情地图</h3><h4 id="1-疫情数据的API接口"><a href="#1-疫情数据的API接口" class="headerlink" title="1.疫情数据的API接口"></a>1.疫情数据的API接口</h4><p>注意!!! (不允许跨域请求)</p>
+<blockquote>
+<p><a href="https://c.m.163.com/ug/api/wuhan/app/index/feiyan-data-list?t=1580892891419" target="_blank" rel="noopener">https://c.m.163.com/ug/api/wuhan/app/index/feiyan-data-list?t=1580892891419</a></p>
+</blockquote>
+<h4 id="2-写入一个Json数据文件"><a href="#2-写入一个Json数据文件" class="headerlink" title="2.写入一个Json数据文件"></a>2.写入一个Json数据文件</h4><h4 id="3-导入Json数据"><a href="#3-导入Json数据" class="headerlink" title="3.导入Json数据"></a>3.导入Json数据</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> jsonData <span class="keyword">from</span> <span class="string">"./feiyan"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(jsonData);</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-设置-设计-数据模型"><a href="#4-设置-设计-数据模型" class="headerlink" title="4.设置(设计)数据模型"></a>4.设置(设计)数据模型</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> provinceObj = &#123;</span><br><span class="line">  <span class="comment">// "广东省":&#123;</span></span><br><span class="line">  <span class="comment">//   confirm:'',</span></span><br><span class="line">  <span class="comment">//   suspect:'',</span></span><br><span class="line">  <span class="comment">//   heal:'',</span></span><br><span class="line">  <span class="comment">//   deal:''</span></span><br><span class="line">  <span class="comment">// &#125;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-进行数据累加"><a href="#5-进行数据累加" class="headerlink" title="5.进行数据累加"></a>5.进行数据累加</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">jsonData.data.list.forEach(<span class="function">(<span class="params">item,index</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="comment">// 数据的初始化处理</span></span><br><span class="line">  <span class="keyword">if</span> (provinceObj[item.province]===<span class="literal">undefined</span>)&#123;</span><br><span class="line">    provinceObj[item.province] = &#123;</span><br><span class="line">      confirm:<span class="number">0</span>,</span><br><span class="line">      suspect:<span class="number">0</span>,</span><br><span class="line">      heal:<span class="number">0</span>,</span><br><span class="line">      dead:<span class="number">0</span>,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 数据异常处理</span></span><br><span class="line">  item.confirm = item.confirm?item.confirm:<span class="number">0</span>;</span><br><span class="line">  item.suspect = item.suspect?item.suspect:<span class="number">0</span>;</span><br><span class="line">  item.heal = item.heal?item.heal:<span class="number">0</span>;</span><br><span class="line">  item.dead = item.dead?item.dead:<span class="number">0</span>;</span><br><span class="line">  <span class="comment">// 对数据进行累加处理,以获取每个省份的数值</span></span><br><span class="line">  provinceObj[item.province] = &#123;</span><br><span class="line">    confirm:provinceObj[item.province].confirm+item.confirm,</span><br><span class="line">    suspect:provinceObj[item.province].suspect+item.suspect,</span><br><span class="line">    heal:provinceObj[item.province].heal+item.heal,</span><br><span class="line">    dead:provinceObj[item.province].dead+item.dead,</span><br><span class="line">  &#125;  </span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">let</span> provinceList = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">in</span> provinceObj) &#123;</span><br><span class="line">  provinceObj[item].province = item;</span><br><span class="line">  provinceList.push(provinceObj[item])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-对数据进行排序"><a href="#6-对数据进行排序" class="headerlink" title="6.对数据进行排序"></a>6.对数据进行排序</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 对数组进行降序排序</span></span><br><span class="line"><span class="keyword">let</span> provinceListSort = provinceList.sort(<span class="function">(<span class="params">a,b</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (a.confirm &gt; b.confirm) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">  &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-将数据渲染至页面上"><a href="#7-将数据渲染至页面上" class="headerlink" title="7.将数据渲染至页面上"></a>7.将数据渲染至页面上</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ParentCom</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line">    <span class="keyword">this</span>.state = &#123;&#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;中国病例&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">        &lt;ul&gt;</span></span><br><span class="line"><span class="regexp">          &lt;li&gt;</span></span><br><span class="line"><span class="regexp">            &lt;span&gt;地区&lt;/</span>span&gt;</span><br><span class="line">            &lt;span&gt;确诊&lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">            &lt;span&gt;死亡&lt;/</span>span&gt;</span><br><span class="line">            &lt;span&gt;疑似&lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">          &lt;/</span>li&gt;</span><br><span class="line">          &#123;</span><br><span class="line">            <span class="keyword">this</span>.props.list.map(<span class="function">(<span class="params">item,index</span>)=&gt;</span>&#123;</span><br><span class="line">              <span class="keyword">return</span> (</span><br><span class="line">                &lt;li key=&#123;index&#125;&gt;</span><br><span class="line">                  &lt;span&gt;&#123;item.province&#125;&lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">                  &lt;span&gt;&#123;item.confirm&#125;&lt;/</span>span&gt;</span><br><span class="line">                  &lt;span&gt;&#123;item.dead&#125;&lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">                  &lt;span&gt;&#123;item.suspect&#125;&lt;/</span>span&gt;</span><br><span class="line">                &lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">              )</span></span><br><span class="line"><span class="regexp">            &#125;)</span></span><br><span class="line"><span class="regexp">          &#125;</span></span><br><span class="line"><span class="regexp">        &lt;/u</span>l&gt;</span><br><span class="line">      &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">    );</span></span><br><span class="line"><span class="regexp"> &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">ReactDOM.render(&lt;ParentCom name='wang' list=&#123;provinceListSort&#125;/</span>&gt;,<span class="built_in">document</span>.querySelector(<span class="string">'#root'</span>));</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="十二、React的生命周期"><a href="#十二、React的生命周期" class="headerlink" title="十二、React的生命周期"></a>十二、React的生命周期</h3><p><strong>生命周期的3个状态：</strong></p>
+<ol>
+<li>mount：挂载</li>
+<li>update：数据更新</li>
+<li>unMount：卸载</li>
+</ol>
+<h3 id="十三、-表单"><a href="#十三、-表单" class="headerlink" title="十三、 表单"></a>十三、 表单</h3><ol>
+<li>必须绑定value值</li>
+<li>必须绑定onChange事件</li>
+</ol>
+<h3 id="十四、Ajax与React"><a href="#十四、Ajax与React" class="headerlink" title="十四、Ajax与React"></a>十四、Ajax与React</h3><p><strong>本次小案例运用到的是技术有:</strong></p>
+<ul>
+<li>axios网路请求</li>
+<li>express后端框架</li>
+<li>React前端框架</li>
+<li>AJax异步请求</li>
+</ul>
+<p>1.API接口</p>
+<blockquote>
+<p><a href="https://i.snssdk.com/ugc/hotboard_fe/hot_list/template/hot_list/forum_tab.html?activeWidget=1" target="_blank" rel="noopener">https://i.snssdk.com/ugc/hotboard_fe/hot_list/template/hot_list/forum_tab.html?activeWidget=1</a></p>
+</blockquote>
+<p>获取到首页的信息后查看Ajax的数据请求</p>
+<p>可以获取到首页的数据请求</p>
+<p>以及</p>
+<p>2.建议服务器</p>
+<ul>
+<li>express –view=ejs react-serve</li>
+<li>cd react-serve</li>
+<li>npm install</li>
+</ul>
+<p>3.axios的安装</p>
+<ul>
+<li>npm install axios</li>
+</ul>
+<h3 id="十五、React实现todoList"><a href="#十五、React实现todoList" class="headerlink" title="十五、React实现todoList"></a>十五、React实现todoList</h3><p><strong>复习一下React的事件机制</strong></p>
+<blockquote>
+<p>涉及到的技术有:Ref以及键盘事件</p>
+</blockquote>
+<h3 id="十六、关于prop-types"><a href="#十六、关于prop-types" class="headerlink" title="十六、关于prop-types"></a>十六、关于prop-types</h3><h4 id="1-prop-types介绍"><a href="#1-prop-types介绍" class="headerlink" title="1.prop-types介绍"></a>1.prop-types介绍</h4><p>​        <em>prop-types是用于限制父组件传给子组件的数据类型,以及是否为必须的数据</em></p>
+<p>​    prop-types的报错只是表明与声明的规范不一致导致的报错,并不一定会影响最终的DOM渲染</p>
+<h4 id="2-prop-types的安装"><a href="#2-prop-types的安装" class="headerlink" title="2. prop-types的安装"></a>2. prop-types的安装</h4><p>​    自从React V15之后,prop-type就作为单独的插件,需要另外的安装,而且也不是必须使用的插件</p>
+<p><strong>安装</strong>:</p>
+<blockquote>
+<p>npm i prop-types –save</p>
+</blockquote>
+<h4 id="3-prop-types的使用"><a href="#3-prop-types的使用" class="headerlink" title="3.prop-types的使用"></a>3.prop-types的使用</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 导入prop-types</span></span><br><span class="line"><span class="comment">// ES6的写法</span></span><br><span class="line"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">'prop-types'</span>;</span><br><span class="line"><span class="comment">// ES5的写法</span></span><br><span class="line"><span class="keyword">var</span> PropTypes = <span class="built_in">require</span>(<span class="string">'prop-types'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 创建一个组件</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  construction(props)&#123;</span><br><span class="line">      <span class="keyword">super</span>(props)</span><br><span class="line">  &#125;  </span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="comment">// ... 写入需要生成的DOM元素</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. 使用prop-types</span></span><br><span class="line">MyComponent.propTypes = &#123;</span><br><span class="line">    <span class="comment">// 定义类型为字符串</span></span><br><span class="line">    desc:PropTypes.string,</span><br><span class="line">    <span class="comment">// 定义类型为数字类型</span></span><br><span class="line">    x:PropTypes.number,</span><br><span class="line">    <span class="comment">// 定义类型为数字类型,且为必须的数字类型</span></span><br><span class="line">    y:PropTypes.number.isRequrie</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 4. 使用prop-types的默认属性值</span></span><br><span class="line">MyComponent.defaultProps = &#123;</span><br><span class="line">	y:<span class="number">2</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>当然还有另外一种写法:</strong></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line">    <span class="keyword">this</span>.state = &#123;</span><br><span class="line">      title:<span class="keyword">this</span>.props.title</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.props);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">static</span> propTypes = &#123;</span><br><span class="line">    desc:PropTypes.string,</span><br><span class="line">    x:PropTypes.number,</span><br><span class="line">    y:PropTypes.number.isRequired</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">static</span> defaultProps = &#123;</span><br><span class="line">    y:<span class="number">2</span></span><br><span class="line">  &#125;;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h1&gt;这是&#123;<span class="keyword">this</span>.state.title&#125;&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">        &#123;this.props.children&#125;</span></span><br><span class="line"><span class="regexp">        &#123;this.props.x+this.props.y&#125;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="十七、React插槽"><a href="#十七、React插槽" class="headerlink" title="十七、React插槽"></a>十七、React插槽</h3><p>​        组件中写入自定义内容，这些内容可以被识别和控制，</p>
+<h4 id="1-原理"><a href="#1-原理" class="headerlink" title="1.原理"></a>1.原理</h4><p>插槽的内容会默认传入props.children处,直接调用可以使用<code>this.props.children</code></p>
+<p>组件中的HTML内容直接全部插入,调用<code>{this.props.children}</code></p>
+<p>根据HTML内容的不同插入的内容也不同的,(即对组件插槽进行处理)</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父组件</span></span><br><span class="line">&lt;ChildCom&gt;</span><br><span class="line">          &lt;h1 data-position=<span class="string">"header"</span>&gt;这是放置头部的内容&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">          &lt;h1 data-position="main"&gt;这是放置主要内容的内容&lt;/</span>h1&gt;</span><br><span class="line">          &lt;h1 data-position=<span class="string">"footer"</span>&gt;这是放置尾部的内容&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>ChildCom&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义子组件</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ChildCom</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">let</span> headerCom,mainCom,footerCom;</span><br><span class="line">    <span class="keyword">this</span>.props.children.forEach(<span class="function">(<span class="params">item, index</span>)=&gt;</span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (item.props[<span class="string">"data-position"</span>] === <span class="string">"header"</span>)&#123;</span><br><span class="line">        headerCom = item</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (item.props[<span class="string">"data-position"</span>] === <span class="string">"main"</span>) &#123;</span><br><span class="line">        mainCom = item</span><br><span class="line">      &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        footerCom = item</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;div className=<span class="string">"header"</span>&gt;</span><br><span class="line">          &#123;headerCom&#125;</span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;div className="main"&gt;</span></span><br><span class="line"><span class="regexp">          &#123;mainCom&#125;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>div&gt;</span><br><span class="line">        &lt;div className=<span class="string">"footer"</span>&gt;</span><br><span class="line">          &#123;footerCom&#125;</span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="十八、-React-路由"><a href="#十八、-React-路由" class="headerlink" title="十八、 React 路由"></a>十八、 React 路由</h3><h4 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h4><blockquote>
+<p>cnpm i react-router-dom –save</p>
+</blockquote>
+<h4 id="2-路由的三大组件"><a href="#2-路由的三大组件" class="headerlink" title="2.路由的三大组件"></a>2.路由的三大组件</h4><ol>
+<li><strong>Router</strong>:所有的路由的根组件</li>
+<li><strong>Link</strong>:用于页面的跳转相当于HTML的A标签</li>
+<li><strong>Route</strong>:路由根组件下面匹配的组件</li>
+</ol>
+<h4 id="3-写一个简单的路由"><a href="#3-写一个简单的路由" class="headerlink" title="3.写一个简单的路由"></a>3.写一个简单的路由</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;Router basename=<span class="string">"/admin"</span>&gt;</span><br><span class="line">    &lt;div className=<span class="string">"nav"</span>&gt;</span><br><span class="line">        &lt;Link to=<span class="string">"/"</span>&gt;Home&lt;<span class="regexp">/Link&gt;</span></span><br><span class="line"><span class="regexp">        &lt;Link to="/</span>product<span class="string">"&gt;Product&lt;/Link&gt;</span></span><br><span class="line"><span class="string">        &lt;Link to="</span>/me<span class="string">"&gt;Me&lt;/Link&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">    &#123;/* 如果需要精确匹配就需要加入exact属性 */&#125;</span></span><br><span class="line"><span class="string">    &lt;Route path="</span>/<span class="string">" exact component=&#123;Home&#125; /&gt;</span></span><br><span class="line"><span class="string">    &lt;Route path="</span>/product<span class="string">" component=&#123;Product&#125;/&gt;</span></span><br><span class="line"><span class="string">    &lt;Route path="</span>/me<span class="string">" component=&#123;Me&#125;/&gt;</span></span><br><span class="line"><span class="string"> &lt;/Router&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="4-路由传参"><a href="#4-路由传参" class="headerlink" title="4.路由传参"></a>4.路由传参</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">    &lt;h1&gt;外面显示的所有内容:&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">    &lt;Router basename="/</span>admin<span class="string">"&gt;</span></span><br><span class="line"><span class="string">        &lt;div className="</span>nav<span class="string">"&gt;</span></span><br><span class="line"><span class="string">            &lt;Link to="</span>/<span class="string">"&gt;Home&lt;/Link&gt;</span></span><br><span class="line"><span class="string">            &lt;Link to="</span>/product<span class="string">"&gt;Product&lt;/Link&gt;</span></span><br><span class="line"><span class="string">            &lt;Link to=&#123;&#123;pathname:'/me',search:'?username=admin',hash:'#abc',state:&#123;msg:'isLogin'&#125;&#125;&#125;&gt;Me&lt;/Link&gt;</span></span><br><span class="line"><span class="string">        &lt;/div&gt;</span></span><br><span class="line"><span class="string">        &#123;/* 如果需要精确匹配就需要加入exact属性 */&#125;</span></span><br><span class="line"><span class="string">        &lt;Route path="</span>/<span class="string">" exact component=&#123;Home&#125; /&gt;</span></span><br><span class="line"><span class="string">        &lt;Route path="</span>/product<span class="string">" component=&#123;Product&#125;/&gt;</span></span><br><span class="line"><span class="string">        &lt;Route path="</span>/me<span class="string">" component=&#123;Me&#125;/&gt;</span></span><br><span class="line"><span class="string">    &lt;/Router&gt;</span></span><br><span class="line"><span class="string">&lt;/div&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="5-路径切换"><a href="#5-路径切换" class="headerlink" title="5.路径切换"></a>5.路径切换</h4><p>路由的切换,默认采用的push方法,可以前进后退</p>
+<p>replace:进入的该路由之后,就会将该路由设置为默认首页,此时不可以前进或者后退</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;Router basename=<span class="string">"/admin"</span>&gt;</span><br><span class="line">    &lt;div className=<span class="string">"nav"</span>&gt;</span><br><span class="line">        &lt;Link replace to=&#123;&#123;<span class="attr">pathname</span>:<span class="string">'/me'</span>,<span class="attr">search</span>:<span class="string">'?username=admin'</span>,<span class="attr">hash</span>:<span class="string">'#abc'</span>,<span class="attr">state</span>:&#123;<span class="attr">msg</span>:<span class="string">'isLogin'</span>&#125;&#125;&#125;&gt;Me&lt;<span class="regexp">/Link&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">    &lt;Route path=<span class="string">"/me"</span> component=&#123;Me&#125;/&gt;</span><br><span class="line">&lt;<span class="regexp">/Router&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="6-动态路由"><a href="#6-动态路由" class="headerlink" title="6.动态路由"></a>6.动态路由</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;Router basename=<span class="string">"/admin"</span>&gt;</span><br><span class="line">    &lt;div className=<span class="string">"nav"</span>&gt; </span><br><span class="line">        &lt;Link to=<span class="string">"/news/123"</span>&gt;News&lt;<span class="regexp">/Link&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">    &lt;Route path=<span class="string">"/news/:id"</span> component=&#123;News&#125;/&gt;</span><br><span class="line">    &#123;<span class="comment">/* this.props.match.params.id 获取动态路由的信息 */</span>&#125;</span><br><span class="line">&lt;<span class="regexp">/Router&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="7-路由重定向"><a href="#7-路由重定向" class="headerlink" title="7.路由重定向"></a>7.路由重定向</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 当访问到LoginInfo组件的是否,该组件会跟条件重定向至不同的内容</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">LoginInfo</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// props.loginState = "success";</span></span><br><span class="line">  <span class="comment">// props.loginState = "fail";</span></span><br><span class="line">  <span class="built_in">console</span>.log(props);</span><br><span class="line">  <span class="keyword">if</span> (props.location.state.loginState === <span class="string">"success"</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;Redirect to=<span class="string">"/admin"</span> /&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span>  (</span><br><span class="line">      &lt;Redirect to=<span class="string">"/login"</span> /&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-路由函数式导航"><a href="#8-路由函数式导航" class="headerlink" title="8.路由函数式导航"></a>8.路由函数式导航</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ChildCom</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  toIndex = <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.props);</span><br><span class="line">    <span class="keyword">this</span>.props.history.push(<span class="string">"/"</span>,&#123;<span class="attr">msg</span>:<span class="string">'从childCom发给首页的数据'</span>&#125;)</span><br><span class="line">      &#123;<span class="comment">/* 首页接收数据是以 this.props.location.state.msg */</span>&#125;  </span><br><span class="line">  &#125;;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;button onClick=&#123;<span class="keyword">this</span>.toIndex&#125;&gt;跳转至首页&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="9-Switch组件"><a href="#9-Switch组件" class="headerlink" title="9.Switch组件"></a>9.Switch组件</h4><p>让switch组件内容的route只匹配1次,只要匹配到了内容,便不会往下匹配</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;Router&gt;</span><br><span class="line">    &lt;Switch&gt;</span><br><span class="line">        &#123;<span class="comment">/* 此时不会显示abc2页面 */</span>&#125;</span><br><span class="line">        &lt;Route path=<span class="string">"/abc"</span> exact component=&#123;()=&gt;(<span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>这是abc1页面<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>)&#125; /&gt;</span><br><span class="line">        &lt;Route path=<span class="string">"/abc"</span> exact component=&#123;()=&gt;(<span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>这是abc2页面<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span>)&#125; /&gt;</span><br><span class="line">    &lt;<span class="regexp">/Switch&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>Router&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="十九、Redux状态管理树"><a href="#十九、Redux状态管理树" class="headerlink" title="十九、Redux状态管理树"></a>十九、Redux状态管理树</h3><p>​        解决React数据管理(状态管理),用于中大型项目,数据比较庞大,且组件间的数据交互多的情况下使用</p>
+<p><strong>Redux的特点:</strong></p>
+<ol>
+<li>Store:数据仓库,保存数据的地方</li>
+<li>state:state是一个对象,数据仓库的所有数据都放到state里面</li>
+<li>action:与Vue有点区别,action就是一个动作用于触发数据改变的方法,不是用于Ajax异步请求</li>
+<li>dispatch:将action动作触发成方法</li>
+<li>Reducer:是一个函数,通过获取动作,改变数据生成一个新的状态state从而改变页面</li>
+</ol>
+<h4 id="1-安装Redux"><a href="#1-安装Redux" class="headerlink" title="1.安装Redux"></a>1.安装Redux</h4><blockquote>
+<p>cnpm install redux –save</p>
+</blockquote>
+<h4 id="2-初始化仓库"><a href="#2-初始化仓库" class="headerlink" title="2.初始化仓库"></a>2.初始化仓库</h4><figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.导入redux</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.创建store仓库</span></span><br><span class="line"><span class="keyword">const</span> store = createStore(reducer);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.初始化仓库数据以及方法</span></span><br><span class="line"><span class="keyword">const</span> reducer = <span class="function"><span class="keyword">function</span> (<span class="params">state = &#123;num: <span class="number">0</span>&#125;, action</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(action); <span class="comment">// 输出&#123;type: "add"&#125;</span></span><br><span class="line">  <span class="keyword">switch</span> (action.type) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">"add"</span>:</span><br><span class="line">      state.num++;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">"decrement"</span>:</span><br><span class="line">      state.num--;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> &#123;...state&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 4.调用数据</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 通过仓库的方法进行修改数据</span></span><br><span class="line">  store.dispatch(&#123;<span class="attr">type</span>: <span class="string">"add"</span>&#125;);</span><br><span class="line">  <span class="comment">// console.log(store.getState());</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">decrement</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 通过仓库的方法进行修改数据</span></span><br><span class="line">  store.dispatch(&#123;<span class="attr">type</span>:<span class="string">"decrement"</span>&#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 获取数据的方式</span></span><br><span class="line"><span class="keyword">let</span> state = store.getState()</span><br><span class="line"><span class="comment">// 5.修改视图--监听数据的变化重新渲染视图</span></span><br><span class="line">store.subscribe(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    	ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="name">App</span> /&gt;</span></span>, <span class="built_in">document</span>.getElementById(<span class="string">'root'</span>));</span><br><span class="line">	&#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-React-redux"><a href="#3-React-redux" class="headerlink" title="3.React-redux"></a>3.React-redux</h4><p><strong>安装</strong>:</p>
+<blockquote>
+<p>cnpm i react-redux –save</p>
+</blockquote>
+<p>概念:</p>
+<ol>
+<li>Province</li>
+<li></li>
+</ol>
+<p><strong>使用:</strong></p>
+<ol>
+<li><p>初始化仓库数据</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reducer</span>(<span class="params">state=<span class="number">0</span>,action</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">switch</span> (action.type) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">"add"</span>:</span><br><span class="line">      state.num++;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">"decrement"</span>:</span><br><span class="line">      state.num--;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> &#123;...state&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p>实例化数据仓库</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> store = createStore(reducer);</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="3">
+<li><p>数据的获取–映射函数</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置action</span></span><br><span class="line"><span class="keyword">let</span> addAction = &#123;</span><br><span class="line">    type:<span class="string">"add"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将state映射到props函数中</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">mapStateToProps</span>(<span class="params">state</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    value:state.num,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 将修改state数据的方法,映射到props,默认会传入store里的dispatch方法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">mapDispatchToProps</span>(<span class="params">dispatch</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    onAddClick:<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">      dispatch(addAction)</span><br><span class="line">    &#125;,</span><br><span class="line">	onDecrementClick:<span class="function"><span class="params">()</span>=&gt;</span> dispatch(&#123;<span class="attr">type</span>:<span class="string">"decrement"</span>&#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="4">
+<li><p>将两个映射函数结合成一个新的App函数</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> App = connect(</span><br><span class="line">  mapStateToProps,</span><br><span class="line">  mapDispatchToProps</span><br><span class="line">)(Counter)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>渲染组件</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;Provider store=&#123;store&#125;&gt;</span><br><span class="line">    &lt;App /&gt;</span><br><span class="line">  &lt;<span class="regexp">/Provider&gt;,</span></span><br><span class="line"><span class="regexp">  document.getElementById('root')</span></span><br><span class="line"><span class="regexp">)</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>请我吃点东西吧, 我的已经3天没吃饭了<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/31/PHP%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3/" class="archive-article-date">
-  	<time datetime="2020-07-31T15:12:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/31/PHP%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3/">PHP学习文档</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/10/06/%E5%AD%A6%E4%B9%A0react/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/31/%E8%BF%99%E6%98%AF%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-07-31T14:50:17.847Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/10/06/%E5%AD%A6%E4%B9%A0koa2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          学习koa2
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/31/PHP%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">PHP学习文档</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/31/%E8%BF%99%E6%98%AF%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/">这是我的第二篇博客</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/31/layui-excel/" class="archive-article-date">
-  	<time datetime="2020-07-31T14:50:17.846Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/31/layui-excel/">layui-excel</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/31/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/" class="archive-article-date">
-  	<time datetime="2020-07-31T14:50:17.846Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/31/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/">查看浏览器宽度</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/31/GIt%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-07-31T14:50:17.845Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/31/GIt%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/">GIt代码管理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/31/hello-world/" class="archive-article-date">
-  	<time datetime="2020-07-31T14:50:17.845Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/31/hello-world/">Hello !!! 你好呀, 朋友</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/31/axios%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E4%B8%8A%E4%BC%A0%E8%BF%9B%E5%BA%A6%E7%9B%91%E5%90%AC/" class="archive-article-date">
-  	<time datetime="2020-07-31T14:50:17.844Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/31/axios%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E4%B8%8A%E4%BC%A0%E8%BF%9B%E5%BA%A6%E7%9B%91%E5%90%AC/">axios文件下载上传进度监听</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/31/axios%E7%9A%84%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2020-07-31T14:50:17.844Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/31/axios%E7%9A%84%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/">axios的简单配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -409,8 +639,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
