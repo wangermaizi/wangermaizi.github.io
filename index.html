@@ -1997,83 +1997,6 @@ leave类似于java中的break语句，跳出所在循环！！！</code></pre>
 
 
   
-    <article id="post-查看浏览器宽度" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/31/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/">查看浏览器宽度</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/31/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/" class="archive-article-date">
-  	<time datetime="2020-07-31T14:50:17.846Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="js中查看浏览器宽度"><a href="#js中查看浏览器宽度" class="headerlink" title="js中查看浏览器宽度"></a>js中查看浏览器宽度</h2><p>  1 <strong>网页可见区域宽：document.body.clientWidth</strong></p>
-<p>  2 <strong>网页可见区域高：document.body.clientHeight</strong> </p>
-<p>  3 <strong>网页可见区域宽：document.body.offsetWidth (包括边线的宽)</strong> </p>
-<p>  4 <strong>网页可见区域高：document.body.offsetHeight (包括边线的宽)</strong></p>
-<p>  5 <strong>网页正文全文宽：document.body.scrollWidth</strong> </p>
-<p>  6 <strong>网页正文全文高：document.body.scrollHeight</strong> </p>
-<p>  7 <strong>网页被卷去的高：document.body.scrollTop</strong></p>
-<p>  8 <strong>网页被卷去的左：document.body.scrollLeft</strong> </p>
-<p>  9 <strong>网页正文部分上：window.screenTop</strong> </p>
-<p> 10 <strong>网页正文部分左：window.screenLeft</strong></p>
-<p> 11 <strong>屏幕分辨率的高：window.screen.height</strong></p>
-<p> 12 <strong>屏幕分辨率的宽：window.screen.width</strong> </p>
-<p> 13 <strong>屏幕可用工作区高度：window.screen.availHeight</strong> </p>
-<p> 14 <strong>屏幕可用工作区宽度：window.screen.availWidth</strong> </p>
-<p> 17 HTML精确定位:scrollLeft,scrollWidth,clientWidth,offsetWidth<br> 18 scrollHeight: 获取对象的滚动高度。<br> 19 scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离<br> 20 scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离<br> 21 scrollWidth:获取对象的滚动宽度<br> 22 offsetHeight:获取对象相对于版面或由父坐标 offsetParent 属性指定的父坐标的高度<br> 23 offsetLeft:获取对象相对于版面或由 offsetParent 属性指定的父坐标的计算左侧位置<br> 24 offsetTop:获取对象相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置<br> 25 event.clientX 相对文档的水平座标<br> 26 event.clientY 相对文档的垂直座标<br> 27 event.offsetX 相对容器的水平坐标<br> 28 event.offsetY 相对容器的垂直坐标<br> 29 document.documentElement.scrollTop 垂直方向滚动的值<br> 30 event.clientX+document.documentElement.scrollTop 相对文档的水平座标+垂直方向滚动的量<br> 31<br> 32 IE，FireFox 差异如下：<br> 33<br> 34 IE6.0、FF1.06+：<br> 35 clientWidth = width + padding<br> 36 clientHeight = height + padding<br> 37 offsetWidth = width + padding + border<br> 38 offsetHeight = height + padding + border<br> 39<br> 40 IE5.0/5.5：<br> 41 clientWidth = width - border<br> 42 clientHeight = height - border<br> 43 offsetWidth = width<br> 44 offsetHeight = height<br> 45<br> 46 (需要提一下：CSS中的margin属性，与clientWidth、offsetWidth、clientHeight、offsetHeight均无关)<br> 47 网页可见区域宽： document.body.clientWidth<br> 48 网页可见区域高： document.body.clientHeight<br> 49 网页可见区域宽： document.body.offsetWidth (包括边线的宽)<br> 50 网页可见区域高： document.body.offsetHeight (包括边线的高)<br> 51 网页正文全文宽： document.body.scrollWidth<br> 52 网页正文全文高： document.body.scrollHeight<br> 53 网页被卷去的高： document.body.scrollTop<br> 54 网页被卷去的左： document.body.scrollLeft<br> 55 网页正文部分上： window.screenTop<br> 56 网页正文部分左： window.screenLeft<br> 57 屏幕分辨率的高： window.screen.height<br> 58 屏幕分辨率的宽： window.screen.width<br> 59 屏幕可用工作区高度： window.screen.availHeight<br> 60 屏幕可用工作区宽度： window.screen.availWidth</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/31/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-layui-excel" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -2163,6 +2086,83 @@ leave类似于java中的break语句，跳出所在循环！！！</code></pre>
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/07/31/layui-excel/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-查看浏览器宽度" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/31/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/">查看浏览器宽度</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/31/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/" class="archive-article-date">
+  	<time datetime="2020-07-31T14:50:17.846Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="js中查看浏览器宽度"><a href="#js中查看浏览器宽度" class="headerlink" title="js中查看浏览器宽度"></a>js中查看浏览器宽度</h2><p>  1 <strong>网页可见区域宽：document.body.clientWidth</strong></p>
+<p>  2 <strong>网页可见区域高：document.body.clientHeight</strong> </p>
+<p>  3 <strong>网页可见区域宽：document.body.offsetWidth (包括边线的宽)</strong> </p>
+<p>  4 <strong>网页可见区域高：document.body.offsetHeight (包括边线的宽)</strong></p>
+<p>  5 <strong>网页正文全文宽：document.body.scrollWidth</strong> </p>
+<p>  6 <strong>网页正文全文高：document.body.scrollHeight</strong> </p>
+<p>  7 <strong>网页被卷去的高：document.body.scrollTop</strong></p>
+<p>  8 <strong>网页被卷去的左：document.body.scrollLeft</strong> </p>
+<p>  9 <strong>网页正文部分上：window.screenTop</strong> </p>
+<p> 10 <strong>网页正文部分左：window.screenLeft</strong></p>
+<p> 11 <strong>屏幕分辨率的高：window.screen.height</strong></p>
+<p> 12 <strong>屏幕分辨率的宽：window.screen.width</strong> </p>
+<p> 13 <strong>屏幕可用工作区高度：window.screen.availHeight</strong> </p>
+<p> 14 <strong>屏幕可用工作区宽度：window.screen.availWidth</strong> </p>
+<p> 17 HTML精确定位:scrollLeft,scrollWidth,clientWidth,offsetWidth<br> 18 scrollHeight: 获取对象的滚动高度。<br> 19 scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离<br> 20 scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离<br> 21 scrollWidth:获取对象的滚动宽度<br> 22 offsetHeight:获取对象相对于版面或由父坐标 offsetParent 属性指定的父坐标的高度<br> 23 offsetLeft:获取对象相对于版面或由 offsetParent 属性指定的父坐标的计算左侧位置<br> 24 offsetTop:获取对象相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置<br> 25 event.clientX 相对文档的水平座标<br> 26 event.clientY 相对文档的垂直座标<br> 27 event.offsetX 相对容器的水平坐标<br> 28 event.offsetY 相对容器的垂直坐标<br> 29 document.documentElement.scrollTop 垂直方向滚动的值<br> 30 event.clientX+document.documentElement.scrollTop 相对文档的水平座标+垂直方向滚动的量<br> 31<br> 32 IE，FireFox 差异如下：<br> 33<br> 34 IE6.0、FF1.06+：<br> 35 clientWidth = width + padding<br> 36 clientHeight = height + padding<br> 37 offsetWidth = width + padding + border<br> 38 offsetHeight = height + padding + border<br> 39<br> 40 IE5.0/5.5：<br> 41 clientWidth = width - border<br> 42 clientHeight = height - border<br> 43 offsetWidth = width<br> 44 offsetHeight = height<br> 45<br> 46 (需要提一下：CSS中的margin属性，与clientWidth、offsetWidth、clientHeight、offsetHeight均无关)<br> 47 网页可见区域宽： document.body.clientWidth<br> 48 网页可见区域高： document.body.clientHeight<br> 49 网页可见区域宽： document.body.offsetWidth (包括边线的宽)<br> 50 网页可见区域高： document.body.offsetHeight (包括边线的高)<br> 51 网页正文全文宽： document.body.scrollWidth<br> 52 网页正文全文高： document.body.scrollHeight<br> 53 网页被卷去的高： document.body.scrollTop<br> 54 网页被卷去的左： document.body.scrollLeft<br> 55 网页正文部分上： window.screenTop<br> 56 网页正文部分左： window.screenLeft<br> 57 屏幕分辨率的高： window.screen.height<br> 58 屏幕分辨率的宽： window.screen.width<br> 59 屏幕可用工作区高度： window.screen.availHeight<br> 60 屏幕可用工作区宽度： window.screen.availWidth</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/31/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/">展开全文 >></a>
         </p>
       
 
