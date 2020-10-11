@@ -6,16 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>GIt代码管理 | 王二麻子</title>
+  <title>MySQL基础 | 王二麻子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="GIt代码管理Git-分布式代码管理 Svn集中式代码管理 1.Git安装直接next就可以了 2.Git命令2.创建新的仓库 1cd 你要成为仓库的目录  1.初始化Git 注意：创建一个新的Git仓库，并且在该目录下隐藏一个Git文件，不要修改或者删除 1Git init  3.检出仓库将代码从远程的服务端克隆一份到本地的仓库 1.克隆命令 1Git clone 地址(github地址或者码云">
+  <meta name="description" content="本单元目标​    一、为什么要学习数据库​    二、数据库的相关概念​        DBMS、DB、SQL​    三、数据库存储数据的特点​    四、初始MySQL​        MySQL产品的介绍​        MySQL产品的安装          ★​        MySQL服务的启动和停止     ★​        MySQL服务的登录和退出     ★​">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GIt代码管理">
-<meta property="og:url" content="http://yoursite.com/2020/07/31/GIt%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/index.html">
+<meta property="og:title" content="MySQL基础">
+<meta property="og:url" content="http://yoursite.com/2020/10/11/MySQL%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="王二麻子">
-<meta property="og:description" content="GIt代码管理Git-分布式代码管理 Svn集中式代码管理 1.Git安装直接next就可以了 2.Git命令2.创建新的仓库 1cd 你要成为仓库的目录  1.初始化Git 注意：创建一个新的Git仓库，并且在该目录下隐藏一个Git文件，不要修改或者删除 1Git init  3.检出仓库将代码从远程的服务端克隆一份到本地的仓库 1.克隆命令 1Git clone 地址(github地址或者码云">
-<meta property="article:published_time" content="2020-07-31T14:50:17.845Z">
-<meta property="article:modified_time" content="2020-07-14T02:53:20.964Z">
+<meta property="og:description" content="本单元目标​    一、为什么要学习数据库​    二、数据库的相关概念​        DBMS、DB、SQL​    三、数据库存储数据的特点​    四、初始MySQL​        MySQL产品的介绍​        MySQL产品的安装          ★​        MySQL服务的启动和停止     ★​        MySQL服务的登录和退出     ★​">
+<meta property="article:published_time" content="2020-10-11T15:55:23.651Z">
+<meta property="article:modified_time" content="2020-10-11T15:55:08.909Z">
 <meta property="article:author" content="王二麻子">
 <meta name="twitter:card" content="summary">
   
@@ -157,122 +157,374 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-GIt代码管理" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-MySQL基础" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      GIt代码管理
+      MySQL基础
     </h1>
   
 
         
-        <a href="/2020/07/31/GIt%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-07-31T14:50:17.845Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
+        <a href="/2020/10/11/MySQL%E5%9F%BA%E7%A1%80/" class="archive-article-date">
+  	<time datetime="2020-10-11T15:55:23.651Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="GIt代码管理"><a href="#GIt代码管理" class="headerlink" title="GIt代码管理"></a>GIt代码管理</h3><p>Git-分布式代码管理</p>
-<p>Svn集中式代码管理</p>
-<h3 id="1-Git安装"><a href="#1-Git安装" class="headerlink" title="1.Git安装"></a>1.Git安装</h3><p>直接next就可以了</p>
-<h2 id="2-Git命令"><a href="#2-Git命令" class="headerlink" title="2.Git命令"></a>2.Git命令</h2><p>2.创建新的仓库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd 你要成为仓库的目录</span><br></pre></td></tr></table></figure>
-
-<p>1.初始化Git</p>
-<p>注意：创建一个新的Git仓库，并且在该目录下隐藏一个Git文件，不要修改或者删除</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Git init</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-检出仓库"><a href="#3-检出仓库" class="headerlink" title="3.检出仓库"></a>3.检出仓库</h3><p>将代码从远程的服务端克隆一份到本地的仓库</p>
-<p>1.克隆命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Git clone 地址(github地址或者码云的克隆地址)</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-Git工作流"><a href="#4-Git工作流" class="headerlink" title="4.Git工作流"></a>4.Git工作流</h3><h5 id="Git维护是由三棵树"><a href="#Git维护是由三棵树" class="headerlink" title="Git维护是由三棵树"></a>Git维护是由三棵树</h5><ol>
-<li>工作目录：持有实际的文件</li>
-<li>缓存区：其实类似与修改索引，将修改的内容临时保存到缓存区域</li>
-<li>HEAD，类似与版本，指向你最近一次提交的结果</li>
-</ol>
-<h3 id="5-添加与提交"><a href="#5-添加与提交" class="headerlink" title="5.添加与提交"></a>5.添加与提交</h3><p>1.将计划改动的文件提交到缓存区</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add 文件名称</span><br><span class="line">git add *</span><br><span class="line"><span class="comment"># 可以使用</span></span><br><span class="line">git add .</span><br><span class="line"><span class="comment"># 将所有文件进行提交</span></span><br></pre></td></tr></table></figure>
-
-<p>2.当内容修改完成之后，希望成为1个版本，那么可以将内容进行提交</p>
-<p>​    注意：这个命令将改动提交到HEAD，但是没有传入到远程仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"代码提交的信息"</span>（比如：git commit -m <span class="string">"create one.txt.1"</span>）</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-设置远程地址"><a href="#6-设置远程地址" class="headerlink" title="6.设置远程地址"></a>6.设置远程地址</h3><p>1.设置远程仓库地址</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/KTBOY/testGit.git</span><br></pre></td></tr></table></figure>
-
-<p>2.将代码推送到远程仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br><span class="line"><span class="comment"># 特殊情况下可能会使用 -f 进行强制推送</span></span><br><span class="line">git push -u -f origin master</span><br><span class="line"></span><br><span class="line"><span class="comment"># 系统会提示登录, 请正确填写用户名以及密码</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="7-项目中经常使用的命令"><a href="#7-项目中经常使用的命令" class="headerlink" title="7.项目中经常使用的命令"></a>7.项目中经常使用的命令</h3><p>1.更新项目到本地</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
-<p>2.版本回退</p>
-<p>查看提交项目的版本信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 或者使用</span></span><br><span class="line">git reflog</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset -hard id</span><br></pre></td></tr></table></figure>
-
-<p>3.分支</p>
-<p>创建分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b dev</span><br></pre></td></tr></table></figure>
-
-<p>切换分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout 分支名称</span><br></pre></td></tr></table></figure>
-
-<p>合并分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge 分支名称</span><br></pre></td></tr></table></figure>
-
-<h3 id="8-公司工作使用Git的流程"><a href="#8-公司工作使用Git的流程" class="headerlink" title="8.公司工作使用Git的流程"></a>8.公司工作使用Git的流程</h3><p>1.远程仓库地址克隆服务器里面的代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone</span><br></pre></td></tr></table></figure>
-
-<p>2.创建分支给自己开发</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b 分支名称</span><br></pre></td></tr></table></figure>
-
-<p>3.更新服务器最新代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
-<p>4.将自己开发的代码和服务器的代码合并</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge 分支的名称</span><br></pre></td></tr></table></figure>
-
-<p>5.提交代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
+        <h2 id="本单元目标"><a href="#本单元目标" class="headerlink" title="本单元目标"></a>本单元目标</h2><p>​    一、为什么要学习数据库<br>​    二、数据库的相关概念<br>​        DBMS、DB、SQL<br>​    三、数据库存储数据的特点<br>​    四、初始MySQL<br>​        MySQL产品的介绍<br>​        MySQL产品的安装          ★<br>​        MySQL服务的启动和停止     ★<br>​        MySQL服务的登录和退出     ★<br>​        MySQL的常见命令和语法规范<br>​    五、DQL语言的学习   ★<br>​        基础查询        ★<br>​        条件查询         ★<br>​        排序查询         ★<br>​        常见函数        ★<br>​        分组函数        ★<br>​        分组查询           ★<br>​        连接查询         ★<br>​        子查询       √<br>​        分页查询       ★<br>​        union联合查询    √<br>​        </p>
+<p>六、DML语言的学习    ★<br>    插入语句<br>    修改语句<br>    删除语句<br>七、DDL语言的学习<br>    库和表的管理     √<br>    常见数据类型介绍  √<br>    常见约束        √<br>八、TCL语言的学习<br>    事务和事务处理<br>九、视图的讲解           √<br>十、变量<br>十一、存储过程和函数  </p>
+<p>十二、流程控制结构       </p>
+<h2 id="数据库的好处"><a href="#数据库的好处" class="headerlink" title="数据库的好处"></a>数据库的好处</h2><p>​    1.持久化数据到本地<br>​    2.可以实现结构化查询，方便管理<br>​    </p>
+<h2 id="数据库相关概念"><a href="#数据库相关概念" class="headerlink" title="数据库相关概念"></a>数据库相关概念</h2><p>​    1、DB：数据库，保存一组有组织的数据的容器<br>​    2、DBMS：数据库管理系统，又称为数据库软件（产品），用于管理DB中的数据<br>​    3、SQL:结构化查询语言，用于和DBMS通信的语言</p>
+<h2 id="数据库存储数据的特点"><a href="#数据库存储数据的特点" class="headerlink" title="数据库存储数据的特点"></a>数据库存储数据的特点</h2><p>​    1、将数据放到表中，表再放到库中<br>​    2、一个数据库中可以有多个表，每个表都有一个的名字，用来标识自己。表名具有唯一性。<br>​    3、表具有一些特性，这些特性定义了数据在表中如何存储，类似java中 “类”的设计。<br>​    4、表由列组成，我们也称为字段。所有表都是由一个或多个列组成的，每一列类似java 中的”属性”<br>​    5、表中的数据是按行存储的，每一行类似于java中的“对象”。</p>
+<h2 id="MySQL产品的介绍和安装"><a href="#MySQL产品的介绍和安装" class="headerlink" title="MySQL产品的介绍和安装"></a>MySQL产品的介绍和安装</h2><h3 id="MySQL服务的启动和停止"><a href="#MySQL服务的启动和停止" class="headerlink" title="MySQL服务的启动和停止"></a>MySQL服务的启动和停止</h3><p>​    方式一：计算机——右击管理——服务<br>​    方式二：通过管理员身份运行<br>​    net start 服务名（启动服务）<br>​    net stop 服务名（停止服务）</p>
+<h3 id="MySQL服务的登录和退出"><a href="#MySQL服务的登录和退出" class="headerlink" title="MySQL服务的登录和退出"></a>MySQL服务的登录和退出</h3><p>​    方式一：通过mysql自带的客户端<br>​    只限于root用户</p>
+<p>​    方式二：通过windows自带的客户端<br>​    登录：<br>​    mysql 【-h主机名 -P端口号 】-u用户名 -p密码</p>
+<p>​    退出：<br>​    exit或ctrl+C</p>
+<p>​    </p>
+<h3 id="MySQL的常见命令"><a href="#MySQL的常见命令" class="headerlink" title="MySQL的常见命令"></a>MySQL的常见命令</h3><p>​    1.查看当前所有的数据库<br>​        show databases;<br>​    2.打开指定的库<br>​        use 库名<br>​    3.查看当前库的所有表<br>​        show tables;<br>​    4.查看其它库的所有表<br>​        show tables from 库名;<br>​    5.创建表<br>​        create table 表名(<br>​            列名 列类型,<br>​            列名 列类型，<br>​            。。。<br>​        );<br>​    6.查看表结构<br>​        desc 表名;</p>
+<p>​    7.查看服务器的版本<br>​        方式一：登录到mysql服务端<br>​            select version();<br>​        方式二：没有登录到mysql服务端<br>​            mysql –version<br>​        或<br>​            mysql –V</p>
+<h3 id="MySQL的语法规范"><a href="#MySQL的语法规范" class="headerlink" title="MySQL的语法规范"></a>MySQL的语法规范</h3><p>​    1.不区分大小写,但建议关键字大写，表名、列名小写<br>​    2.每条命令最好用分号结尾<br>​    3.每条命令根据需要，可以进行缩进 或换行<br>​    4.注释<br>​        单行注释：#注释文字<br>​        单行注释：– 注释文字<br>​        多行注释：/* 注释文字  */<br>​    </p>
+<h3 id="SQL的语言分类"><a href="#SQL的语言分类" class="headerlink" title="SQL的语言分类"></a>SQL的语言分类</h3><p>​    DQL（Data Query Language）：数据查询语言<br>​        select<br>​    DML(Data Manipulate Language):数据操作语言<br>​        insert 、update、delete<br>​    DDL（Data Define Languge）：数据定义语言<br>​        create、drop、alter<br>​    TCL（Transaction Control Language）：事务控制语言<br>​        commit、rollback<br>​    </p>
+<h3 id="SQL的常见命令"><a href="#SQL的常见命令" class="headerlink" title="SQL的常见命令"></a>SQL的常见命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">show databases； 查看所有的数据库</span><br><span class="line">use 库名； 打开指定 的库</span><br><span class="line">show tables ; 显示库中的所有表</span><br><span class="line">show tables from 库名;显示指定库中的所有表</span><br><span class="line">create table 表名(</span><br><span class="line">	字段名 字段类型,	</span><br><span class="line">	字段名 字段类型</span><br><span class="line">); 创建表</span><br><span class="line"></span><br><span class="line">desc 表名; 查看指定表的结构</span><br><span class="line">select * from 表名;显示表中的所有数据</span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="9-忽视文件夹"><a href="#9-忽视文件夹" class="headerlink" title="9. 忽视文件夹"></a>9. 忽视文件夹</h3><p>​        在使用<code>git</code>的过程中，一般我们总会有些文件无需纳入<code>git</code>的管理，也不希望它们总出现在未跟踪文件列表，这些文件通常是日志文件、临时文件、编译产生的中间文件、工具自动生成的文件等等。</p>
-<p>​        以 Vue项目为例子, 我们不想提交大量node_module包, 因此需要在.gitignore中提示不提交node_module的相关文件</p>
-<h4 id="9-1-gitignore-规范"><a href="#9-1-gitignore-规范" class="headerlink" title="9.1 .gitignore 规范"></a>9.1 .gitignore 规范</h4><ul>
-<li>所有空行或者以注释符号 ＃ 开头的行都会被 Git 忽略</li>
-<li>可以使用标准的 glob 模式匹配</li>
-<li>匹配模式最后跟斜杠(/)说明要忽略的是目录</li>
-<li>要忽略指定模式以外的文件或目录，可以在模式前加上感叹号(!)进行取反</li>
+<h2 id="DQL语言的学习"><a href="#DQL语言的学习" class="headerlink" title="DQL语言的学习"></a>DQL语言的学习</h2><h3 id="进阶1：基础查询"><a href="#进阶1：基础查询" class="headerlink" title="进阶1：基础查询"></a>进阶1：基础查询</h3><p>​    语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT 要查询的东西 FROM 表名;</span><br></pre></td></tr></table></figure>
+
+<p>类似于Java中 :System.out.println(要打印的东西);<br>特点：<br>    ① 通过select查询完的结果 ，是一个虚拟的表格，不是真实存在<br>    ② 要查询的东西 可以是常量值、可以是表达式、可以是字段、可以是函数</p>
+<h3 id="进阶2：条件查询"><a href="#进阶2：条件查询" class="headerlink" title="进阶2：条件查询"></a>进阶2：条件查询</h3><p>​    条件查询：根据条件过滤原始表的数据，查询到想要的数据<br>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">	要查询的字段|表达式|常量值|函数</span><br><span class="line">from </span><br><span class="line">	表</span><br><span class="line">where </span><br><span class="line"></span><br><span class="line">条件 ;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>分类：</p>
+<h4 id="一、条件表达式"><a href="#一、条件表达式" class="headerlink" title="一、条件表达式"></a>一、条件表达式</h4><p>示例：salary&gt;10000<br>    条件运算符：</p>
+<p>​    &lt; &gt;= &lt;= = != &lt;&gt;</p>
+<h4 id="二、逻辑表达式"><a href="#二、逻辑表达式" class="headerlink" title="二、逻辑表达式"></a>二、逻辑表达式</h4><p>示例：salary&gt;10000 &amp;&amp; salary&lt;20000</p>
+<p>逻辑运算符：</p>
+<p>​    and（&amp;&amp;）:两个条件如果同时成立，结果为true，否则为false<br>​    or(||)：两个条件只要有一个成立，结果为true，否则为false<br>​    not(!)：如果条件成立，则not后为false，否则为true</p>
+<h4 id="三、模糊查询"><a href="#三、模糊查询" class="headerlink" title="三、模糊查询"></a>三、模糊查询</h4><p>示例：last_name like ‘a%’</p>
+<h3 id="进阶3：排序查询"><a href="#进阶3：排序查询" class="headerlink" title="进阶3：排序查询"></a>进阶3：排序查询</h3><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">select</span><br><span class="line">	要查询的东西</span><br><span class="line">from</span><br><span class="line">	表</span><br><span class="line">where </span><br><span class="line">	条件</span><br><span class="line"></span><br><span class="line">order by 排序的字段|表达式|函数|别名 [asc|desc]</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="进阶4：常见函数"><a href="#进阶4：常见函数" class="headerlink" title="进阶4：常见函数"></a>进阶4：常见函数</h3><h4 id="一、单行函数"><a href="#一、单行函数" class="headerlink" title="一、单行函数"></a>一、单行函数</h4><pre><code>##### 1、字符函数</code></pre><p>​        concat拼接<br>​        substr截取子串<br>​        upper转换成大写<br>​        lower转换成小写<br>​        trim去前后指定的空格和字符<br>​        ltrim去左边空格<br>​        rtrim去右边空格<br>​        replace替换<br>​        lpad左填充<br>​        rpad右填充<br>​        instr返回子串第一次出现的索引<br>​        length 获取字节个数<br>​        </p>
+<h5 id="2、数学函数"><a href="#2、数学函数" class="headerlink" title="2、数学函数"></a>2、数学函数</h5><p>​        round 四舍五入<br>​        rand 随机数<br>​        floor向下取整<br>​        ceil向上取整<br>​        mod取余<br>​        truncate截断</p>
+<pre><code>##### 3、日期函数</code></pre><p>​        now当前系统日期+时间<br>​        curdate当前系统日期<br>​        curtime当前系统时间<br>​        str_to_date 将字符转换成日期<br>​        date_format将日期转换成字符</p>
+<pre><code>##### 4、流程控制函数</code></pre><p>​        if 处理双分支<br>​        case语句 处理多分支<br>​            情况1：处理等值判断<br>​            情况2：处理条件判断<br>​        </p>
+<pre><code>##### 5、其他函数</code></pre><p>​        version版本<br>​        database当前库<br>​        user当前连接用户</p>
+<p>​    </p>
+<h4 id="二、分组函数"><a href="#二、分组函数" class="headerlink" title="二、分组函数"></a>二、分组函数</h4><p>​    sum 求和<br>​    max 最大值<br>​    min 最小值<br>​    avg 平均值<br>​    count 计数</p>
+<p>​    特点：<br>​        1、以上五个分组函数都忽略null值，除了count(*)<br>​        2、sum和avg一般用于处理数值型<br>​            max、min、count可以处理任何数据类型<br>        3、都可以搭配distinct使用，用于统计去重后的结果<br>​        4、count的参数可以支持：<br>​        字段、*、常量值，一般放1</p>
+<p>​    建议使用 count(*)</p>
+<h3 id="进阶5：分组查询"><a href="#进阶5：分组查询" class="headerlink" title="进阶5：分组查询"></a>进阶5：分组查询</h3><p>​    语法：<br>​    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select 查询的字段，分组函数</span><br><span class="line">from 表</span><br><span class="line">group by 分组的字段</span><br></pre></td></tr></table></figure>
+
+<p>​<br>​    </p>
+<p>特点：<br>    1、可以按单个字段分组<br>    2、和分组函数一同查询的字段最好是分组后的字段<br>    3、分组筛选<br>        针对的表    位置            关键字<br>        分组前筛选：    原始表        group by的前面        where<br>        分组后筛选：    分组后的结果集    group by的后面        having</p>
+<p>​    4、可以按多个字段分组，字段之间用逗号隔开<br>​    5、可以支持排序<br>​    6、having后可以支持别名</p>
+<h3 id="进阶6：多表连接查询"><a href="#进阶6：多表连接查询" class="headerlink" title="进阶6：多表连接查询"></a>进阶6：多表连接查询</h3><p>笛卡尔乘积：如果连接条件省略或无效则会出现<br>解决办法：添加上连接条件</p>
+<h4 id="一、传统模式下的连接-：等值连接——非等值连接"><a href="#一、传统模式下的连接-：等值连接——非等值连接" class="headerlink" title="一、传统模式下的连接 ：等值连接——非等值连接"></a>一、传统模式下的连接 ：等值连接——非等值连接</h4><p>​    1.等值连接的结果 = 多个表的交集<br>​    2.n表连接，至少需要n-1个连接条件<br>​    3.多个表不分主次，没有顺序要求<br>​    4.一般为表起别名，提高阅读性和性能</p>
+<h4 id="二、sql99语法：通过join关键字实现连接"><a href="#二、sql99语法：通过join关键字实现连接" class="headerlink" title="二、sql99语法：通过join关键字实现连接"></a>二、sql99语法：通过join关键字实现连接</h4><p>含义：1999年推出的sql语法<br>支持：<br>    等值连接、非等值连接 （内连接）<br>    外连接<br>    交叉连接</p>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">select 字段，...</span><br><span class="line">from 表1</span><br><span class="line">[inner|left outer|right outer|cross]join 表2 on  连接条件</span><br><span class="line">[inner|left outer|right outer|cross]join 表3 on  连接条件</span><br><span class="line">[where 筛选条件]</span><br><span class="line">[group by 分组字段]</span><br><span class="line">[having 分组后的筛选条件]</span><br><span class="line">[order by 排序的字段或表达式]</span><br></pre></td></tr></table></figure>
+
+<p>好处：语句上，连接条件和筛选条件实现了分离，简洁明了！</p>
+<p>​    </p>
+<h4 id="三、自连接"><a href="#三、自连接" class="headerlink" title="三、自连接"></a>三、自连接</h4><p>案例：查询员工名和直接上级的名称</p>
+<p><strong>sql99</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT e.last_name,m.last_name</span><br><span class="line">FROM employees e</span><br><span class="line">JOIN employees m ON e.&#96;manager_id&#96;&#x3D;m.&#96;employee_id&#96;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>sql92</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT e.last_name,m.last_name</span><br><span class="line">FROM employees e,employees m </span><br><span class="line">WHERE e.&#96;manager_id&#96;&#x3D;m.&#96;employee_id&#96;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="进阶7：子查询"><a href="#进阶7：子查询" class="headerlink" title="进阶7：子查询"></a>进阶7：子查询</h3><p>含义：</p>
+<p>一条查询语句中又嵌套了另一条完整的select语句，其中被嵌套的select语句，称为子查询或内查询<br>在外面的查询语句，称为主查询或外查询</p>
+<p>特点：</p>
+<p>​    1、子查询都放在小括号内<br>​    2、子查询可以放在from后面、select后面、where后面、having后面，但一般放在条件的            右侧<br>​    3、子查询优先于主查询执行，主查询使用了子查询的执行结果<br>​    4、子查询根据查询结果的行数不同分为以下两类：<br>​        ① 单行子查询<br>​                结果集只有一行<br>​                一般搭配单行操作符使用：&gt; &lt; = &lt;&gt; &gt;= &lt;=<br>​                非法使用子查询的情况：<br>​                a、子查询的结果为一组值<br>​                b、子查询的结果为空<br>​<br>​        ② 多行子查询<br>​                结果集有多行<br>​                一般搭配多行操作符使用：any、all、in、not in<br>​                in： 属于子查询结果中的任意一个就行<br>​                any和all往往可以用其他查询代替</p>
+<h3 id="进阶8：分页查询"><a href="#进阶8：分页查询" class="headerlink" title="进阶8：分页查询"></a>进阶8：分页查询</h3><p>应用场景：</p>
+<p>实际的web项目中需要根据用户的需求提交对应的分页查询的sql语句</p>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select 字段|表达式,...</span><br><span class="line">from 表</span><br><span class="line">[where 条件]</span><br><span class="line">[group by 分组字段]</span><br><span class="line">[having 条件]</span><br><span class="line">[order by 排序的字段]</span><br><span class="line">limit 起始的条目索引，条目数;</span><br></pre></td></tr></table></figure>
+
+<p>特点：</p>
+<p>1.起始条目索引从0开始</p>
+<p>2.limit子句放在查询语句的最后</p>
+<p>3.公式：select * from  表 limit （page-1）*sizePerPage,sizePerPage<br>假如:<br>每页显示条目数sizePerPage<br>要显示的页数 page</p>
+<h3 id="进阶9：联合查询"><a href="#进阶9：联合查询" class="headerlink" title="进阶9：联合查询"></a>进阶9：联合查询</h3><p>引入：<br>    union 联合、合并</p>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select 字段|常量|表达式|函数 【from 表】 【where 条件】 union 【all】</span><br><span class="line">select 字段|常量|表达式|函数 【from 表】 【where 条件】 union 【all】</span><br><span class="line">select 字段|常量|表达式|函数 【from 表】 【where 条件】 union  【all】</span><br><span class="line">.....</span><br><span class="line">select 字段|常量|表达式|函数 【from 表】 【where 条件】</span><br></pre></td></tr></table></figure>
+
+<p>特点：</p>
+<pre><code>1、多条查询语句的查询的列数必须是一致的
+2、多条查询语句的查询的列的类型几乎相同
+3、union代表去重，union all代表不去重</code></pre><h2 id="DML语言"><a href="#DML语言" class="headerlink" title="DML语言"></a>DML语言</h2><h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">insert into 表名(字段名，...)</span><br><span class="line">values(值1，...);</span><br></pre></td></tr></table></figure>
+
+<p>特点：</p>
+<p>​    1、字段类型和值类型一致或兼容，而且一一对应<br>​    2、可以为空的字段，可以不用插入值，或用null填充<br>​    3、不可以为空的字段，必须插入值<br>​    4、字段个数和值的个数必须一致<br>​    5、字段可以省略，但默认所有字段，并且顺序和表中的存储顺序一致</p>
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>修改单表语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">update 表名 set 字段&#x3D;新值,字段&#x3D;新值</span><br><span class="line">[where 条件]</span><br></pre></td></tr></table></figure>
+<p>修改多表语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">update 表1 别名1,表2 别名2</span><br><span class="line">set 字段&#x3D;新值，字段&#x3D;新值</span><br><span class="line">where 连接条件</span><br><span class="line">and 筛选条件</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p>方式1：delete语句 </p>
+<p>单表的删除： ★</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from 表名 【where 筛选条件】</span><br></pre></td></tr></table></figure>
+
+<p>多表的删除：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">delete 别名1，别名2</span><br><span class="line">from 表1 别名1，表2 别名2</span><br><span class="line">where 连接条件</span><br><span class="line">and 筛选条件;</span><br></pre></td></tr></table></figure>
+
+
+<p>方式2：truncate语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">truncate table 表名</span><br></pre></td></tr></table></figure>
+
+
+<p>两种方式的区别【面试题】</p>
+<pre><code>#1.truncate不能加where条件，而delete可以加where条件
+#2.truncate的效率高一丢丢
+#3.truncate 删除带自增长的列的表后，如果再插入数据，数据从1开始
+#delete 删除带自增长列的表后，如果再插入数据，数据从上一次的断点处开始
+#4.truncate删除不能回滚，delete删除可以回滚</code></pre><h2 id="DDL语句"><a href="#DDL语句" class="headerlink" title="DDL语句"></a>DDL语句</h2><h3 id="库和表的管理"><a href="#库和表的管理" class="headerlink" title="库和表的管理"></a>库和表的管理</h3><h4 id="库的管理："><a href="#库的管理：" class="headerlink" title="库的管理："></a>库的管理：</h4><h5 id="一、创建库"><a href="#一、创建库" class="headerlink" title="一、创建库"></a>一、创建库</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database 库名</span><br></pre></td></tr></table></figure>
+
+<h5 id="二、删除库"><a href="#二、删除库" class="headerlink" title="二、删除库"></a>二、删除库</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop database 库名</span><br></pre></td></tr></table></figure>
+<h4 id="表的管理："><a href="#表的管理：" class="headerlink" title="表的管理："></a>表的管理：</h4><h5 id="1-创建表"><a href="#1-创建表" class="headerlink" title="1.创建表"></a>1.创建表</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE IF NOT EXISTS stuinfo(</span><br><span class="line">	stuId INT,</span><br><span class="line">	stuName VARCHAR(20),</span><br><span class="line">	gender CHAR,</span><br><span class="line">	bornDate DATETIME</span><br><span class="line">);</span><br><span class="line">DESC studentinfo;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-修改表-alter"><a href="#2-修改表-alter" class="headerlink" title="2.修改表 alter"></a>2.修改表 alter</h5><p>​    语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE 表名 ADD|MODIFY|DROP|CHANGE COLUMN 字段名 [字段类型];</span><br></pre></td></tr></table></figure>
+
+<p>​    ①修改字段名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE studentinfo CHANGE  COLUMN sex gender CHAR;</span><br></pre></td></tr></table></figure>
+
+<p>​    ②修改表名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE stuinfo RENAME [TO]  studentinfo;</span><br></pre></td></tr></table></figure>
+
+<p>​    ③修改字段类型和列级约束</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE studentinfo MODIFY COLUMN borndate DATE ;</span><br></pre></td></tr></table></figure>
+
+<p>​    ④添加字段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE studentinfo ADD COLUMN email VARCHAR(20) first;</span><br></pre></td></tr></table></figure>
+
+<p>​    ⑤删除字段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE studentinfo DROP COLUMN email;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-删除表"><a href="#3-删除表" class="headerlink" title="3.删除表"></a>3.删除表</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE [IF EXISTS] studentinfo;</span><br></pre></td></tr></table></figure>
+
+
+<p>​    </p>
+<h3 id="常见类型"><a href="#常见类型" class="headerlink" title="常见类型"></a>常见类型</h3><p>​    整型：<br>​    小数：<br>​        浮点型<br>​        定点型<br>​    字符型：<br>​    日期型：<br>​    Blob类型：</p>
+<h3 id="常见约束"><a href="#常见约束" class="headerlink" title="常见约束"></a>常见约束</h3><ul>
+<li><code>NOT NULL</code></li>
+<li><code>DEFAULT</code></li>
+<li><code>UNIQUE</code></li>
+<li><code>CHECK</code></li>
+<li><code>PRIMARY KEY</code></li>
+<li><code>FOREIGN KEY</code></li>
 </ul>
-<h4 id="9-2-匹配规则"><a href="#9-2-匹配规则" class="headerlink" title="9.2 匹配规则"></a>9.2 匹配规则</h4><ul>
-<li><code>logs/</code>：忽略当前路径下的logs目录，包含logs下的所有子目录和文件</li>
-<li><code>/logs.txt</code>：忽略根目录下的logs.txt文件</li>
-<li><code>*.class</code>：忽略所有后缀为.class的文件</li>
-<li><code>!/classes/a.class</code>：不忽略classes目录下的a.class文件</li>
-<li><code>tmp/*.txt</code>：只忽略tmp目录下的.txt文件</li>
-<li><code>**/foo</code>：可以忽略/foo, a/foo, a/b/foo等</li>
-</ul>
-<h4 id="9-3-举个例子"><a href="#9-3-举个例子" class="headerlink" title="9.3 举个例子"></a>9.3 举个例子</h4><ol>
-<li><p>创建.gitignore</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># touch 是Linux系统常见的命令, 意为创建文件意思</span></span><br><span class="line">touch .gitignore</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在.gitignore 中编辑</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 忽视所有的node_module文件</span><br><span class="line">&#x2F;node_module</span><br><span class="line"># 忽视 vscode自动生成的文件</span><br><span class="line">.vscode</span><br><span class="line"># 忽视 HBuild 自动生成的文件</span><br><span class="line">.project</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>保存即可</p>
-<p>完成可使用 <code>git add .</code> 进行验证</p>
-</li>
-</ol>
+<h2 id="数据库事务"><a href="#数据库事务" class="headerlink" title="数据库事务"></a>数据库事务</h2><h3 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h3><p>​    通过一组逻辑操作单元（一组DML——sql语句），将数据从一种状态切换到另外一种状态</p>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>​    （ACID）<br>​    原子性：要么都执行，要么都回滚<br>​    一致性：保证数据的状态操作前和操作后保持一致<br>​    隔离性：多个事务同时操作相同数据库的同一个数据时，一个事务的执行不受另外一个事务的干扰<br>​    持久性：一个事务一旦提交，则数据将持久化到本地，除非其他事务对其进行修改</p>
+<p><strong>相关步骤：</strong></p>
+<p>​    1、开启事务<br>​    2、编写事务的一组逻辑操作单元（多条sql语句）<br>​    3、提交事务或回滚事务</p>
+<h3 id="事务的分类："><a href="#事务的分类：" class="headerlink" title="事务的分类："></a>事务的分类：</h3><p>隐式事务，没有明显的开启和结束事务的标志</p>
+<p>​    比如<br>​    insert、update、delete语句本身就是一个事务</p>
+<p>显式事务，具有明显的开启和结束事务的标志</p>
+<p>​    1、开启事务<br>​    取消自动提交事务的功能<br>​    2、编写事务的一组逻辑操作单元（多条sql语句）<br>​    insert<br>​    update<br>​    delete<br>​    3、提交事务或回滚事务</p>
+<h3 id="使用到的关键字"><a href="#使用到的关键字" class="headerlink" title="使用到的关键字"></a>使用到的关键字</h3><pre><code>set autocommit=0;
+start transaction;
+commit;
+rollback;
 
+savepoint  断点
+commit to 断点
+rollback to 断点</code></pre><h3 id="事务的隔离级别"><a href="#事务的隔离级别" class="headerlink" title="事务的隔离级别:"></a>事务的隔离级别:</h3><p>事务并发问题如何发生？</p>
+<ul>
+<li>当多个事务同时操作同一个数据库的相同数据时</li>
+</ul>
+<p>事务的并发问题有哪些？</p>
+<ul>
+<li>脏读：一个事务读取到了另外一个事务未提交的数据<br>不可重复读：同一个事务中，多次读取到的数据不一致</li>
+<li>幻读：一个事务读取数据时，另外一个事务进行更新，导致第一个事务读取到了没有更新的数据</li>
+</ul>
+<p>如何避免事务的并发问题？</p>
+<p>​    通过设置事务的隔离级别<br>​        1、READ UNCOMMITTED<br>​        2、READ COMMITTED 可以避免脏读<br>​        3、REPEATABLE READ 可以避免脏读、不可重复读和一部分幻读<br>​        4、SERIALIZABLE可以避免脏读、不可重复读和幻读</p>
+<p>设置隔离级别：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set session|global  transaction isolation level 隔离级别名;</span><br></pre></td></tr></table></figure>
+<p>查看隔离级别：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select @@tx_isolation;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h2><p>含义：理解成一张虚拟的表</p>
+<p>视图和表的区别：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>使用方式</th>
+<th>占用物理空间</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>视图</td>
+<td>完全相同</td>
+<td>不占用，仅仅保存的是sql逻辑</td>
+</tr>
+<tr>
+<td>表</td>
+<td>完全相同</td>
+<td>占用</td>
+</tr>
+</tbody></table>
+<p>视图的好处：</p>
+<pre><code>1、sql语句提高重用性，效率高
+2、和表实现了分离，提高了安全性</code></pre><h3 id="视图的创建"><a href="#视图的创建" class="headerlink" title="视图的创建"></a>视图的创建</h3><p>​    语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CREATE VIEW  视图名</span><br><span class="line">	AS</span><br><span class="line">查询语句;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="视图的增删改查"><a href="#视图的增删改查" class="headerlink" title="视图的增删改查"></a>视图的增删改查</h3><h4 id="1、查看视图的数据-★"><a href="#1、查看视图的数据-★" class="headerlink" title="1、查看视图的数据 ★"></a>1、查看视图的数据 ★</h4><p>​    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM my_v4;</span><br><span class="line">SELECT * FROM my_v1 WHERE last_name&#x3D;&#39;Partners&#39;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、插入视图的数据"><a href="#2、插入视图的数据" class="headerlink" title="2、插入视图的数据"></a>2、插入视图的数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO my_v4(last_name,department_id) VALUES(&#39;虚竹&#39;,90);</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、修改视图的数据"><a href="#3、修改视图的数据" class="headerlink" title="3、修改视图的数据"></a>3、修改视图的数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UPDATE my_v4 SET last_name &#x3D;&#39;梦姑&#39; WHERE last_name&#x3D;&#39;虚竹&#39;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、删除视图的数据"><a href="#4、删除视图的数据" class="headerlink" title="4、删除视图的数据"></a>4、删除视图的数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DELETE FROM my_v4;</span><br></pre></td></tr></table></figure>
+
+<h3 id="某些视图不能更新"><a href="#某些视图不能更新" class="headerlink" title="某些视图不能更新"></a>某些视图不能更新</h3><p>​    包含以下关键字的sql语句：分组函数、distinct、group  by、having、union或者union all<br>​    常量视图<br>​    Select中包含子查询<br>​    join<br>​    from一个不能更新的视图<br>​    where子句的子查询引用了from子句中的表</p>
+<h3 id="视图逻辑的更新"><a href="#视图逻辑的更新" class="headerlink" title="视图逻辑的更新"></a>视图逻辑的更新</h3><h4 id="方式一："><a href="#方式一：" class="headerlink" title="方式一："></a>方式一：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE OR REPLACE VIEW test_v7</span><br><span class="line">		AS</span><br><span class="line">SELECT last_name FROM employees</span><br><span class="line">WHERE employee_id&gt;100;</span><br></pre></td></tr></table></figure>
+
+<h4 id="方式二"><a href="#方式二" class="headerlink" title="方式二:"></a>方式二:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ALTER VIEW test_v7</span><br><span class="line">AS</span><br><span class="line">SELECT employee_id FROM employees;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM test_v7;</span><br></pre></td></tr></table></figure>
+<h3 id="视图的删除"><a href="#视图的删除" class="headerlink" title="视图的删除"></a>视图的删除</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP VIEW test_v1,test_v2,test_v3;</span><br></pre></td></tr></table></figure>
+
+<h3 id="视图结构的查看"><a href="#视图结构的查看" class="headerlink" title="视图结构的查看"></a>视图结构的查看</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DESC test_v7;</span><br><span class="line">SHOW CREATE VIEW test_v7;</span><br></pre></td></tr></table></figure>
+
+<h2 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h2><p>含义：一组经过预先编译的sql语句的集合<br>好处：</p>
+<p>​    1、提高了sql语句的重用性，减少了开发程序员的压力<br>​    2、提高了效率<br>​    3、减少了传输次数</p>
+<p>分类：</p>
+<pre><code>1、无返回无参
+2、仅仅带in类型，无返回有参
+3、仅仅带out类型，有返回无参
+4、既带in又带out，有返回有参
+5、带inout，有返回有参
+注意：in、out、inout都可以在一个存储过程中带多个</code></pre><h3 id="创建存储过程"><a href="#创建存储过程" class="headerlink" title="创建存储过程"></a>创建存储过程</h3><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">create procedure 存储过程名(in|out|inout 参数名  参数类型,...)</span><br><span class="line">begin</span><br><span class="line">	存储过程体</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p>类似于方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">修饰符 返回类型 方法名(参数类型 参数名,...)&#123;</span><br><span class="line"></span><br><span class="line">	方法体;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意</p>
+<p>​    1、需要设置新的结束标记<br>​        delimiter 新的结束标记<br>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">delimiter $</span><br><span class="line"></span><br><span class="line">CREATE PROCEDURE 存储过程名(IN|OUT|INOUT 参数名  参数类型,...)</span><br><span class="line">BEGIN</span><br><span class="line">	sql语句1;</span><br><span class="line">	sql语句2;</span><br><span class="line"></span><br><span class="line">END $</span><br></pre></td></tr></table></figure>
+
+<p>​    2、存储过程体中可以有多条sql语句，如果仅仅一条sql语句，则可以省略begin end</p>
+<p>​    3、参数前面的符号的意思<br>​        in:该参数只能作为输入 （该参数不能做返回值）<br>​        out：该参数只能作为输出（该参数只能做返回值）<br>​        inout：既能做输入又能做输出</p>
+<p>#调用存储过程<br>    call 存储过程名(实参列表)<br>##函数</p>
+<p>###创建函数</p>
+<p>学过的函数：LENGTH、SUBSTR、CONCAT等<br>语法：</p>
+<pre><code>CREATE FUNCTION 函数名(参数名 参数类型,...) RETURNS 返回类型
+BEGIN
+    函数体
+
+END</code></pre><p>###调用函数<br>    SELECT 函数名（实参列表）</p>
+<p>###函数和存储过程的区别</p>
+<pre><code>        关键字        调用语法    返回值            应用场景
+函数        FUNCTION    SELECT 函数()    只能是一个        一般用于查询结果为一个值并返回时，当有返回值而且仅仅一个
+存储过程    PROCEDURE    CALL 存储过程()    可以有0个或多个        一般用于更新</code></pre><p>##流程控制结构</p>
+<h3 id="系统变量"><a href="#系统变量" class="headerlink" title="系统变量"></a>系统变量</h3><p>一、全局变量</p>
+<p>作用域：针对于所有会话（连接）有效，但不能跨重启</p>
+<pre><code>查看所有全局变量
+SHOW GLOBAL VARIABLES;
+查看满足条件的部分系统变量
+SHOW GLOBAL VARIABLES LIKE &apos;%char%&apos;;
+查看指定的系统变量的值
+SELECT @@global.autocommit;
+为某个系统变量赋值
+SET @@global.autocommit=0;
+SET GLOBAL autocommit=0;</code></pre><p>二、会话变量</p>
+<p>作用域：针对于当前会话（连接）有效</p>
+<pre><code>查看所有会话变量
+SHOW SESSION VARIABLES;
+查看满足条件的部分会话变量
+SHOW SESSION VARIABLES LIKE &apos;%char%&apos;;
+查看指定的会话变量的值
+SELECT @@autocommit;
+SELECT @@session.tx_isolation;
+为某个会话变量赋值
+SET @@session.tx_isolation=&apos;read-uncommitted&apos;;
+SET SESSION tx_isolation=&apos;read-committed&apos;;</code></pre><h3 id="自定义变量"><a href="#自定义变量" class="headerlink" title="自定义变量"></a>自定义变量</h3><p>一、用户变量</p>
+<p>声明并初始化：</p>
+<pre><code>SET @变量名=值;
+SET @变量名:=值;
+SELECT @变量名:=值;</code></pre><p>赋值：</p>
+<pre><code>方式一：一般用于赋简单的值
+SET 变量名=值;
+SET 变量名:=值;
+SELECT 变量名:=值;
+
+
+方式二：一般用于赋表 中的字段值
+SELECT 字段名或表达式 INTO 变量
+FROM 表;</code></pre><p>使用：</p>
+<pre><code>select @变量名;</code></pre><p>二、局部变量</p>
+<p>声明：</p>
+<pre><code>declare 变量名 类型 【default 值】;</code></pre><p>赋值：</p>
+<pre><code>方式一：一般用于赋简单的值
+SET 变量名=值;
+SET 变量名:=值;
+SELECT 变量名:=值;
+
+
+方式二：一般用于赋表 中的字段值
+SELECT 字段名或表达式 INTO 变量
+FROM 表;</code></pre><p>使用：</p>
+<pre><code>select 变量名</code></pre><p>二者的区别：</p>
+<pre><code>作用域            定义位置        语法</code></pre><p>用户变量    当前会话        会话的任何地方        加@符号，不用指定类型<br>局部变量    定义它的BEGIN END中     BEGIN END的第一句话    一般不用加@,需要指定类型</p>
+<p>###分支<br>一、if函数<br>    语法：if(条件，值1，值2)<br>    特点：可以用在任何位置</p>
+<p>二、case语句</p>
+<p>语法：</p>
+<pre><code>情况一：类似于switch
+case 表达式
+when 值1 then 结果1或语句1(如果是语句，需要加分号) 
+when 值2 then 结果2或语句2(如果是语句，需要加分号)
+...
+else 结果n或语句n(如果是语句，需要加分号)
+end 【case】（如果是放在begin end中需要加上case，如果放在select后面不需要）
+
+情况二：类似于多重if
+case 
+when 条件1 then 结果1或语句1(如果是语句，需要加分号) 
+when 条件2 then 结果2或语句2(如果是语句，需要加分号)
+...
+else 结果n或语句n(如果是语句，需要加分号)
+end 【case】（如果是放在begin end中需要加上case，如果放在select后面不需要）</code></pre><p>特点：<br>    可以用在任何位置</p>
+<p>三、if elseif语句</p>
+<p>语法：</p>
+<pre><code>if 情况1 then 语句1;
+elseif 情况2 then 语句2;
+...
+else 语句n;
+end if;</code></pre><p>特点：<br>    只能用在begin end中！！！！！！！！！！！！！！！</p>
+<p>三者比较：<br>            应用场合<br>    if函数        简单双分支<br>    case结构    等值判断 的多分支<br>    if结构        区间判断 的多分支</p>
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p>语法：</p>
+<pre><code>【标签：】WHILE 循环条件  DO
+    循环体
+END WHILE 【标签】;</code></pre><p>特点：</p>
+<pre><code>只能放在BEGIN END里面
+
+如果要搭配leave跳转语句，需要使用标签，否则可以不用标签
+
+leave类似于java中的break语句，跳出所在循环！！！</code></pre>
       
 
       
@@ -351,7 +603,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/31/GIt%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/10/11/MySQL%E5%9F%BA%E7%A1%80/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -365,18 +617,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/31/layui-excel/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          layui-excel
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/07/31/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello !!! 你好呀, 朋友</div>
+    <a href="/2020/10/11/node%E7%88%AC%E8%99%AB/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">node爬虫</div>
       <i class="icon-circle-right"></i>
     </a>
   

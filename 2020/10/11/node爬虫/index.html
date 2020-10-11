@@ -6,16 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>GIt代码管理 | 王二麻子</title>
+  <title>node爬虫 | 王二麻子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="GIt代码管理Git-分布式代码管理 Svn集中式代码管理 1.Git安装直接next就可以了 2.Git命令2.创建新的仓库 1cd 你要成为仓库的目录  1.初始化Git 注意：创建一个新的Git仓库，并且在该目录下隐藏一个Git文件，不要修改或者删除 1Git init  3.检出仓库将代码从远程的服务端克隆一份到本地的仓库 1.克隆命令 1Git clone 地址(github地址或者码云">
+  <meta name="description" content="爬虫总结1.爬虫介绍通过模拟浏览器的请求，服务器就会根据我们的请求返回我们想要的数据，将数据解析出来，并且进行保存。 2.爬虫流程1-目标：确定你想要获取的数据 确定想要的数据在什么页面上（一般详细的数据会在详情页） 确定在哪些页面可以链接到这些页面（一般分类列表页面会有详情页的链接数据） 寻找页面之间和数据之间的规律  2-分析页面 获取数据的方式（正则，cherrio） 2. 分析数据是通过a">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GIt代码管理">
-<meta property="og:url" content="http://yoursite.com/2020/07/31/GIt%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/index.html">
+<meta property="og:title" content="node爬虫">
+<meta property="og:url" content="http://yoursite.com/2020/10/11/node%E7%88%AC%E8%99%AB/index.html">
 <meta property="og:site_name" content="王二麻子">
-<meta property="og:description" content="GIt代码管理Git-分布式代码管理 Svn集中式代码管理 1.Git安装直接next就可以了 2.Git命令2.创建新的仓库 1cd 你要成为仓库的目录  1.初始化Git 注意：创建一个新的Git仓库，并且在该目录下隐藏一个Git文件，不要修改或者删除 1Git init  3.检出仓库将代码从远程的服务端克隆一份到本地的仓库 1.克隆命令 1Git clone 地址(github地址或者码云">
-<meta property="article:published_time" content="2020-07-31T14:50:17.845Z">
-<meta property="article:modified_time" content="2020-07-14T02:53:20.964Z">
+<meta property="og:description" content="爬虫总结1.爬虫介绍通过模拟浏览器的请求，服务器就会根据我们的请求返回我们想要的数据，将数据解析出来，并且进行保存。 2.爬虫流程1-目标：确定你想要获取的数据 确定想要的数据在什么页面上（一般详细的数据会在详情页） 确定在哪些页面可以链接到这些页面（一般分类列表页面会有详情页的链接数据） 寻找页面之间和数据之间的规律  2-分析页面 获取数据的方式（正则，cherrio） 2. 分析数据是通过a">
+<meta property="article:published_time" content="2020-10-11T14:57:30.480Z">
+<meta property="article:modified_time" content="2020-10-11T15:06:40.584Z">
 <meta property="article:author" content="王二麻子">
 <meta name="twitter:card" content="summary">
   
@@ -157,121 +157,110 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-GIt代码管理" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-node爬虫" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      GIt代码管理
+      node爬虫
     </h1>
   
 
         
-        <a href="/2020/07/31/GIt%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-07-31T14:50:17.845Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
+        <a href="/2020/10/11/node%E7%88%AC%E8%99%AB/" class="archive-article-date">
+  	<time datetime="2020-10-11T14:57:30.480Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="GIt代码管理"><a href="#GIt代码管理" class="headerlink" title="GIt代码管理"></a>GIt代码管理</h3><p>Git-分布式代码管理</p>
-<p>Svn集中式代码管理</p>
-<h3 id="1-Git安装"><a href="#1-Git安装" class="headerlink" title="1.Git安装"></a>1.Git安装</h3><p>直接next就可以了</p>
-<h2 id="2-Git命令"><a href="#2-Git命令" class="headerlink" title="2.Git命令"></a>2.Git命令</h2><p>2.创建新的仓库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd 你要成为仓库的目录</span><br></pre></td></tr></table></figure>
-
-<p>1.初始化Git</p>
-<p>注意：创建一个新的Git仓库，并且在该目录下隐藏一个Git文件，不要修改或者删除</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Git init</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-检出仓库"><a href="#3-检出仓库" class="headerlink" title="3.检出仓库"></a>3.检出仓库</h3><p>将代码从远程的服务端克隆一份到本地的仓库</p>
-<p>1.克隆命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Git clone 地址(github地址或者码云的克隆地址)</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-Git工作流"><a href="#4-Git工作流" class="headerlink" title="4.Git工作流"></a>4.Git工作流</h3><h5 id="Git维护是由三棵树"><a href="#Git维护是由三棵树" class="headerlink" title="Git维护是由三棵树"></a>Git维护是由三棵树</h5><ol>
-<li>工作目录：持有实际的文件</li>
-<li>缓存区：其实类似与修改索引，将修改的内容临时保存到缓存区域</li>
-<li>HEAD，类似与版本，指向你最近一次提交的结果</li>
+        <h1 id="爬虫总结"><a href="#爬虫总结" class="headerlink" title="爬虫总结"></a>爬虫总结</h1><h2 id="1-爬虫介绍"><a href="#1-爬虫介绍" class="headerlink" title="1.爬虫介绍"></a>1.爬虫介绍</h2><p>通过模拟浏览器的请求，服务器就会根据我们的请求返回我们想要的数据，将数据解析出来，并且进行保存。</p>
+<h2 id="2-爬虫流程"><a href="#2-爬虫流程" class="headerlink" title="2.爬虫流程"></a>2.爬虫流程</h2><h4 id="1-目标：确定你想要获取的数据"><a href="#1-目标：确定你想要获取的数据" class="headerlink" title="1-目标：确定你想要获取的数据"></a>1-目标：确定你想要获取的数据</h4><ol>
+<li>确定想要的数据在什么页面上（一般详细的数据会在详情页）</li>
+<li>确定在哪些页面可以链接到这些页面（一般分类列表页面会有详情页的链接数据）</li>
+<li>寻找页面之间和数据之间的规律</li>
 </ol>
-<h3 id="5-添加与提交"><a href="#5-添加与提交" class="headerlink" title="5.添加与提交"></a>5.添加与提交</h3><p>1.将计划改动的文件提交到缓存区</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add 文件名称</span><br><span class="line">git add *</span><br><span class="line"><span class="comment"># 可以使用</span></span><br><span class="line">git add .</span><br><span class="line"><span class="comment"># 将所有文件进行提交</span></span><br></pre></td></tr></table></figure>
-
-<p>2.当内容修改完成之后，希望成为1个版本，那么可以将内容进行提交</p>
-<p>​    注意：这个命令将改动提交到HEAD，但是没有传入到远程仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"代码提交的信息"</span>（比如：git commit -m <span class="string">"create one.txt.1"</span>）</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-设置远程地址"><a href="#6-设置远程地址" class="headerlink" title="6.设置远程地址"></a>6.设置远程地址</h3><p>1.设置远程仓库地址</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/KTBOY/testGit.git</span><br></pre></td></tr></table></figure>
-
-<p>2.将代码推送到远程仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br><span class="line"><span class="comment"># 特殊情况下可能会使用 -f 进行强制推送</span></span><br><span class="line">git push -u -f origin master</span><br><span class="line"></span><br><span class="line"><span class="comment"># 系统会提示登录, 请正确填写用户名以及密码</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="7-项目中经常使用的命令"><a href="#7-项目中经常使用的命令" class="headerlink" title="7.项目中经常使用的命令"></a>7.项目中经常使用的命令</h3><p>1.更新项目到本地</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
-<p>2.版本回退</p>
-<p>查看提交项目的版本信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 或者使用</span></span><br><span class="line">git reflog</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset -hard id</span><br></pre></td></tr></table></figure>
-
-<p>3.分支</p>
-<p>创建分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b dev</span><br></pre></td></tr></table></figure>
-
-<p>切换分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout 分支名称</span><br></pre></td></tr></table></figure>
-
-<p>合并分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge 分支名称</span><br></pre></td></tr></table></figure>
-
-<h3 id="8-公司工作使用Git的流程"><a href="#8-公司工作使用Git的流程" class="headerlink" title="8.公司工作使用Git的流程"></a>8.公司工作使用Git的流程</h3><p>1.远程仓库地址克隆服务器里面的代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone</span><br></pre></td></tr></table></figure>
-
-<p>2.创建分支给自己开发</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b 分支名称</span><br></pre></td></tr></table></figure>
-
-<p>3.更新服务器最新代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
-<p>4.将自己开发的代码和服务器的代码合并</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge 分支的名称</span><br></pre></td></tr></table></figure>
-
-<p>5.提交代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="9-忽视文件夹"><a href="#9-忽视文件夹" class="headerlink" title="9. 忽视文件夹"></a>9. 忽视文件夹</h3><p>​        在使用<code>git</code>的过程中，一般我们总会有些文件无需纳入<code>git</code>的管理，也不希望它们总出现在未跟踪文件列表，这些文件通常是日志文件、临时文件、编译产生的中间文件、工具自动生成的文件等等。</p>
-<p>​        以 Vue项目为例子, 我们不想提交大量node_module包, 因此需要在.gitignore中提示不提交node_module的相关文件</p>
-<h4 id="9-1-gitignore-规范"><a href="#9-1-gitignore-规范" class="headerlink" title="9.1 .gitignore 规范"></a>9.1 .gitignore 规范</h4><ul>
-<li>所有空行或者以注释符号 ＃ 开头的行都会被 Git 忽略</li>
-<li>可以使用标准的 glob 模式匹配</li>
-<li>匹配模式最后跟斜杠(/)说明要忽略的是目录</li>
-<li>要忽略指定模式以外的文件或目录，可以在模式前加上感叹号(!)进行取反</li>
-</ul>
-<h4 id="9-2-匹配规则"><a href="#9-2-匹配规则" class="headerlink" title="9.2 匹配规则"></a>9.2 匹配规则</h4><ul>
-<li><code>logs/</code>：忽略当前路径下的logs目录，包含logs下的所有子目录和文件</li>
-<li><code>/logs.txt</code>：忽略根目录下的logs.txt文件</li>
-<li><code>*.class</code>：忽略所有后缀为.class的文件</li>
-<li><code>!/classes/a.class</code>：不忽略classes目录下的a.class文件</li>
-<li><code>tmp/*.txt</code>：只忽略tmp目录下的.txt文件</li>
-<li><code>**/foo</code>：可以忽略/foo, a/foo, a/b/foo等</li>
-</ul>
-<h4 id="9-3-举个例子"><a href="#9-3-举个例子" class="headerlink" title="9.3 举个例子"></a>9.3 举个例子</h4><ol>
-<li><p>创建.gitignore</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># touch 是Linux系统常见的命令, 意为创建文件意思</span></span><br><span class="line">touch .gitignore</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在.gitignore 中编辑</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 忽视所有的node_module文件</span><br><span class="line">&#x2F;node_module</span><br><span class="line"># 忽视 vscode自动生成的文件</span><br><span class="line">.vscode</span><br><span class="line"># 忽视 HBuild 自动生成的文件</span><br><span class="line">.project</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>保存即可</p>
-<p>完成可使用 <code>git add .</code> 进行验证</p>
-</li>
+<h4 id="2-分析页面"><a href="#2-分析页面" class="headerlink" title="2-分析页面"></a>2-分析页面</h4><ol>
+<li><p>获取数据的方式（正则，cherrio）</p>
+<pre><code>2. 分析数据是通过ajax请求的数据，还是html里自带的数据
+3. 如果是通过AJAX请求的数据，那么需要获取ajax请求的链接，一般请求到的数据都为JSON格式数据，那么就会比较容易解析。
+4. 如何数据在HTML里面，那么就用cherrio通过选择器将内容选中</code></pre></li>
 </ol>
+<h4 id="3-编写单个数据获取的案例"><a href="#3-编写单个数据获取的案例" class="headerlink" title="3-编写单个数据获取的案例"></a>3-编写单个数据获取的案例</h4><ol>
+<li><p>解析出分类页的链接地址</p>
+<pre><code>2. 解析出列表页的链接地址
+3. 解析出详情页的链接地址
+4. 解析详情页里面想要获取的数据
+5. 将数据进行保存到本地或者是数据库</code></pre></li>
+</ol>
+<h4 id="4-如果遇到阻碍进行反爬虫对抗"><a href="#4-如果遇到阻碍进行反爬虫对抗" class="headerlink" title="4-如果遇到阻碍进行反爬虫对抗"></a>4-如果遇到阻碍进行反爬虫对抗</h4><ol>
+<li><p>User-Agent是否是正常浏览器的信息</p>
+<pre><code>2. 将请求头设置成跟浏览器一样的内容
+3. 因为爬虫的爬取速度过快，会导致封号。1那么可以降低速度进行解决，2可以使用代理进行解决
+4. 如果设置需要凭证，那么可以采用无界浏览器真实模拟。</code></pre></li>
+</ol>
+<h2 id="3-请求数据的库"><a href="#3-请求数据的库" class="headerlink" title="3.请求数据的库"></a>3.请求数据的库</h2><p>request，axios：通过库，帮助我们快速实现HTTP请求包的打包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">request.get(&#39;请求地址&#39;, &#123;</span><br><span class="line">  &#39;请求头字段&#39;: &#39;请求头的value值&#39;</span><br><span class="line">&#125;,(res)&#x3D;&gt;&#123;处理返回的内容&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>axios优势会更明显，前后端通杀，前后端调用的方式一致。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">axios.get(&#39;请求地址&#39;,参数对象).then(function (response) &#123;</span><br><span class="line">    console.log(response);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>axios获取图片</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">  method:&#39;get&#39;,</span><br><span class="line">  url:&#39;http:&#x2F;&#x2F;bit.ly&#x2F;2mTM3nY&#39;,</span><br><span class="line">  responseType:&#39;stream&#39;</span><br><span class="line">&#125;)</span><br><span class="line">.then(function(response) &#123;</span><br><span class="line">  response.data.pipe(fs.createWriteStream(&#39;ada_lovelace.jpg&#39;))</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>puppeteer:完全模拟浏览器</p>
+<p>打开浏览器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">let options &#x3D; &#123;</span><br><span class="line">	headless:true,&#x2F;&#x2F;是否是无界面浏览器</span><br><span class="line">	slowMo:250,&#x2F;&#x2F;调试时可以减慢操作速度</span><br><span class="line">	defaultViewport:&#123;</span><br><span class="line">		width:1200,&#x2F;&#x2F;设置视窗的宽高</span><br><span class="line">		height:800</span><br><span class="line">	&#125;,</span><br><span class="line">	timeout:3000，&#x2F;&#x2F;默认超时3秒</span><br><span class="line">&#125;</span><br><span class="line">let browser &#x3D;await puppeteer.launch(options);</span><br></pre></td></tr></table></figure>
+
+<p>打开新标签页</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let page &#x3D; await browser.newPage()</span><br></pre></td></tr></table></figure>
+
+<p>获取所有浏览器中的页面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let pages &#x3D; await browser.pages()</span><br></pre></td></tr></table></figure>
+
+<p>关闭浏览器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">browser.close()</span><br></pre></td></tr></table></figure>
+
+<p>将页面跳转至</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">await page.goto(url)</span><br></pre></td></tr></table></figure>
+
+<p>获取页面的对象,并进行操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let btn &#x3D; await page.$(selector)</span><br><span class="line">let input &#x3D; await page.$(selector)</span><br><span class="line">&#x2F;&#x2F;点击按钮</span><br><span class="line">btn.click()</span><br><span class="line">&#x2F;&#x2F;聚焦到输入框</span><br><span class="line">input.forcus()</span><br></pre></td></tr></table></figure>
+
+<p>在页面上写入内容或者键盘按键</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">await page.keyboard.type(&#39;Hello World!&#39;);</span><br><span class="line">await page.keyboard.press(&#39;ArrowLeft&#39;);</span><br><span class="line">await page.keyboard.down(&#39;Shift&#39;);</span><br></pre></td></tr></table></figure>
+
+<p>设置鼠标的移动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">await page.mouse.move(0, 0);</span><br><span class="line">await page.mouse.down();</span><br><span class="line">await page.mouse.move(0, 100);</span><br><span class="line">await page.mouse.move(100, 100);</span><br><span class="line">await page.mouse.move(100, 0);</span><br><span class="line">await page.mouse.move(0, 0);</span><br><span class="line">await page.mouse.up();</span><br></pre></td></tr></table></figure>
+
+<p>截获页面请求</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">await page.setRequestInterception(true);</span><br><span class="line">page.on(&#39;request&#39;, request &#x3D;&gt; &#123;</span><br><span class="line">request.url()&#x2F;&#x2F;可以获取请求的网址，request，包含了所有的请求信息</span><br><span class="line">	if(你想要的条件)&#123;</span><br><span class="line">		request.continue()</span><br><span class="line">	&#125;else&#123;</span><br><span class="line">		request.abort([errorCode])</span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>获取浏览器的信息和内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">page.$eval(selector,(item)&#x3D;&gt;&#123;return item&#125;)</span><br><span class="line">page.$$eval(selectors,(items)&#x3D;&gt;&#123;return items&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-2-编码解析"><a href="#3-2-编码解析" class="headerlink" title="3.2 编码解析"></a>3.2 编码解析</h4><p>以下代码没有任何实用性,  仅是对解析字体编码提供一种思路</p>
+<h4 id="3-2-1-获取随机字体文件的链接地址"><a href="#3-2-1-获取随机字体文件的链接地址" class="headerlink" title="3.2.1 获取随机字体文件的链接地址"></a>3.2.1 获取随机字体文件的链接地址</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fontUrl = $(<span class="string">"head &gt; style"</span>).html()</span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/format.*?url\('(.*?woff)'\)/ig</span>s;</span><br><span class="line"><span class="comment">//console.log(fontUrl)</span></span><br><span class="line"><span class="keyword">let</span> result = reg.exec(fontUrl)</span><br><span class="line"><span class="keyword">let</span> fontPath = result[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-2-2-将随机的字体文件下载并进行解析"><a href="#3-2-2-将随机的字体文件下载并进行解析" class="headerlink" title="3.2.2 将随机的字体文件下载并进行解析"></a>3.2.2 将随机的字体文件下载并进行解析</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//已文件流的形式下载字体图标库</span></span><br><span class="line"><span class="keyword">let</span> ws = fs.createWriteStream(<span class="string">'a.woff'</span>) <span class="comment">//下载的文件名暂定为"a.woff"</span></span><br><span class="line">res.data.pipe(ws);</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-2-3-将编码切割成数组-逐一进行解析-循环解析"><a href="#3-2-3-将编码切割成数组-逐一进行解析-循环解析" class="headerlink" title="3.2.3 将编码切割成数组,逐一进行解析(循环解析)"></a>3.2.3 将编码切割成数组,逐一进行解析(循环解析)</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr1 = aa.split(<span class="string">""</span>)</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">let</span> arr11 = []</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2-4-编码解析"><a href="#3-2-4-编码解析" class="headerlink" title="3.2.4 编码解析"></a>3.2.4 编码解析</h4><p>循环解析字符串编码, 循环每个item,  当成str传入解析函数中</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">parseNum</span>(<span class="params">str</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve,reject</span>)</span>&#123;</span><br><span class="line">        <span class="comment">//载入字体文件，并解析出字体对象</span></span><br><span class="line">        opentype.load(<span class="string">"a.woff"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, font</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (err) &#123;</span><br><span class="line">                reject(<span class="string">'Font could not be loaded: '</span> + err)</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">//通过字体对象，并在getPath方法中传入乱码的编码，获取出绘制该字体图像路径，0，100，72分别表示绘制的x坐标为0，y坐标为100，字体大小为72</span></span><br><span class="line">                <span class="keyword">var</span> path = font.getPath(str,<span class="number">0</span>,<span class="number">100</span>,<span class="number">72</span>);</span><br><span class="line">                <span class="comment">//通过绘制的图像路径，得出SVG矢量图的字符串</span></span><br><span class="line">                <span class="keyword">let</span> a = path.toSVG();</span><br><span class="line">                <span class="keyword">let</span> max = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">let</span> key = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">let</span> arr = []</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">                    <span class="keyword">let</span> temp = similar(a,svgPaths[i])</span><br><span class="line">                    <span class="keyword">if</span>(max&lt;temp)&#123;</span><br><span class="line">                        max = temp;</span><br><span class="line">                        key = i;</span><br><span class="line">                    &#125;</span><br><span class="line">                    arr.push(&#123;temp,i&#125;)</span><br><span class="line">                &#125;</span><br><span class="line">                resolve(&#123;key,max&#125;)</span><br><span class="line">                </span><br><span class="line">                </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">//similar(a,b)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2-5-结果处理"><a href="#3-2-5-结果处理" class="headerlink" title="3.2.5 结果处理"></a>3.2.5 结果处理</h4><p>判断相似度,最大相似度大于50%则采用,不然返回原值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr11[i] = <span class="built_in">parseFloat</span>(result.max)&gt;<span class="number">0.5</span>?result.key:item;</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -351,7 +340,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/31/GIt%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/10/11/node%E7%88%AC%E8%99%AB/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -365,18 +354,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/31/layui-excel/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/10/11/MySQL%E5%9F%BA%E7%A1%80/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          layui-excel
+          MySQL基础
         
       </div>
     </a>
   
   
-    <a href="/2020/07/31/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello !!! 你好呀, 朋友</div>
+    <a href="/2020/10/06/%E5%AD%A6%E4%B9%A0koa2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">学习koa2</div>
       <i class="icon-circle-right"></i>
     </a>
   

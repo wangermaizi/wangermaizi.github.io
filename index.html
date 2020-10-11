@@ -157,6 +157,561 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-MySQL基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/11/MySQL%E5%9F%BA%E7%A1%80/">MySQL基础</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/11/MySQL%E5%9F%BA%E7%A1%80/" class="archive-article-date">
+  	<time datetime="2020-10-11T15:55:23.651Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="本单元目标"><a href="#本单元目标" class="headerlink" title="本单元目标"></a>本单元目标</h2><p>​    一、为什么要学习数据库<br>​    二、数据库的相关概念<br>​        DBMS、DB、SQL<br>​    三、数据库存储数据的特点<br>​    四、初始MySQL<br>​        MySQL产品的介绍<br>​        MySQL产品的安装          ★<br>​        MySQL服务的启动和停止     ★<br>​        MySQL服务的登录和退出     ★<br>​        MySQL的常见命令和语法规范<br>​    五、DQL语言的学习   ★<br>​        基础查询        ★<br>​        条件查询         ★<br>​        排序查询         ★<br>​        常见函数        ★<br>​        分组函数        ★<br>​        分组查询           ★<br>​        连接查询         ★<br>​        子查询       √<br>​        分页查询       ★<br>​        union联合查询    √<br>​        </p>
+<p>六、DML语言的学习    ★<br>    插入语句<br>    修改语句<br>    删除语句<br>七、DDL语言的学习<br>    库和表的管理     √<br>    常见数据类型介绍  √<br>    常见约束        √<br>八、TCL语言的学习<br>    事务和事务处理<br>九、视图的讲解           √<br>十、变量<br>十一、存储过程和函数  </p>
+<p>十二、流程控制结构       </p>
+<h2 id="数据库的好处"><a href="#数据库的好处" class="headerlink" title="数据库的好处"></a>数据库的好处</h2><p>​    1.持久化数据到本地<br>​    2.可以实现结构化查询，方便管理<br>​    </p>
+<h2 id="数据库相关概念"><a href="#数据库相关概念" class="headerlink" title="数据库相关概念"></a>数据库相关概念</h2><p>​    1、DB：数据库，保存一组有组织的数据的容器<br>​    2、DBMS：数据库管理系统，又称为数据库软件（产品），用于管理DB中的数据<br>​    3、SQL:结构化查询语言，用于和DBMS通信的语言</p>
+<h2 id="数据库存储数据的特点"><a href="#数据库存储数据的特点" class="headerlink" title="数据库存储数据的特点"></a>数据库存储数据的特点</h2><p>​    1、将数据放到表中，表再放到库中<br>​    2、一个数据库中可以有多个表，每个表都有一个的名字，用来标识自己。表名具有唯一性。<br>​    3、表具有一些特性，这些特性定义了数据在表中如何存储，类似java中 “类”的设计。<br>​    4、表由列组成，我们也称为字段。所有表都是由一个或多个列组成的，每一列类似java 中的”属性”<br>​    5、表中的数据是按行存储的，每一行类似于java中的“对象”。</p>
+<h2 id="MySQL产品的介绍和安装"><a href="#MySQL产品的介绍和安装" class="headerlink" title="MySQL产品的介绍和安装"></a>MySQL产品的介绍和安装</h2><h3 id="MySQL服务的启动和停止"><a href="#MySQL服务的启动和停止" class="headerlink" title="MySQL服务的启动和停止"></a>MySQL服务的启动和停止</h3><p>​    方式一：计算机——右击管理——服务<br>​    方式二：通过管理员身份运行<br>​    net start 服务名（启动服务）<br>​    net stop 服务名（停止服务）</p>
+<h3 id="MySQL服务的登录和退出"><a href="#MySQL服务的登录和退出" class="headerlink" title="MySQL服务的登录和退出"></a>MySQL服务的登录和退出</h3><p>​    方式一：通过mysql自带的客户端<br>​    只限于root用户</p>
+<p>​    方式二：通过windows自带的客户端<br>​    登录：<br>​    mysql 【-h主机名 -P端口号 】-u用户名 -p密码</p>
+<p>​    退出：<br>​    exit或ctrl+C</p>
+<p>​    </p>
+<h3 id="MySQL的常见命令"><a href="#MySQL的常见命令" class="headerlink" title="MySQL的常见命令"></a>MySQL的常见命令</h3><p>​    1.查看当前所有的数据库<br>​        show databases;<br>​    2.打开指定的库<br>​        use 库名<br>​    3.查看当前库的所有表<br>​        show tables;<br>​    4.查看其它库的所有表<br>​        show tables from 库名;<br>​    5.创建表<br>​        create table 表名(<br>​            列名 列类型,<br>​            列名 列类型，<br>​            。。。<br>​        );<br>​    6.查看表结构<br>​        desc 表名;</p>
+<p>​    7.查看服务器的版本<br>​        方式一：登录到mysql服务端<br>​            select version();<br>​        方式二：没有登录到mysql服务端<br>​            mysql –version<br>​        或<br>​            mysql –V</p>
+<h3 id="MySQL的语法规范"><a href="#MySQL的语法规范" class="headerlink" title="MySQL的语法规范"></a>MySQL的语法规范</h3><p>​    1.不区分大小写,但建议关键字大写，表名、列名小写<br>​    2.每条命令最好用分号结尾<br>​    3.每条命令根据需要，可以进行缩进 或换行<br>​    4.注释<br>​        单行注释：#注释文字<br>​        单行注释：– 注释文字<br>​        多行注释：/* 注释文字  */<br>​    </p>
+<h3 id="SQL的语言分类"><a href="#SQL的语言分类" class="headerlink" title="SQL的语言分类"></a>SQL的语言分类</h3><p>​    DQL（Data Query Language）：数据查询语言<br>​        select<br>​    DML(Data Manipulate Language):数据操作语言<br>​        insert 、update、delete<br>​    DDL（Data Define Languge）：数据定义语言<br>​        create、drop、alter<br>​    TCL（Transaction Control Language）：事务控制语言<br>​        commit、rollback<br>​    </p>
+<h3 id="SQL的常见命令"><a href="#SQL的常见命令" class="headerlink" title="SQL的常见命令"></a>SQL的常见命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">show databases； 查看所有的数据库</span><br><span class="line">use 库名； 打开指定 的库</span><br><span class="line">show tables ; 显示库中的所有表</span><br><span class="line">show tables from 库名;显示指定库中的所有表</span><br><span class="line">create table 表名(</span><br><span class="line">	字段名 字段类型,	</span><br><span class="line">	字段名 字段类型</span><br><span class="line">); 创建表</span><br><span class="line"></span><br><span class="line">desc 表名; 查看指定表的结构</span><br><span class="line">select * from 表名;显示表中的所有数据</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="DQL语言的学习"><a href="#DQL语言的学习" class="headerlink" title="DQL语言的学习"></a>DQL语言的学习</h2><h3 id="进阶1：基础查询"><a href="#进阶1：基础查询" class="headerlink" title="进阶1：基础查询"></a>进阶1：基础查询</h3><p>​    语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT 要查询的东西 FROM 表名;</span><br></pre></td></tr></table></figure>
+
+<p>类似于Java中 :System.out.println(要打印的东西);<br>特点：<br>    ① 通过select查询完的结果 ，是一个虚拟的表格，不是真实存在<br>    ② 要查询的东西 可以是常量值、可以是表达式、可以是字段、可以是函数</p>
+<h3 id="进阶2：条件查询"><a href="#进阶2：条件查询" class="headerlink" title="进阶2：条件查询"></a>进阶2：条件查询</h3><p>​    条件查询：根据条件过滤原始表的数据，查询到想要的数据<br>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select </span><br><span class="line">	要查询的字段|表达式|常量值|函数</span><br><span class="line">from </span><br><span class="line">	表</span><br><span class="line">where </span><br><span class="line"></span><br><span class="line">条件 ;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>分类：</p>
+<h4 id="一、条件表达式"><a href="#一、条件表达式" class="headerlink" title="一、条件表达式"></a>一、条件表达式</h4><p>示例：salary&gt;10000<br>    条件运算符：</p>
+<p>​    &lt; &gt;= &lt;= = != &lt;&gt;</p>
+<h4 id="二、逻辑表达式"><a href="#二、逻辑表达式" class="headerlink" title="二、逻辑表达式"></a>二、逻辑表达式</h4><p>示例：salary&gt;10000 &amp;&amp; salary&lt;20000</p>
+<p>逻辑运算符：</p>
+<p>​    and（&amp;&amp;）:两个条件如果同时成立，结果为true，否则为false<br>​    or(||)：两个条件只要有一个成立，结果为true，否则为false<br>​    not(!)：如果条件成立，则not后为false，否则为true</p>
+<h4 id="三、模糊查询"><a href="#三、模糊查询" class="headerlink" title="三、模糊查询"></a>三、模糊查询</h4><p>示例：last_name like ‘a%’</p>
+<h3 id="进阶3：排序查询"><a href="#进阶3：排序查询" class="headerlink" title="进阶3：排序查询"></a>进阶3：排序查询</h3><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">select</span><br><span class="line">	要查询的东西</span><br><span class="line">from</span><br><span class="line">	表</span><br><span class="line">where </span><br><span class="line">	条件</span><br><span class="line"></span><br><span class="line">order by 排序的字段|表达式|函数|别名 [asc|desc]</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="进阶4：常见函数"><a href="#进阶4：常见函数" class="headerlink" title="进阶4：常见函数"></a>进阶4：常见函数</h3><h4 id="一、单行函数"><a href="#一、单行函数" class="headerlink" title="一、单行函数"></a>一、单行函数</h4><pre><code>##### 1、字符函数</code></pre><p>​        concat拼接<br>​        substr截取子串<br>​        upper转换成大写<br>​        lower转换成小写<br>​        trim去前后指定的空格和字符<br>​        ltrim去左边空格<br>​        rtrim去右边空格<br>​        replace替换<br>​        lpad左填充<br>​        rpad右填充<br>​        instr返回子串第一次出现的索引<br>​        length 获取字节个数<br>​        </p>
+<h5 id="2、数学函数"><a href="#2、数学函数" class="headerlink" title="2、数学函数"></a>2、数学函数</h5><p>​        round 四舍五入<br>​        rand 随机数<br>​        floor向下取整<br>​        ceil向上取整<br>​        mod取余<br>​        truncate截断</p>
+<pre><code>##### 3、日期函数</code></pre><p>​        now当前系统日期+时间<br>​        curdate当前系统日期<br>​        curtime当前系统时间<br>​        str_to_date 将字符转换成日期<br>​        date_format将日期转换成字符</p>
+<pre><code>##### 4、流程控制函数</code></pre><p>​        if 处理双分支<br>​        case语句 处理多分支<br>​            情况1：处理等值判断<br>​            情况2：处理条件判断<br>​        </p>
+<pre><code>##### 5、其他函数</code></pre><p>​        version版本<br>​        database当前库<br>​        user当前连接用户</p>
+<p>​    </p>
+<h4 id="二、分组函数"><a href="#二、分组函数" class="headerlink" title="二、分组函数"></a>二、分组函数</h4><p>​    sum 求和<br>​    max 最大值<br>​    min 最小值<br>​    avg 平均值<br>​    count 计数</p>
+<p>​    特点：<br>​        1、以上五个分组函数都忽略null值，除了count(*)<br>​        2、sum和avg一般用于处理数值型<br>​            max、min、count可以处理任何数据类型<br>        3、都可以搭配distinct使用，用于统计去重后的结果<br>​        4、count的参数可以支持：<br>​        字段、*、常量值，一般放1</p>
+<p>​    建议使用 count(*)</p>
+<h3 id="进阶5：分组查询"><a href="#进阶5：分组查询" class="headerlink" title="进阶5：分组查询"></a>进阶5：分组查询</h3><p>​    语法：<br>​    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select 查询的字段，分组函数</span><br><span class="line">from 表</span><br><span class="line">group by 分组的字段</span><br></pre></td></tr></table></figure>
+
+<p>​<br>​    </p>
+<p>特点：<br>    1、可以按单个字段分组<br>    2、和分组函数一同查询的字段最好是分组后的字段<br>    3、分组筛选<br>        针对的表    位置            关键字<br>        分组前筛选：    原始表        group by的前面        where<br>        分组后筛选：    分组后的结果集    group by的后面        having</p>
+<p>​    4、可以按多个字段分组，字段之间用逗号隔开<br>​    5、可以支持排序<br>​    6、having后可以支持别名</p>
+<h3 id="进阶6：多表连接查询"><a href="#进阶6：多表连接查询" class="headerlink" title="进阶6：多表连接查询"></a>进阶6：多表连接查询</h3><p>笛卡尔乘积：如果连接条件省略或无效则会出现<br>解决办法：添加上连接条件</p>
+<h4 id="一、传统模式下的连接-：等值连接——非等值连接"><a href="#一、传统模式下的连接-：等值连接——非等值连接" class="headerlink" title="一、传统模式下的连接 ：等值连接——非等值连接"></a>一、传统模式下的连接 ：等值连接——非等值连接</h4><p>​    1.等值连接的结果 = 多个表的交集<br>​    2.n表连接，至少需要n-1个连接条件<br>​    3.多个表不分主次，没有顺序要求<br>​    4.一般为表起别名，提高阅读性和性能</p>
+<h4 id="二、sql99语法：通过join关键字实现连接"><a href="#二、sql99语法：通过join关键字实现连接" class="headerlink" title="二、sql99语法：通过join关键字实现连接"></a>二、sql99语法：通过join关键字实现连接</h4><p>含义：1999年推出的sql语法<br>支持：<br>    等值连接、非等值连接 （内连接）<br>    外连接<br>    交叉连接</p>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">select 字段，...</span><br><span class="line">from 表1</span><br><span class="line">[inner|left outer|right outer|cross]join 表2 on  连接条件</span><br><span class="line">[inner|left outer|right outer|cross]join 表3 on  连接条件</span><br><span class="line">[where 筛选条件]</span><br><span class="line">[group by 分组字段]</span><br><span class="line">[having 分组后的筛选条件]</span><br><span class="line">[order by 排序的字段或表达式]</span><br></pre></td></tr></table></figure>
+
+<p>好处：语句上，连接条件和筛选条件实现了分离，简洁明了！</p>
+<p>​    </p>
+<h4 id="三、自连接"><a href="#三、自连接" class="headerlink" title="三、自连接"></a>三、自连接</h4><p>案例：查询员工名和直接上级的名称</p>
+<p><strong>sql99</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT e.last_name,m.last_name</span><br><span class="line">FROM employees e</span><br><span class="line">JOIN employees m ON e.&#96;manager_id&#96;&#x3D;m.&#96;employee_id&#96;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>sql92</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT e.last_name,m.last_name</span><br><span class="line">FROM employees e,employees m </span><br><span class="line">WHERE e.&#96;manager_id&#96;&#x3D;m.&#96;employee_id&#96;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="进阶7：子查询"><a href="#进阶7：子查询" class="headerlink" title="进阶7：子查询"></a>进阶7：子查询</h3><p>含义：</p>
+<p>一条查询语句中又嵌套了另一条完整的select语句，其中被嵌套的select语句，称为子查询或内查询<br>在外面的查询语句，称为主查询或外查询</p>
+<p>特点：</p>
+<p>​    1、子查询都放在小括号内<br>​    2、子查询可以放在from后面、select后面、where后面、having后面，但一般放在条件的            右侧<br>​    3、子查询优先于主查询执行，主查询使用了子查询的执行结果<br>​    4、子查询根据查询结果的行数不同分为以下两类：<br>​        ① 单行子查询<br>​                结果集只有一行<br>​                一般搭配单行操作符使用：&gt; &lt; = &lt;&gt; &gt;= &lt;=<br>​                非法使用子查询的情况：<br>​                a、子查询的结果为一组值<br>​                b、子查询的结果为空<br>​<br>​        ② 多行子查询<br>​                结果集有多行<br>​                一般搭配多行操作符使用：any、all、in、not in<br>​                in： 属于子查询结果中的任意一个就行<br>​                any和all往往可以用其他查询代替</p>
+<h3 id="进阶8：分页查询"><a href="#进阶8：分页查询" class="headerlink" title="进阶8：分页查询"></a>进阶8：分页查询</h3><p>应用场景：</p>
+<p>实际的web项目中需要根据用户的需求提交对应的分页查询的sql语句</p>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select 字段|表达式,...</span><br><span class="line">from 表</span><br><span class="line">[where 条件]</span><br><span class="line">[group by 分组字段]</span><br><span class="line">[having 条件]</span><br><span class="line">[order by 排序的字段]</span><br><span class="line">limit 起始的条目索引，条目数;</span><br></pre></td></tr></table></figure>
+
+<p>特点：</p>
+<p>1.起始条目索引从0开始</p>
+<p>2.limit子句放在查询语句的最后</p>
+<p>3.公式：select * from  表 limit （page-1）*sizePerPage,sizePerPage<br>假如:<br>每页显示条目数sizePerPage<br>要显示的页数 page</p>
+<h3 id="进阶9：联合查询"><a href="#进阶9：联合查询" class="headerlink" title="进阶9：联合查询"></a>进阶9：联合查询</h3><p>引入：<br>    union 联合、合并</p>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select 字段|常量|表达式|函数 【from 表】 【where 条件】 union 【all】</span><br><span class="line">select 字段|常量|表达式|函数 【from 表】 【where 条件】 union 【all】</span><br><span class="line">select 字段|常量|表达式|函数 【from 表】 【where 条件】 union  【all】</span><br><span class="line">.....</span><br><span class="line">select 字段|常量|表达式|函数 【from 表】 【where 条件】</span><br></pre></td></tr></table></figure>
+
+<p>特点：</p>
+<pre><code>1、多条查询语句的查询的列数必须是一致的
+2、多条查询语句的查询的列的类型几乎相同
+3、union代表去重，union all代表不去重</code></pre><h2 id="DML语言"><a href="#DML语言" class="headerlink" title="DML语言"></a>DML语言</h2><h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">insert into 表名(字段名，...)</span><br><span class="line">values(值1，...);</span><br></pre></td></tr></table></figure>
+
+<p>特点：</p>
+<p>​    1、字段类型和值类型一致或兼容，而且一一对应<br>​    2、可以为空的字段，可以不用插入值，或用null填充<br>​    3、不可以为空的字段，必须插入值<br>​    4、字段个数和值的个数必须一致<br>​    5、字段可以省略，但默认所有字段，并且顺序和表中的存储顺序一致</p>
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>修改单表语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">update 表名 set 字段&#x3D;新值,字段&#x3D;新值</span><br><span class="line">[where 条件]</span><br></pre></td></tr></table></figure>
+<p>修改多表语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">update 表1 别名1,表2 别名2</span><br><span class="line">set 字段&#x3D;新值，字段&#x3D;新值</span><br><span class="line">where 连接条件</span><br><span class="line">and 筛选条件</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p>方式1：delete语句 </p>
+<p>单表的删除： ★</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from 表名 【where 筛选条件】</span><br></pre></td></tr></table></figure>
+
+<p>多表的删除：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">delete 别名1，别名2</span><br><span class="line">from 表1 别名1，表2 别名2</span><br><span class="line">where 连接条件</span><br><span class="line">and 筛选条件;</span><br></pre></td></tr></table></figure>
+
+
+<p>方式2：truncate语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">truncate table 表名</span><br></pre></td></tr></table></figure>
+
+
+<p>两种方式的区别【面试题】</p>
+<pre><code>#1.truncate不能加where条件，而delete可以加where条件
+#2.truncate的效率高一丢丢
+#3.truncate 删除带自增长的列的表后，如果再插入数据，数据从1开始
+#delete 删除带自增长列的表后，如果再插入数据，数据从上一次的断点处开始
+#4.truncate删除不能回滚，delete删除可以回滚</code></pre><h2 id="DDL语句"><a href="#DDL语句" class="headerlink" title="DDL语句"></a>DDL语句</h2><h3 id="库和表的管理"><a href="#库和表的管理" class="headerlink" title="库和表的管理"></a>库和表的管理</h3><h4 id="库的管理："><a href="#库的管理：" class="headerlink" title="库的管理："></a>库的管理：</h4><h5 id="一、创建库"><a href="#一、创建库" class="headerlink" title="一、创建库"></a>一、创建库</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database 库名</span><br></pre></td></tr></table></figure>
+
+<h5 id="二、删除库"><a href="#二、删除库" class="headerlink" title="二、删除库"></a>二、删除库</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop database 库名</span><br></pre></td></tr></table></figure>
+<h4 id="表的管理："><a href="#表的管理：" class="headerlink" title="表的管理："></a>表的管理：</h4><h5 id="1-创建表"><a href="#1-创建表" class="headerlink" title="1.创建表"></a>1.创建表</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE IF NOT EXISTS stuinfo(</span><br><span class="line">	stuId INT,</span><br><span class="line">	stuName VARCHAR(20),</span><br><span class="line">	gender CHAR,</span><br><span class="line">	bornDate DATETIME</span><br><span class="line">);</span><br><span class="line">DESC studentinfo;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-修改表-alter"><a href="#2-修改表-alter" class="headerlink" title="2.修改表 alter"></a>2.修改表 alter</h5><p>​    语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE 表名 ADD|MODIFY|DROP|CHANGE COLUMN 字段名 [字段类型];</span><br></pre></td></tr></table></figure>
+
+<p>​    ①修改字段名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE studentinfo CHANGE  COLUMN sex gender CHAR;</span><br></pre></td></tr></table></figure>
+
+<p>​    ②修改表名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE stuinfo RENAME [TO]  studentinfo;</span><br></pre></td></tr></table></figure>
+
+<p>​    ③修改字段类型和列级约束</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE studentinfo MODIFY COLUMN borndate DATE ;</span><br></pre></td></tr></table></figure>
+
+<p>​    ④添加字段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE studentinfo ADD COLUMN email VARCHAR(20) first;</span><br></pre></td></tr></table></figure>
+
+<p>​    ⑤删除字段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE studentinfo DROP COLUMN email;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-删除表"><a href="#3-删除表" class="headerlink" title="3.删除表"></a>3.删除表</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE [IF EXISTS] studentinfo;</span><br></pre></td></tr></table></figure>
+
+
+<p>​    </p>
+<h3 id="常见类型"><a href="#常见类型" class="headerlink" title="常见类型"></a>常见类型</h3><p>​    整型：<br>​    小数：<br>​        浮点型<br>​        定点型<br>​    字符型：<br>​    日期型：<br>​    Blob类型：</p>
+<h3 id="常见约束"><a href="#常见约束" class="headerlink" title="常见约束"></a>常见约束</h3><ul>
+<li><code>NOT NULL</code></li>
+<li><code>DEFAULT</code></li>
+<li><code>UNIQUE</code></li>
+<li><code>CHECK</code></li>
+<li><code>PRIMARY KEY</code></li>
+<li><code>FOREIGN KEY</code></li>
+</ul>
+<h2 id="数据库事务"><a href="#数据库事务" class="headerlink" title="数据库事务"></a>数据库事务</h2><h3 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h3><p>​    通过一组逻辑操作单元（一组DML——sql语句），将数据从一种状态切换到另外一种状态</p>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>​    （ACID）<br>​    原子性：要么都执行，要么都回滚<br>​    一致性：保证数据的状态操作前和操作后保持一致<br>​    隔离性：多个事务同时操作相同数据库的同一个数据时，一个事务的执行不受另外一个事务的干扰<br>​    持久性：一个事务一旦提交，则数据将持久化到本地，除非其他事务对其进行修改</p>
+<p><strong>相关步骤：</strong></p>
+<p>​    1、开启事务<br>​    2、编写事务的一组逻辑操作单元（多条sql语句）<br>​    3、提交事务或回滚事务</p>
+<h3 id="事务的分类："><a href="#事务的分类：" class="headerlink" title="事务的分类："></a>事务的分类：</h3><p>隐式事务，没有明显的开启和结束事务的标志</p>
+<p>​    比如<br>​    insert、update、delete语句本身就是一个事务</p>
+<p>显式事务，具有明显的开启和结束事务的标志</p>
+<p>​    1、开启事务<br>​    取消自动提交事务的功能<br>​    2、编写事务的一组逻辑操作单元（多条sql语句）<br>​    insert<br>​    update<br>​    delete<br>​    3、提交事务或回滚事务</p>
+<h3 id="使用到的关键字"><a href="#使用到的关键字" class="headerlink" title="使用到的关键字"></a>使用到的关键字</h3><pre><code>set autocommit=0;
+start transaction;
+commit;
+rollback;
+
+savepoint  断点
+commit to 断点
+rollback to 断点</code></pre><h3 id="事务的隔离级别"><a href="#事务的隔离级别" class="headerlink" title="事务的隔离级别:"></a>事务的隔离级别:</h3><p>事务并发问题如何发生？</p>
+<ul>
+<li>当多个事务同时操作同一个数据库的相同数据时</li>
+</ul>
+<p>事务的并发问题有哪些？</p>
+<ul>
+<li>脏读：一个事务读取到了另外一个事务未提交的数据<br>不可重复读：同一个事务中，多次读取到的数据不一致</li>
+<li>幻读：一个事务读取数据时，另外一个事务进行更新，导致第一个事务读取到了没有更新的数据</li>
+</ul>
+<p>如何避免事务的并发问题？</p>
+<p>​    通过设置事务的隔离级别<br>​        1、READ UNCOMMITTED<br>​        2、READ COMMITTED 可以避免脏读<br>​        3、REPEATABLE READ 可以避免脏读、不可重复读和一部分幻读<br>​        4、SERIALIZABLE可以避免脏读、不可重复读和幻读</p>
+<p>设置隔离级别：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set session|global  transaction isolation level 隔离级别名;</span><br></pre></td></tr></table></figure>
+<p>查看隔离级别：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select @@tx_isolation;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h2><p>含义：理解成一张虚拟的表</p>
+<p>视图和表的区别：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>使用方式</th>
+<th>占用物理空间</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>视图</td>
+<td>完全相同</td>
+<td>不占用，仅仅保存的是sql逻辑</td>
+</tr>
+<tr>
+<td>表</td>
+<td>完全相同</td>
+<td>占用</td>
+</tr>
+</tbody></table>
+<p>视图的好处：</p>
+<pre><code>1、sql语句提高重用性，效率高
+2、和表实现了分离，提高了安全性</code></pre><h3 id="视图的创建"><a href="#视图的创建" class="headerlink" title="视图的创建"></a>视图的创建</h3><p>​    语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CREATE VIEW  视图名</span><br><span class="line">	AS</span><br><span class="line">查询语句;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="视图的增删改查"><a href="#视图的增删改查" class="headerlink" title="视图的增删改查"></a>视图的增删改查</h3><h4 id="1、查看视图的数据-★"><a href="#1、查看视图的数据-★" class="headerlink" title="1、查看视图的数据 ★"></a>1、查看视图的数据 ★</h4><p>​    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM my_v4;</span><br><span class="line">SELECT * FROM my_v1 WHERE last_name&#x3D;&#39;Partners&#39;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、插入视图的数据"><a href="#2、插入视图的数据" class="headerlink" title="2、插入视图的数据"></a>2、插入视图的数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO my_v4(last_name,department_id) VALUES(&#39;虚竹&#39;,90);</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、修改视图的数据"><a href="#3、修改视图的数据" class="headerlink" title="3、修改视图的数据"></a>3、修改视图的数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UPDATE my_v4 SET last_name &#x3D;&#39;梦姑&#39; WHERE last_name&#x3D;&#39;虚竹&#39;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、删除视图的数据"><a href="#4、删除视图的数据" class="headerlink" title="4、删除视图的数据"></a>4、删除视图的数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DELETE FROM my_v4;</span><br></pre></td></tr></table></figure>
+
+<h3 id="某些视图不能更新"><a href="#某些视图不能更新" class="headerlink" title="某些视图不能更新"></a>某些视图不能更新</h3><p>​    包含以下关键字的sql语句：分组函数、distinct、group  by、having、union或者union all<br>​    常量视图<br>​    Select中包含子查询<br>​    join<br>​    from一个不能更新的视图<br>​    where子句的子查询引用了from子句中的表</p>
+<h3 id="视图逻辑的更新"><a href="#视图逻辑的更新" class="headerlink" title="视图逻辑的更新"></a>视图逻辑的更新</h3><h4 id="方式一："><a href="#方式一：" class="headerlink" title="方式一："></a>方式一：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE OR REPLACE VIEW test_v7</span><br><span class="line">		AS</span><br><span class="line">SELECT last_name FROM employees</span><br><span class="line">WHERE employee_id&gt;100;</span><br></pre></td></tr></table></figure>
+
+<h4 id="方式二"><a href="#方式二" class="headerlink" title="方式二:"></a>方式二:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ALTER VIEW test_v7</span><br><span class="line">AS</span><br><span class="line">SELECT employee_id FROM employees;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM test_v7;</span><br></pre></td></tr></table></figure>
+<h3 id="视图的删除"><a href="#视图的删除" class="headerlink" title="视图的删除"></a>视图的删除</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP VIEW test_v1,test_v2,test_v3;</span><br></pre></td></tr></table></figure>
+
+<h3 id="视图结构的查看"><a href="#视图结构的查看" class="headerlink" title="视图结构的查看"></a>视图结构的查看</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DESC test_v7;</span><br><span class="line">SHOW CREATE VIEW test_v7;</span><br></pre></td></tr></table></figure>
+
+<h2 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h2><p>含义：一组经过预先编译的sql语句的集合<br>好处：</p>
+<p>​    1、提高了sql语句的重用性，减少了开发程序员的压力<br>​    2、提高了效率<br>​    3、减少了传输次数</p>
+<p>分类：</p>
+<pre><code>1、无返回无参
+2、仅仅带in类型，无返回有参
+3、仅仅带out类型，有返回无参
+4、既带in又带out，有返回有参
+5、带inout，有返回有参
+注意：in、out、inout都可以在一个存储过程中带多个</code></pre><h3 id="创建存储过程"><a href="#创建存储过程" class="headerlink" title="创建存储过程"></a>创建存储过程</h3><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">create procedure 存储过程名(in|out|inout 参数名  参数类型,...)</span><br><span class="line">begin</span><br><span class="line">	存储过程体</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<p>类似于方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">修饰符 返回类型 方法名(参数类型 参数名,...)&#123;</span><br><span class="line"></span><br><span class="line">	方法体;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意</p>
+<p>​    1、需要设置新的结束标记<br>​        delimiter 新的结束标记<br>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">delimiter $</span><br><span class="line"></span><br><span class="line">CREATE PROCEDURE 存储过程名(IN|OUT|INOUT 参数名  参数类型,...)</span><br><span class="line">BEGIN</span><br><span class="line">	sql语句1;</span><br><span class="line">	sql语句2;</span><br><span class="line"></span><br><span class="line">END $</span><br></pre></td></tr></table></figure>
+
+<p>​    2、存储过程体中可以有多条sql语句，如果仅仅一条sql语句，则可以省略begin end</p>
+<p>​    3、参数前面的符号的意思<br>​        in:该参数只能作为输入 （该参数不能做返回值）<br>​        out：该参数只能作为输出（该参数只能做返回值）<br>​        inout：既能做输入又能做输出</p>
+<p>#调用存储过程<br>    call 存储过程名(实参列表)<br>##函数</p>
+<p>###创建函数</p>
+<p>学过的函数：LENGTH、SUBSTR、CONCAT等<br>语法：</p>
+<pre><code>CREATE FUNCTION 函数名(参数名 参数类型,...) RETURNS 返回类型
+BEGIN
+    函数体
+
+END</code></pre><p>###调用函数<br>    SELECT 函数名（实参列表）</p>
+<p>###函数和存储过程的区别</p>
+<pre><code>        关键字        调用语法    返回值            应用场景
+函数        FUNCTION    SELECT 函数()    只能是一个        一般用于查询结果为一个值并返回时，当有返回值而且仅仅一个
+存储过程    PROCEDURE    CALL 存储过程()    可以有0个或多个        一般用于更新</code></pre><p>##流程控制结构</p>
+<h3 id="系统变量"><a href="#系统变量" class="headerlink" title="系统变量"></a>系统变量</h3><p>一、全局变量</p>
+<p>作用域：针对于所有会话（连接）有效，但不能跨重启</p>
+<pre><code>查看所有全局变量
+SHOW GLOBAL VARIABLES;
+查看满足条件的部分系统变量
+SHOW GLOBAL VARIABLES LIKE &apos;%char%&apos;;
+查看指定的系统变量的值
+SELECT @@global.autocommit;
+为某个系统变量赋值
+SET @@global.autocommit=0;
+SET GLOBAL autocommit=0;</code></pre><p>二、会话变量</p>
+<p>作用域：针对于当前会话（连接）有效</p>
+<pre><code>查看所有会话变量
+SHOW SESSION VARIABLES;
+查看满足条件的部分会话变量
+SHOW SESSION VARIABLES LIKE &apos;%char%&apos;;
+查看指定的会话变量的值
+SELECT @@autocommit;
+SELECT @@session.tx_isolation;
+为某个会话变量赋值
+SET @@session.tx_isolation=&apos;read-uncommitted&apos;;
+SET SESSION tx_isolation=&apos;read-committed&apos;;</code></pre><h3 id="自定义变量"><a href="#自定义变量" class="headerlink" title="自定义变量"></a>自定义变量</h3><p>一、用户变量</p>
+<p>声明并初始化：</p>
+<pre><code>SET @变量名=值;
+SET @变量名:=值;
+SELECT @变量名:=值;</code></pre><p>赋值：</p>
+<pre><code>方式一：一般用于赋简单的值
+SET 变量名=值;
+SET 变量名:=值;
+SELECT 变量名:=值;
+
+
+方式二：一般用于赋表 中的字段值
+SELECT 字段名或表达式 INTO 变量
+FROM 表;</code></pre><p>使用：</p>
+<pre><code>select @变量名;</code></pre><p>二、局部变量</p>
+<p>声明：</p>
+<pre><code>declare 变量名 类型 【default 值】;</code></pre><p>赋值：</p>
+<pre><code>方式一：一般用于赋简单的值
+SET 变量名=值;
+SET 变量名:=值;
+SELECT 变量名:=值;
+
+
+方式二：一般用于赋表 中的字段值
+SELECT 字段名或表达式 INTO 变量
+FROM 表;</code></pre><p>使用：</p>
+<pre><code>select 变量名</code></pre><p>二者的区别：</p>
+<pre><code>作用域            定义位置        语法</code></pre><p>用户变量    当前会话        会话的任何地方        加@符号，不用指定类型<br>局部变量    定义它的BEGIN END中     BEGIN END的第一句话    一般不用加@,需要指定类型</p>
+<p>###分支<br>一、if函数<br>    语法：if(条件，值1，值2)<br>    特点：可以用在任何位置</p>
+<p>二、case语句</p>
+<p>语法：</p>
+<pre><code>情况一：类似于switch
+case 表达式
+when 值1 then 结果1或语句1(如果是语句，需要加分号) 
+when 值2 then 结果2或语句2(如果是语句，需要加分号)
+...
+else 结果n或语句n(如果是语句，需要加分号)
+end 【case】（如果是放在begin end中需要加上case，如果放在select后面不需要）
+
+情况二：类似于多重if
+case 
+when 条件1 then 结果1或语句1(如果是语句，需要加分号) 
+when 条件2 then 结果2或语句2(如果是语句，需要加分号)
+...
+else 结果n或语句n(如果是语句，需要加分号)
+end 【case】（如果是放在begin end中需要加上case，如果放在select后面不需要）</code></pre><p>特点：<br>    可以用在任何位置</p>
+<p>三、if elseif语句</p>
+<p>语法：</p>
+<pre><code>if 情况1 then 语句1;
+elseif 情况2 then 语句2;
+...
+else 语句n;
+end if;</code></pre><p>特点：<br>    只能用在begin end中！！！！！！！！！！！！！！！</p>
+<p>三者比较：<br>            应用场合<br>    if函数        简单双分支<br>    case结构    等值判断 的多分支<br>    if结构        区间判断 的多分支</p>
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p>语法：</p>
+<pre><code>【标签：】WHILE 循环条件  DO
+    循环体
+END WHILE 【标签】;</code></pre><p>特点：</p>
+<pre><code>只能放在BEGIN END里面
+
+如果要搭配leave跳转语句，需要使用标签，否则可以不用标签
+
+leave类似于java中的break语句，跳出所在循环！！！</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/11/MySQL%E5%9F%BA%E7%A1%80/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-node爬虫" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/11/node%E7%88%AC%E8%99%AB/">node爬虫</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/11/node%E7%88%AC%E8%99%AB/" class="archive-article-date">
+  	<time datetime="2020-10-11T14:57:30.480Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="爬虫总结"><a href="#爬虫总结" class="headerlink" title="爬虫总结"></a>爬虫总结</h1><h2 id="1-爬虫介绍"><a href="#1-爬虫介绍" class="headerlink" title="1.爬虫介绍"></a>1.爬虫介绍</h2><p>通过模拟浏览器的请求，服务器就会根据我们的请求返回我们想要的数据，将数据解析出来，并且进行保存。</p>
+<h2 id="2-爬虫流程"><a href="#2-爬虫流程" class="headerlink" title="2.爬虫流程"></a>2.爬虫流程</h2><h4 id="1-目标：确定你想要获取的数据"><a href="#1-目标：确定你想要获取的数据" class="headerlink" title="1-目标：确定你想要获取的数据"></a>1-目标：确定你想要获取的数据</h4><ol>
+<li>确定想要的数据在什么页面上（一般详细的数据会在详情页）</li>
+<li>确定在哪些页面可以链接到这些页面（一般分类列表页面会有详情页的链接数据）</li>
+<li>寻找页面之间和数据之间的规律</li>
+</ol>
+<h4 id="2-分析页面"><a href="#2-分析页面" class="headerlink" title="2-分析页面"></a>2-分析页面</h4><ol>
+<li><p>获取数据的方式（正则，cherrio）</p>
+<pre><code>2. 分析数据是通过ajax请求的数据，还是html里自带的数据
+3. 如果是通过AJAX请求的数据，那么需要获取ajax请求的链接，一般请求到的数据都为JSON格式数据，那么就会比较容易解析。
+4. 如何数据在HTML里面，那么就用cherrio通过选择器将内容选中</code></pre></li>
+</ol>
+<h4 id="3-编写单个数据获取的案例"><a href="#3-编写单个数据获取的案例" class="headerlink" title="3-编写单个数据获取的案例"></a>3-编写单个数据获取的案例</h4><ol>
+<li><p>解析出分类页的链接地址</p>
+<pre><code>2. 解析出列表页的链接地址
+3. 解析出详情页的链接地址
+4. 解析详情页里面想要获取的数据
+5. 将数据进行保存到本地或者是数据库</code></pre></li>
+</ol>
+<h4 id="4-如果遇到阻碍进行反爬虫对抗"><a href="#4-如果遇到阻碍进行反爬虫对抗" class="headerlink" title="4-如果遇到阻碍进行反爬虫对抗"></a>4-如果遇到阻碍进行反爬虫对抗</h4><ol>
+<li><p>User-Agent是否是正常浏览器的信息</p>
+<pre><code>2. 将请求头设置成跟浏览器一样的内容
+3. 因为爬虫的爬取速度过快，会导致封号。1那么可以降低速度进行解决，2可以使用代理进行解决
+4. 如果设置需要凭证，那么可以采用无界浏览器真实模拟。</code></pre></li>
+</ol>
+<h2 id="3-请求数据的库"><a href="#3-请求数据的库" class="headerlink" title="3.请求数据的库"></a>3.请求数据的库</h2><p>request，axios：通过库，帮助我们快速实现HTTP请求包的打包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">request.get(&#39;请求地址&#39;, &#123;</span><br><span class="line">  &#39;请求头字段&#39;: &#39;请求头的value值&#39;</span><br><span class="line">&#125;,(res)&#x3D;&gt;&#123;处理返回的内容&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>axios优势会更明显，前后端通杀，前后端调用的方式一致。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">axios.get(&#39;请求地址&#39;,参数对象).then(function (response) &#123;</span><br><span class="line">    console.log(response);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>axios获取图片</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">axios(&#123;</span><br><span class="line">  method:&#39;get&#39;,</span><br><span class="line">  url:&#39;http:&#x2F;&#x2F;bit.ly&#x2F;2mTM3nY&#39;,</span><br><span class="line">  responseType:&#39;stream&#39;</span><br><span class="line">&#125;)</span><br><span class="line">.then(function(response) &#123;</span><br><span class="line">  response.data.pipe(fs.createWriteStream(&#39;ada_lovelace.jpg&#39;))</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>puppeteer:完全模拟浏览器</p>
+<p>打开浏览器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">let options &#x3D; &#123;</span><br><span class="line">	headless:true,&#x2F;&#x2F;是否是无界面浏览器</span><br><span class="line">	slowMo:250,&#x2F;&#x2F;调试时可以减慢操作速度</span><br><span class="line">	defaultViewport:&#123;</span><br><span class="line">		width:1200,&#x2F;&#x2F;设置视窗的宽高</span><br><span class="line">		height:800</span><br><span class="line">	&#125;,</span><br><span class="line">	timeout:3000，&#x2F;&#x2F;默认超时3秒</span><br><span class="line">&#125;</span><br><span class="line">let browser &#x3D;await puppeteer.launch(options);</span><br></pre></td></tr></table></figure>
+
+<p>打开新标签页</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let page &#x3D; await browser.newPage()</span><br></pre></td></tr></table></figure>
+
+<p>获取所有浏览器中的页面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let pages &#x3D; await browser.pages()</span><br></pre></td></tr></table></figure>
+
+<p>关闭浏览器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">browser.close()</span><br></pre></td></tr></table></figure>
+
+<p>将页面跳转至</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">await page.goto(url)</span><br></pre></td></tr></table></figure>
+
+<p>获取页面的对象,并进行操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let btn &#x3D; await page.$(selector)</span><br><span class="line">let input &#x3D; await page.$(selector)</span><br><span class="line">&#x2F;&#x2F;点击按钮</span><br><span class="line">btn.click()</span><br><span class="line">&#x2F;&#x2F;聚焦到输入框</span><br><span class="line">input.forcus()</span><br></pre></td></tr></table></figure>
+
+<p>在页面上写入内容或者键盘按键</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">await page.keyboard.type(&#39;Hello World!&#39;);</span><br><span class="line">await page.keyboard.press(&#39;ArrowLeft&#39;);</span><br><span class="line">await page.keyboard.down(&#39;Shift&#39;);</span><br></pre></td></tr></table></figure>
+
+<p>设置鼠标的移动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">await page.mouse.move(0, 0);</span><br><span class="line">await page.mouse.down();</span><br><span class="line">await page.mouse.move(0, 100);</span><br><span class="line">await page.mouse.move(100, 100);</span><br><span class="line">await page.mouse.move(100, 0);</span><br><span class="line">await page.mouse.move(0, 0);</span><br><span class="line">await page.mouse.up();</span><br></pre></td></tr></table></figure>
+
+<p>截获页面请求</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">await page.setRequestInterception(true);</span><br><span class="line">page.on(&#39;request&#39;, request &#x3D;&gt; &#123;</span><br><span class="line">request.url()&#x2F;&#x2F;可以获取请求的网址，request，包含了所有的请求信息</span><br><span class="line">	if(你想要的条件)&#123;</span><br><span class="line">		request.continue()</span><br><span class="line">	&#125;else&#123;</span><br><span class="line">		request.abort([errorCode])</span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>获取浏览器的信息和内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">page.$eval(selector,(item)&#x3D;&gt;&#123;return item&#125;)</span><br><span class="line">page.$$eval(selectors,(items)&#x3D;&gt;&#123;return items&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-2-编码解析"><a href="#3-2-编码解析" class="headerlink" title="3.2 编码解析"></a>3.2 编码解析</h4><p>以下代码没有任何实用性,  仅是对解析字体编码提供一种思路</p>
+<h4 id="3-2-1-获取随机字体文件的链接地址"><a href="#3-2-1-获取随机字体文件的链接地址" class="headerlink" title="3.2.1 获取随机字体文件的链接地址"></a>3.2.1 获取随机字体文件的链接地址</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fontUrl = $(<span class="string">"head &gt; style"</span>).html()</span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/format.*?url\('(.*?woff)'\)/ig</span>s;</span><br><span class="line"><span class="comment">//console.log(fontUrl)</span></span><br><span class="line"><span class="keyword">let</span> result = reg.exec(fontUrl)</span><br><span class="line"><span class="keyword">let</span> fontPath = result[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-2-2-将随机的字体文件下载并进行解析"><a href="#3-2-2-将随机的字体文件下载并进行解析" class="headerlink" title="3.2.2 将随机的字体文件下载并进行解析"></a>3.2.2 将随机的字体文件下载并进行解析</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//已文件流的形式下载字体图标库</span></span><br><span class="line"><span class="keyword">let</span> ws = fs.createWriteStream(<span class="string">'a.woff'</span>) <span class="comment">//下载的文件名暂定为"a.woff"</span></span><br><span class="line">res.data.pipe(ws);</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-2-3-将编码切割成数组-逐一进行解析-循环解析"><a href="#3-2-3-将编码切割成数组-逐一进行解析-循环解析" class="headerlink" title="3.2.3 将编码切割成数组,逐一进行解析(循环解析)"></a>3.2.3 将编码切割成数组,逐一进行解析(循环解析)</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr1 = aa.split(<span class="string">""</span>)</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">let</span> arr11 = []</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2-4-编码解析"><a href="#3-2-4-编码解析" class="headerlink" title="3.2.4 编码解析"></a>3.2.4 编码解析</h4><p>循环解析字符串编码, 循环每个item,  当成str传入解析函数中</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">parseNum</span>(<span class="params">str</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve,reject</span>)</span>&#123;</span><br><span class="line">        <span class="comment">//载入字体文件，并解析出字体对象</span></span><br><span class="line">        opentype.load(<span class="string">"a.woff"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, font</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (err) &#123;</span><br><span class="line">                reject(<span class="string">'Font could not be loaded: '</span> + err)</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">//通过字体对象，并在getPath方法中传入乱码的编码，获取出绘制该字体图像路径，0，100，72分别表示绘制的x坐标为0，y坐标为100，字体大小为72</span></span><br><span class="line">                <span class="keyword">var</span> path = font.getPath(str,<span class="number">0</span>,<span class="number">100</span>,<span class="number">72</span>);</span><br><span class="line">                <span class="comment">//通过绘制的图像路径，得出SVG矢量图的字符串</span></span><br><span class="line">                <span class="keyword">let</span> a = path.toSVG();</span><br><span class="line">                <span class="keyword">let</span> max = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">let</span> key = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">let</span> arr = []</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">                    <span class="keyword">let</span> temp = similar(a,svgPaths[i])</span><br><span class="line">                    <span class="keyword">if</span>(max&lt;temp)&#123;</span><br><span class="line">                        max = temp;</span><br><span class="line">                        key = i;</span><br><span class="line">                    &#125;</span><br><span class="line">                    arr.push(&#123;temp,i&#125;)</span><br><span class="line">                &#125;</span><br><span class="line">                resolve(&#123;key,max&#125;)</span><br><span class="line">                </span><br><span class="line">                </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">//similar(a,b)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2-5-结果处理"><a href="#3-2-5-结果处理" class="headerlink" title="3.2.5 结果处理"></a>3.2.5 结果处理</h4><p>判断相似度,最大相似度大于50%则采用,不然返回原值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr11[i] = <span class="built_in">parseFloat</span>(result.max)&gt;<span class="number">0.5</span>?result.key:item;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/11/node%E7%88%AC%E8%99%AB/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-学习koa2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -344,7 +899,9 @@
 
 </li>
 </ol>
-<h3 id="八-koa与MongoDB"><a href="#八-koa与MongoDB" class="headerlink" title="八. koa与MongoDB"></a>八. koa与MongoDB</h3><h4 id="8-1-MongoDB封装"><a href="#8-1-MongoDB封装" class="headerlink" title="8.1 MongoDB封装"></a>8.1 MongoDB封装</h4><h2 id="番外"><a href="#番外" class="headerlink" title="番外"></a>番外</h2><h3 id="一-commonJs"><a href="#一-commonJs" class="headerlink" title="一. commonJs"></a>一. commonJs</h3><h4 id="1-1-什么是commonJS"><a href="#1-1-什么是commonJS" class="headerlink" title="1.1 什么是commonJS"></a>1.1 什么是commonJS</h4><p>只用一句话就可以简单表述出来</p>
+<h3 id="八-koa与MongoDB"><a href="#八-koa与MongoDB" class="headerlink" title="八. koa与MongoDB"></a>八. koa与MongoDB</h3><h4 id="8-1-MongoDB封装"><a href="#8-1-MongoDB封装" class="headerlink" title="8.1 MongoDB封装"></a>8.1 MongoDB封装</h4><p>pass</p>
+<p>详情了解官方文档: <a href="https://docs.mongodb.com/drivers/node/" target="_blank" rel="noopener">https://docs.mongodb.com/drivers/node/</a></p>
+<h2 id="番外"><a href="#番外" class="headerlink" title="番外"></a>番外</h2><h3 id="一-commonJs"><a href="#一-commonJs" class="headerlink" title="一. commonJs"></a>一. commonJs</h3><h4 id="1-1-什么是commonJS"><a href="#1-1-什么是commonJS" class="headerlink" title="1.1 什么是commonJS"></a>1.1 什么是commonJS</h4><p>只用一句话就可以简单表述出来</p>
 <blockquote>
 <p>CommonJs 就是模块化的标准,  NodeJs就是CommonJs的实现</p>
 </blockquote>
@@ -393,6 +950,14 @@
 
 <p><strong>冒充对象结合原型链实现继承</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age,hobby</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name=name;</span><br><span class="line">  <span class="keyword">this</span>.age = age;</span><br><span class="line">  <span class="keyword">this</span>.hobby = hobby;</span><br><span class="line">  <span class="keyword">this</span>.run = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>.name+<span class="string">"运动"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//方法需共享</span></span><br><span class="line"><span class="comment">// Person.prototype.run = function()&#123;</span></span><br><span class="line"><span class="comment">//  console.log(this.name+"运动");</span></span><br><span class="line"><span class="comment">// &#125;;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Programmer</span>(<span class="params">name,age,hobby,skill</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 都是先继承再添加新属性</span></span><br><span class="line">  	Person.call(<span class="keyword">this</span>,name);<span class="comment">//对象冒充继承属性</span></span><br><span class="line">  	<span class="keyword">this</span>.skill =skill;<span class="comment">//添加新属性</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Programmer.prototype = <span class="keyword">new</span> Person();<span class="comment">//原型链继承方法</span></span><br><span class="line"><span class="comment">// 注意这步非常重要, 要先在原型链中实现父类, 才能添加方法, 再添加方法才不会覆盖原来定义的方法</span></span><br><span class="line">Programmer.prototype.work = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//添加新方法</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.name+<span class="string">"在工作"</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> programer = <span class="keyword">new</span> Programmer(<span class="string">'fox'</span>,<span class="number">28</span>,[<span class="string">'a'</span>,<span class="string">'b'</span>],<span class="string">'coding'</span>);</span><br><span class="line">programer.run();</span><br><span class="line">programer.work();</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="四-单例模式"><a href="#四-单例模式" class="headerlink" title="四. 单例模式"></a>四. 单例模式</h3><h4 id="4-1-ES5-的单例实现"><a href="#4-1-ES5-的单例实现" class="headerlink" title="4.1 ES5 的单例实现"></a>4.1 ES5 的单例实现</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">A</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">  <span class="comment">// 如果已存在对应的实例</span></span><br><span class="line">  <span class="keyword">if</span>(<span class="keyword">typeof</span> A.instance === <span class="string">'object'</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> A.instance</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//否则正常创建实例</span></span><br><span class="line">  <span class="keyword">this</span>.name = name;</span><br><span class="line">  <span class="comment">// 缓存</span></span><br><span class="line">  A.instance = <span class="keyword">this</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">this</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> a1 = <span class="keyword">new</span> A();</span><br><span class="line"><span class="keyword">var</span> a2= <span class="keyword">new</span> A();</span><br><span class="line"><span class="comment">//  从一般情况来说, 每个实例化的对象, 都是不同内存地址,</span></span><br><span class="line"><span class="comment">//  但是单例设计模式, 却是指向同一个内存地址</span></span><br><span class="line"><span class="built_in">console</span>.log(a1 === a2); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="4-2-ES6-的单例实现"><a href="#4-2-ES6-的单例实现" class="headerlink" title="4.2 ES6 的单例实现"></a>4.2 ES6 的单例实现</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过ES6实现单例, 更较为常用</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"触发构造函数"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  find() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"触发find方法"</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 设计单例</span></span><br><span class="line">  <span class="keyword">static</span> getInstance() &#123;</span><br><span class="line">    <span class="keyword">if</span> (!Person.instance) &#123;</span><br><span class="line">      Person.instance = <span class="keyword">new</span> Person()</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 不做缓存, 直接返回</span></span><br><span class="line">    <span class="keyword">return</span> Person.instance</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> p1 = Person.getInstance();</span><br><span class="line"><span class="keyword">const</span> p2 = Person.getInstance();  <span class="comment">// 此时两次实例化只会触发一次构造函数</span></span><br><span class="line"><span class="comment">// p1.find();</span></span><br><span class="line"><span class="comment">// p2.find();   // 此时两个find均能正常触发</span></span><br><span class="line"><span class="built_in">console</span>.log(p1 === p2);  <span class="comment">// 返回的是 true</span></span><br></pre></td></tr></table></figure>
 
 
       
@@ -1432,6 +1997,83 @@
 
 
   
+    <article id="post-查看浏览器宽度" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/31/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/">查看浏览器宽度</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/31/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/" class="archive-article-date">
+  	<time datetime="2020-07-31T14:50:17.846Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="js中查看浏览器宽度"><a href="#js中查看浏览器宽度" class="headerlink" title="js中查看浏览器宽度"></a>js中查看浏览器宽度</h2><p>  1 <strong>网页可见区域宽：document.body.clientWidth</strong></p>
+<p>  2 <strong>网页可见区域高：document.body.clientHeight</strong> </p>
+<p>  3 <strong>网页可见区域宽：document.body.offsetWidth (包括边线的宽)</strong> </p>
+<p>  4 <strong>网页可见区域高：document.body.offsetHeight (包括边线的宽)</strong></p>
+<p>  5 <strong>网页正文全文宽：document.body.scrollWidth</strong> </p>
+<p>  6 <strong>网页正文全文高：document.body.scrollHeight</strong> </p>
+<p>  7 <strong>网页被卷去的高：document.body.scrollTop</strong></p>
+<p>  8 <strong>网页被卷去的左：document.body.scrollLeft</strong> </p>
+<p>  9 <strong>网页正文部分上：window.screenTop</strong> </p>
+<p> 10 <strong>网页正文部分左：window.screenLeft</strong></p>
+<p> 11 <strong>屏幕分辨率的高：window.screen.height</strong></p>
+<p> 12 <strong>屏幕分辨率的宽：window.screen.width</strong> </p>
+<p> 13 <strong>屏幕可用工作区高度：window.screen.availHeight</strong> </p>
+<p> 14 <strong>屏幕可用工作区宽度：window.screen.availWidth</strong> </p>
+<p> 17 HTML精确定位:scrollLeft,scrollWidth,clientWidth,offsetWidth<br> 18 scrollHeight: 获取对象的滚动高度。<br> 19 scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离<br> 20 scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离<br> 21 scrollWidth:获取对象的滚动宽度<br> 22 offsetHeight:获取对象相对于版面或由父坐标 offsetParent 属性指定的父坐标的高度<br> 23 offsetLeft:获取对象相对于版面或由 offsetParent 属性指定的父坐标的计算左侧位置<br> 24 offsetTop:获取对象相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置<br> 25 event.clientX 相对文档的水平座标<br> 26 event.clientY 相对文档的垂直座标<br> 27 event.offsetX 相对容器的水平坐标<br> 28 event.offsetY 相对容器的垂直坐标<br> 29 document.documentElement.scrollTop 垂直方向滚动的值<br> 30 event.clientX+document.documentElement.scrollTop 相对文档的水平座标+垂直方向滚动的量<br> 31<br> 32 IE，FireFox 差异如下：<br> 33<br> 34 IE6.0、FF1.06+：<br> 35 clientWidth = width + padding<br> 36 clientHeight = height + padding<br> 37 offsetWidth = width + padding + border<br> 38 offsetHeight = height + padding + border<br> 39<br> 40 IE5.0/5.5：<br> 41 clientWidth = width - border<br> 42 clientHeight = height - border<br> 43 offsetWidth = width<br> 44 offsetHeight = height<br> 45<br> 46 (需要提一下：CSS中的margin属性，与clientWidth、offsetWidth、clientHeight、offsetHeight均无关)<br> 47 网页可见区域宽： document.body.clientWidth<br> 48 网页可见区域高： document.body.clientHeight<br> 49 网页可见区域宽： document.body.offsetWidth (包括边线的宽)<br> 50 网页可见区域高： document.body.offsetHeight (包括边线的高)<br> 51 网页正文全文宽： document.body.scrollWidth<br> 52 网页正文全文高： document.body.scrollHeight<br> 53 网页被卷去的高： document.body.scrollTop<br> 54 网页被卷去的左： document.body.scrollLeft<br> 55 网页正文部分上： window.screenTop<br> 56 网页正文部分左： window.screenLeft<br> 57 屏幕分辨率的高： window.screen.height<br> 58 屏幕分辨率的宽： window.screen.width<br> 59 屏幕可用工作区高度： window.screen.availHeight<br> 60 屏幕可用工作区宽度： window.screen.availWidth</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/31/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-layui-excel" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1521,83 +2163,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/07/31/layui-excel/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-查看浏览器宽度" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/31/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/">查看浏览器宽度</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/31/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/" class="archive-article-date">
-  	<time datetime="2020-07-31T14:50:17.846Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="js中查看浏览器宽度"><a href="#js中查看浏览器宽度" class="headerlink" title="js中查看浏览器宽度"></a>js中查看浏览器宽度</h2><p>  1 <strong>网页可见区域宽：document.body.clientWidth</strong></p>
-<p>  2 <strong>网页可见区域高：document.body.clientHeight</strong> </p>
-<p>  3 <strong>网页可见区域宽：document.body.offsetWidth (包括边线的宽)</strong> </p>
-<p>  4 <strong>网页可见区域高：document.body.offsetHeight (包括边线的宽)</strong></p>
-<p>  5 <strong>网页正文全文宽：document.body.scrollWidth</strong> </p>
-<p>  6 <strong>网页正文全文高：document.body.scrollHeight</strong> </p>
-<p>  7 <strong>网页被卷去的高：document.body.scrollTop</strong></p>
-<p>  8 <strong>网页被卷去的左：document.body.scrollLeft</strong> </p>
-<p>  9 <strong>网页正文部分上：window.screenTop</strong> </p>
-<p> 10 <strong>网页正文部分左：window.screenLeft</strong></p>
-<p> 11 <strong>屏幕分辨率的高：window.screen.height</strong></p>
-<p> 12 <strong>屏幕分辨率的宽：window.screen.width</strong> </p>
-<p> 13 <strong>屏幕可用工作区高度：window.screen.availHeight</strong> </p>
-<p> 14 <strong>屏幕可用工作区宽度：window.screen.availWidth</strong> </p>
-<p> 17 HTML精确定位:scrollLeft,scrollWidth,clientWidth,offsetWidth<br> 18 scrollHeight: 获取对象的滚动高度。<br> 19 scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离<br> 20 scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离<br> 21 scrollWidth:获取对象的滚动宽度<br> 22 offsetHeight:获取对象相对于版面或由父坐标 offsetParent 属性指定的父坐标的高度<br> 23 offsetLeft:获取对象相对于版面或由 offsetParent 属性指定的父坐标的计算左侧位置<br> 24 offsetTop:获取对象相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置<br> 25 event.clientX 相对文档的水平座标<br> 26 event.clientY 相对文档的垂直座标<br> 27 event.offsetX 相对容器的水平坐标<br> 28 event.offsetY 相对容器的垂直坐标<br> 29 document.documentElement.scrollTop 垂直方向滚动的值<br> 30 event.clientX+document.documentElement.scrollTop 相对文档的水平座标+垂直方向滚动的量<br> 31<br> 32 IE，FireFox 差异如下：<br> 33<br> 34 IE6.0、FF1.06+：<br> 35 clientWidth = width + padding<br> 36 clientHeight = height + padding<br> 37 offsetWidth = width + padding + border<br> 38 offsetHeight = height + padding + border<br> 39<br> 40 IE5.0/5.5：<br> 41 clientWidth = width - border<br> 42 clientHeight = height - border<br> 43 offsetWidth = width<br> 44 offsetHeight = height<br> 45<br> 46 (需要提一下：CSS中的margin属性，与clientWidth、offsetWidth、clientHeight、offsetHeight均无关)<br> 47 网页可见区域宽： document.body.clientWidth<br> 48 网页可见区域高： document.body.clientHeight<br> 49 网页可见区域宽： document.body.offsetWidth (包括边线的宽)<br> 50 网页可见区域高： document.body.offsetHeight (包括边线的高)<br> 51 网页正文全文宽： document.body.scrollWidth<br> 52 网页正文全文高： document.body.scrollHeight<br> 53 网页被卷去的高： document.body.scrollTop<br> 54 网页被卷去的左： document.body.scrollLeft<br> 55 网页正文部分上： window.screenTop<br> 56 网页正文部分左： window.screenLeft<br> 57 屏幕分辨率的高： window.screen.height<br> 58 屏幕分辨率的宽： window.screen.width<br> 59 屏幕可用工作区高度： window.screen.availHeight<br> 60 屏幕可用工作区宽度： window.screen.availWidth</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/31/%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%BD%E5%BA%A6/">展开全文 >></a>
         </p>
       
 
@@ -1830,194 +2395,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/07/31/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-axios文件下载上传进度监听" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/31/axios%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E4%B8%8A%E4%BC%A0%E8%BF%9B%E5%BA%A6%E7%9B%91%E5%90%AC/">axios文件下载上传进度监听</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/31/axios%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E4%B8%8A%E4%BC%A0%E8%BF%9B%E5%BA%A6%E7%9B%91%E5%90%AC/" class="archive-article-date">
-  	<time datetime="2020-07-31T14:50:17.844Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="axios文件下载上传进度监听"><a href="#axios文件下载上传进度监听" class="headerlink" title="axios文件下载上传进度监听"></a>axios文件下载上传进度监听</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">exportFun()&#123;</span><br><span class="line">  <span class="keyword">let</span> _that = <span class="keyword">this</span></span><br><span class="line">  <span class="comment">// 1. 创建Axios实例</span></span><br><span class="line">  <span class="keyword">const</span> instance = <span class="keyword">this</span>.axios.create(&#123;</span><br><span class="line">    onDownloadProgress: <span class="function"><span class="keyword">function</span>(<span class="params">ProgressEvent</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">const</span> load = ProgressEvent.loaded;</span><br><span class="line">      <span class="keyword">const</span> total = ProgressEvent.total;</span><br><span class="line">      <span class="keyword">const</span> progress = (load / total) * <span class="number">100</span>;</span><br><span class="line">      <span class="built_in">console</span>.log(progress);</span><br><span class="line">      bar.style.width=(progress) + <span class="string">"%"</span>;</span><br><span class="line">      $(<span class="string">"#total"</span>).html( <span class="built_in">Math</span>.floor(progress) + <span class="string">"%"</span>);</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 进度完成之后</span></span><br><span class="line">      <span class="keyword">if</span>(progress == <span class="number">100</span>)&#123;</span><br><span class="line">        _that.$emit(<span class="string">'exportDataFun'</span>,<span class="keyword">this</span>.needData)</span><br><span class="line">        _that.isDownLoad = <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125; </span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> ajaxUrl,fileName;</span><br><span class="line">  <span class="keyword">if</span>(<span class="keyword">this</span>.isCanClick)&#123;</span><br><span class="line">    <span class="keyword">let</span> _that =<span class="keyword">this</span>;</span><br><span class="line">    _that.isCanClick = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 调用Axios实例</span></span><br><span class="line">    instance(&#123;</span><br><span class="line">      url: ajaxUrl,</span><br><span class="line">      method: <span class="string">"post"</span>,</span><br><span class="line">      data: <span class="keyword">this</span>.needData,</span><br><span class="line">      responseType: <span class="string">"blob"</span> <span class="comment">//  application/octet-stream</span></span><br><span class="line">    &#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> data = res.data;</span><br><span class="line">      <span class="keyword">let</span> r = <span class="keyword">new</span> FileReader();</span><br><span class="line">      r.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">          <span class="keyword">let</span> resData = <span class="built_in">JSON</span>.parse(<span class="keyword">this</span>.result)</span><br><span class="line">          <span class="built_in">console</span>.log(resData)</span><br><span class="line">          <span class="keyword">if</span> (resData &amp;&amp; resData[<span class="string">'code'</span>] &amp;&amp; resData[<span class="string">'code'</span>] != <span class="string">'1000'</span>) &#123;</span><br><span class="line">            _that.$Message.info(resData.msg);</span><br><span class="line">            _that.isDownLoad = <span class="literal">false</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">          <span class="comment">// 兼容ie11</span></span><br><span class="line">          <span class="keyword">if</span> (<span class="built_in">window</span>.navigator.msSaveOrOpenBlob) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">              <span class="keyword">const</span> blobObject = <span class="keyword">new</span> Blob([data])</span><br><span class="line">              <span class="built_in">window</span>.navigator.msSaveOrOpenBlob(blobObject, fileName)</span><br><span class="line">            &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">              <span class="built_in">console</span>.log(e)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">this</span>.download(data, fileName)</span><br><span class="line">          alert(<span class="string">'导出成功'</span>)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      r.readAsText(data) <span class="comment">// FileReader的API</span></span><br><span class="line">    &#125;).catch(<span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">let</span> msg = <span class="string">"网络异常"</span>;</span><br><span class="line">      alert(msg);</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/31/axios%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E4%B8%8A%E4%BC%A0%E8%BF%9B%E5%BA%A6%E7%9B%91%E5%90%AC/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-axios的简单配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/31/axios%E7%9A%84%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/">axios的简单配置</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/31/axios%E7%9A%84%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2020-07-31T14:50:17.844Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="关于axios的一些简单配置"><a href="#关于axios的一些简单配置" class="headerlink" title="关于axios的一些简单配置"></a>关于axios的一些简单配置</h2><h3 id="一-发送请求"><a href="#一-发送请求" class="headerlink" title="一. 发送请求"></a>一. 发送请求</h3><h4 id="1-1-发送get请求"><a href="#1-1-发送get请求" class="headerlink" title="1.1 发送get请求"></a>1.1 发送get请求</h4><blockquote>
-<p>axios.get<post>(“url”, {params:parmas}).then((res)=&gt;{console.log(res)})</p>
-</blockquote>
-<p>​        axios在不指定请求方法时,默认发送的是get方法请求</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 为给定 ID 的 user 创建请求</span></span><br><span class="line">axios.get(<span class="string">'/user?ID=12345'</span>)  .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;    <span class="built_in">console</span>.log(response);  &#125;)  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;    <span class="built_in">console</span>.log(error);  &#125;);</span><br><span class="line"><span class="comment">// 上面的请求也可以这样做</span></span><br><span class="line">axios.get(<span class="string">'/user'</span>, &#123;    </span><br><span class="line">    params: &#123;  <span class="attr">ID</span>: <span class="number">12345</span>  &#125;  <span class="comment">// get请求传参</span></span><br><span class="line">&#125;) </span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;  </span><br><span class="line">        <span class="built_in">console</span>.log(response); </span><br><span class="line">&#125;)  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;  </span><br><span class="line">    	<span class="built_in">console</span>.log(error);  </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="1-2-发送post请求"><a href="#1-2-发送post请求" class="headerlink" title="1.2 发送post请求"></a>1.2 发送post请求</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">axios.post(<span class="string">'/user'</span>, &#123;  </span><br><span class="line">    firstName: <span class="string">'Fred'</span>, </span><br><span class="line">    lastName: <span class="string">'Flintstone'</span>  <span class="comment">// post请求传参方式</span></span><br><span class="line">&#125;)  </span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;  </span><br><span class="line">    	<span class="built_in">console</span>.log(response); </span><br><span class="line">&#125;)  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;  </span><br><span class="line">    	<span class="built_in">console</span>.log(error); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="1-3-执行并发请求"><a href="#1-3-执行并发请求" class="headerlink" title="1.3  执行并发请求"></a>1.3  执行并发请求</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> requestList = [axios.get(<span class="string">"/news/2333"</span>),axios.get(<span class="string">"/news/666"</span>)];</span><br><span class="line">axios.all(requestList)</span><br><span class="line">    .then(axios.spread(<span class="function"><span class="keyword">function</span> (<span class="params">acct, perms</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 两个请求现在都执行完成</span></span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="二-配置axios"><a href="#二-配置axios" class="headerlink" title="二. 配置axios"></a>二. 配置axios</h3><p><strong>axios传入的第二个参数就是请求数据相关的配置参数参数</strong></p>
-<h4 id="2-1-配置请求头"><a href="#2-1-配置请求头" class="headerlink" title="2.1 配置请求头"></a>2.1 配置请求头</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">headers: &#123;<span class="string">'X-Requested-With'</span>: <span class="string">'XMLHttpRequest'</span>&#125;,</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="2-2-配置代理"><a href="#2-2-配置代理" class="headerlink" title="2.2 配置代理"></a>2.2 配置代理</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 'proxy' 定义代理服务器的主机名称和端口</span></span><br><span class="line"><span class="comment">// `auth` 表示 HTTP 基础验证应当用于连接代理，并提供凭据</span></span><br><span class="line"><span class="comment">// 这将会设置一个 `Proxy-Authorization` 头，覆写掉已有的通过使用 `header` 设置的自定义 `Proxy-Authorization` 头。</span></span><br><span class="line"><span class="comment">// 但既然都用到代理,就表明不想暴露真实的地址</span></span><br><span class="line">proxy: &#123;</span><br><span class="line">    host: <span class="string">'127.0.0.1'</span>,</span><br><span class="line">    port: <span class="number">9000</span>,</span><br><span class="line">    auth: &#123;</span><br><span class="line">      username: <span class="string">'mikeymike'</span>,</span><br><span class="line">      password: <span class="string">'rapunz3l'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="2-3-配置网页请求根路径"><a href="#2-3-配置网页请求根路径" class="headerlink" title="2.3 配置网页请求根路径"></a>2.3 配置网页请求根路径</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// `baseURL` 将自动加在 `url` 前面，除非 `url` 是一个绝对 URL。</span></span><br><span class="line">	baseURL: <span class="string">'http://127.0.0.1:80/api/'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="2-4-配置请求路径及方法"><a href="#2-4-配置请求路径及方法" class="headerlink" title="2.4 配置请求路径及方法"></a>2.4 配置请求路径及方法</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="comment">// `url` 是用于请求的服务器 URL, 这里可以配置相对路径以及绝对路径</span></span><br><span class="line">  url: <span class="string">'/user'</span>,</span><br><span class="line">  <span class="comment">// `method` 是创建请求时使用的方法</span></span><br><span class="line">  method: <span class="string">'get'</span>, <span class="comment">// default</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="2-5-配置默认值"><a href="#2-5-配置默认值" class="headerlink" title="2.5 配置默认值"></a>2.5 配置默认值</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 配置全局默认值</span></span><br><span class="line">axios.defaults.baseURL = <span class="string">'https://api.example.com'</span>;</span><br><span class="line">axios.defaults.headers.common[<span class="string">'Authorization'</span>] = AUTH_TOKEN;</span><br><span class="line">axios.defaults.headers.post[<span class="string">'Content-Type'</span>] = <span class="string">'application/x-www-form-urlencoded'</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 配置局部(实例axios)默认值</span></span><br><span class="line"><span class="comment">// 创建实例时设置配置的默认值</span></span><br><span class="line"><span class="keyword">var</span> instance = axios.create(&#123;</span><br><span class="line">  baseURL: <span class="string">'https://api.example.com'</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 在实例已创建后修改默认值</span></span><br><span class="line">instance.defaults.headers.common[<span class="string">'Authorization'</span>] = AUTH_TOKEN;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="2-6-配置总结"><a href="#2-6-配置总结" class="headerlink" title="2.6 配置总结"></a>2.6 配置总结</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   <span class="comment">// `url` 是用于请求的服务器 URL</span></span><br><span class="line">  url: <span class="string">'/user'</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// `method` 是创建请求时使用的方法</span></span><br><span class="line">  method: <span class="string">'get'</span>, <span class="comment">// default</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// `baseURL` 将自动加在 `url` 前面，除非 `url` 是一个绝对 URL。</span></span><br><span class="line">  <span class="comment">// 它可以通过设置一个 `baseURL` 便于为 axios 实例的方法传递相对 URL</span></span><br><span class="line">  baseURL: <span class="string">'https://some-domain.com/api/'</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// `transformRequest` 允许在向服务器发送前，修改请求数据</span></span><br><span class="line">  <span class="comment">// 只能用在 'PUT', 'POST' 和 'PATCH' 这几个请求方法</span></span><br><span class="line">  <span class="comment">// 后面数组中的函数必须返回一个字符串，或 ArrayBuffer，或 Stream</span></span><br><span class="line">  transformRequest: [<span class="function"><span class="keyword">function</span> (<span class="params">data, headers</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 对 data 进行任意转换处理</span></span><br><span class="line">    <span class="keyword">return</span> data;</span><br><span class="line">  &#125;],</span><br><span class="line"></span><br><span class="line">  <span class="comment">// `transformResponse` 在传递给 then/catch 前，允许修改响应数据</span></span><br><span class="line">  transformResponse: [<span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 对 data 进行任意转换处理</span></span><br><span class="line">    <span class="keyword">return</span> data;</span><br><span class="line">  &#125;],</span><br><span class="line"></span><br><span class="line">  <span class="comment">// `headers` 是即将被发送的自定义请求头</span></span><br><span class="line">  headers: &#123;<span class="string">'X-Requested-With'</span>: <span class="string">'XMLHttpRequest'</span>&#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// `params` 是即将与请求一起发送的 URL 参数</span></span><br><span class="line">  <span class="comment">// 必须是一个无格式对象(plain object)或 URLSearchParams 对象</span></span><br><span class="line">  params: &#123;</span><br><span class="line">    ID: <span class="number">12345</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">   <span class="comment">// `paramsSerializer` 是一个负责 `params` 序列化的函数</span></span><br><span class="line">  <span class="comment">// (e.g. https://www.npmjs.com/package/qs, http://api.jquery.com/jquery.param/)</span></span><br><span class="line">  paramsSerializer: <span class="function"><span class="keyword">function</span>(<span class="params">params</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> Qs.stringify(params, &#123;<span class="attr">arrayFormat</span>: <span class="string">'brackets'</span>&#125;)</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// `data` 是作为请求主体被发送的数据</span></span><br><span class="line">  <span class="comment">// 只适用于这些请求方法 'PUT', 'POST', 和 'PATCH'</span></span><br><span class="line">  <span class="comment">// 在没有设置 `transformRequest` 时，必须是以下类型之一：</span></span><br><span class="line">  <span class="comment">// - string, plain object, ArrayBuffer, ArrayBufferView, URLSearchParams</span></span><br><span class="line">  <span class="comment">// - 浏览器专属：FormData, File, Blob</span></span><br><span class="line">  <span class="comment">// - Node 专属： Stream</span></span><br><span class="line">  data: &#123;</span><br><span class="line">    firstName: <span class="string">'Fred'</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// `timeout` 指定请求超时的毫秒数(0 表示无超时时间)</span></span><br><span class="line">  <span class="comment">// 如果请求话费了超过 `timeout` 的时间，请求将被中断</span></span><br><span class="line">  timeout: <span class="number">1000</span>,</span><br><span class="line"></span><br><span class="line">   <span class="comment">// `withCredentials` 表示跨域请求时是否需要使用凭证</span></span><br><span class="line">  withCredentials: <span class="literal">false</span>, <span class="comment">// default</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// `adapter` 允许自定义处理请求，以使测试更轻松</span></span><br><span class="line">  <span class="comment">// 返回一个 promise 并应用一个有效的响应 (查阅 [response docs](#response-api)).</span></span><br><span class="line">  adapter: <span class="function"><span class="keyword">function</span> (<span class="params">config</span>) </span>&#123;</span><br><span class="line">    <span class="comment">/* ... */</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line"> <span class="comment">// `auth` 表示应该使用 HTTP 基础验证，并提供凭据</span></span><br><span class="line">  <span class="comment">// 这将设置一个 `Authorization` 头，覆写掉现有的任意使用 `headers` 设置的自定义 `Authorization`头</span></span><br><span class="line">  auth: &#123;</span><br><span class="line">    username: <span class="string">'janedoe'</span>,</span><br><span class="line">    password: <span class="string">'s00pers3cret'</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">   <span class="comment">// `responseType` 表示服务器响应的数据类型，可以是 'arraybuffer', 'blob', 'document', 'json', 'text', 'stream'</span></span><br><span class="line">  responseType: <span class="string">'json'</span>, <span class="comment">// default</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// `responseEncoding` indicates encoding to use for decoding responses</span></span><br><span class="line">  <span class="comment">// Note: Ignored for `responseType` of 'stream' or client-side requests</span></span><br><span class="line">  responseEncoding: <span class="string">'utf8'</span>, <span class="comment">// default</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">// `xsrfCookieName` 是用作 xsrf token 的值的cookie的名称</span></span><br><span class="line">  xsrfCookieName: <span class="string">'XSRF-TOKEN'</span>, <span class="comment">// default</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// `xsrfHeaderName` is the name of the http header that carries the xsrf token value</span></span><br><span class="line">  xsrfHeaderName: <span class="string">'X-XSRF-TOKEN'</span>, <span class="comment">// default</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">// `onUploadProgress` 允许为上传处理进度事件</span></span><br><span class="line">  onUploadProgress: <span class="function"><span class="keyword">function</span> (<span class="params">progressEvent</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Do whatever you want with the native progress event</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// `onDownloadProgress` 允许为下载处理进度事件</span></span><br><span class="line">  onDownloadProgress: <span class="function"><span class="keyword">function</span> (<span class="params">progressEvent</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 对原生进度事件的处理</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">   <span class="comment">// `maxContentLength` 定义允许的响应内容的最大尺寸</span></span><br><span class="line">  maxContentLength: <span class="number">2000</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// `validateStatus` 定义对于给定的HTTP 响应状态码是 resolve 或 reject  promise 。如果 `validateStatus` 返回 `true` (或者设置为 `null` 或 `undefined`)，promise 将被 resolve; 否则，promise 将被 rejecte</span></span><br><span class="line">  validateStatus: <span class="function"><span class="keyword">function</span> (<span class="params">status</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> status &gt;= <span class="number">200</span> &amp;&amp; status &lt; <span class="number">300</span>; <span class="comment">// default</span></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// `maxRedirects` 定义在 node.js 中 follow 的最大重定向数目</span></span><br><span class="line">  <span class="comment">// 如果设置为0，将不会 follow 任何重定向</span></span><br><span class="line">  maxRedirects: <span class="number">5</span>, <span class="comment">// default</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// `socketPath` defines a UNIX Socket to be used in node.js.</span></span><br><span class="line">  <span class="comment">// e.g. '/var/run/docker.sock' to send requests to the docker daemon.</span></span><br><span class="line">  <span class="comment">// Only either `socketPath` or `proxy` can be specified.</span></span><br><span class="line">  <span class="comment">// If both are specified, `socketPath` is used.</span></span><br><span class="line">  socketPath: <span class="literal">null</span>, <span class="comment">// default</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// `httpAgent` 和 `httpsAgent` 分别在 node.js 中用于定义在执行 http 和 https 时使用的自定义代理。允许像这样配置选项：</span></span><br><span class="line">  <span class="comment">// `keepAlive` 默认没有启用</span></span><br><span class="line">  httpAgent: <span class="keyword">new</span> http.Agent(&#123; <span class="attr">keepAlive</span>: <span class="literal">true</span> &#125;),</span><br><span class="line">  httpsAgent: <span class="keyword">new</span> https.Agent(&#123; <span class="attr">keepAlive</span>: <span class="literal">true</span> &#125;),</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 'proxy' 定义代理服务器的主机名称和端口</span></span><br><span class="line">  <span class="comment">// `auth` 表示 HTTP 基础验证应当用于连接代理，并提供凭据</span></span><br><span class="line">  <span class="comment">// 这将会设置一个 `Proxy-Authorization` 头，覆写掉已有的通过使用 `header` 设置的自定义 `Proxy-Authorization` 头。</span></span><br><span class="line">  proxy: &#123;</span><br><span class="line">    host: <span class="string">'127.0.0.1'</span>,</span><br><span class="line">    port: <span class="number">9000</span>,</span><br><span class="line">    auth: &#123;</span><br><span class="line">      username: <span class="string">'mikeymike'</span>,</span><br><span class="line">      password: <span class="string">'rapunz3l'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// `cancelToken` 指定用于取消请求的 cancel token</span></span><br><span class="line">  <span class="comment">// （查看后面的 Cancellation 这节了解更多）</span></span><br><span class="line">  cancelToken: <span class="keyword">new</span> CancelToken(<span class="function"><span class="keyword">function</span> (<span class="params">cancel</span>) </span>&#123;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="三-axios拦截器"><a href="#三-axios拦截器" class="headerlink" title="三.  axios拦截器"></a>三.  axios拦截器</h3><h4 id="3-1-创建axios实例"><a href="#3-1-创建axios实例" class="headerlink" title="3.1 创建axios实例"></a>3.1 创建axios实例</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> instance = axios.create(&#123;</span><br><span class="line">  baseURL: <span class="string">'https://some-domain.com/api/'</span>,</span><br><span class="line">  timeout: <span class="number">1000</span>,</span><br><span class="line">  headers: &#123;<span class="string">'X-Custom-Header'</span>:<span class="string">'foobar'</span>, <span class="string">"_token"</span>:<span class="string">"233333"</span>&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="3-2-配置实例"><a href="#3-2-配置实例" class="headerlink" title="3.2 配置实例"></a>3.2 配置实例</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设token已知</span></span><br><span class="line">instance.defaults.headers.common[<span class="string">'Authorization'</span>] = AUTH_TOKEN;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义axios实例后设置响应拦击器</span></span><br><span class="line">instance.interceptors.request.use(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;<span class="comment">/*</span></span><br><span class="line"><span class="comment">	what should doing?</span></span><br><span class="line"><span class="comment">	// 对响应数据做点什么</span></span><br><span class="line"><span class="comment">*/</span>&#125;, <span class="function"><span class="keyword">function</span>(<span class="params">error</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 对响应数据失误之后做什么</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="3-3-设置axios拦截器"><a href="#3-3-设置axios拦截器" class="headerlink" title="3.3 设置axios拦截器"></a>3.3 设置axios拦截器</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 添加请求拦截器</span></span><br><span class="line">axios.interceptors.request.use(<span class="function"><span class="keyword">function</span> (<span class="params">config</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 在发送请求之前做些什么</span></span><br><span class="line">    <span class="comment">// 请求前放入token</span></span><br><span class="line">    <span class="keyword">if</span> (store.state.user.token) &#123;</span><br><span class="line">    	config.headers.Authorization = <span class="string">`token <span class="subst">$&#123;store.state.user.token&#125;</span>`</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> config;</span><br><span class="line">&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 对请求错误做些什么</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(error);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加响应拦截器</span></span><br><span class="line">axios.interceptors.response.use(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 对响应数据做点什么</span></span><br><span class="line">    <span class="keyword">return</span> response;</span><br><span class="line">&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 对响应错误做点什么</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(error);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="四-番外"><a href="#四-番外" class="headerlink" title="四. 番外"></a>四. 番外</h3><h4 id="4-1-关于axios的响应结构"><a href="#4-1-关于axios的响应结构" class="headerlink" title="4.1 关于axios的响应结构"></a>4.1 关于axios的响应结构</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="comment">// `data` 由服务器提供的响应</span></span><br><span class="line">  data: &#123;&#125;,</span><br><span class="line">  <span class="comment">// `status` 来自服务器响应的 HTTP 状态码</span></span><br><span class="line">  status: <span class="number">200</span>,</span><br><span class="line">  <span class="comment">// `statusText` 来自服务器响应的 HTTP 状态信息</span></span><br><span class="line">  statusText: <span class="string">'OK'</span>,</span><br><span class="line">  <span class="comment">// `headers` 服务器响应的头</span></span><br><span class="line">  headers: &#123;&#125;,</span><br><span class="line">  <span class="comment">// `config` 是为请求提供的配置信息</span></span><br><span class="line">  config: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>由上可知, 我们一般取请求后端的数据都是这么写的:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> axios = <span class="built_in">require</span>(<span class="string">"axios"</span>);</span><br><span class="line"></span><br><span class="line">!<span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="keyword">let</span> res = <span class="keyword">await</span> axios.get(<span class="string">"/news/2333"</span>)</span><br><span class="line">   <span class="built_in">console</span>.log(res.data)</span><br><span class="line">&#125;()</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/31/axios%E7%9A%84%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE/">展开全文 >></a>
         </p>
       
 
